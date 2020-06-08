@@ -1,9 +1,8 @@
 \section{Technique}
 %
-The neutron form factors are challenging to be determind experimentally especially because there is no free neutron target. 
+The neutron form factors are challenging to be determine experimentally especially because there is no free neutron target. 
 However, since the deuterium is a loosely coupled system, it can be viewed as the sum of a proton target and a neutron target. 
-In fact, quasi-elastic scattering from deuterium has been used to extract the neutron magnetic form factor, \gmn, at modestly high \qsq~for decades
-~\cite{Hughes:1965zza, Arnold:1988us} in the single arm (e,e') experiments. 
+In fact, quasi-elastic scattering from deuterium has been used to extract the neutron magnetic form factor, \gmn, at modestly high \qsq~for decades~\cite{Hughes:1965zza, Arnold:1988us} in the single arm (e,e') experiments. 
 However, the proton cross section needs to be subtracted by applying a single-arm quasi-elastic electron-proton scattering. 
 This ``proton-subtraction" technique suffers from a number systematic uncertainties e.g. contributions from inelastic and secondary scattering processes. 
 
@@ -39,36 +38,37 @@ In one-photon approximation, $R_{corrected}$ can be presented as:
 R_{corrected} = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}}}^p \cdot (1+\tau_n)} \times \frac{\epsilon \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon \sigma_{_L}^p + \sigma_{_T}^p}
 \end{equation}
 
-It is important that the ratio $R_M = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}}}^p \cdot (1+\tau_n)}$ could be determine with very high accuracy even
-with modest precision for the beam energy, electron scattering angle, and detector solid angle.
-
-
-Now, let us write the $R_{corrected}$ at two values of $\epsilon$ using $R_s^{n(p)} = \sigma_{_L}^{n(p)}/ \sigma_{_T}^{n(p)}$ as
-
+It is important that the ratio $R_{Mott} = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}}}^p \cdot (1+\tau_n)}$ could be determine with very high relative accuracy even with modest precision for the beam energy, electron scattering angle, and detector solid angle. 
+Now, let us write the $R_{corrected}$ at two values of $\epsilon$ using $R_c^{n(p)} = \sigma_{_L}^{n(p)}/ \sigma_{_T}^{n(p)}$ as:
 \begin{equation*}
-R_{{corrected},\epsilon_1} = R_{M,\epsilon_1} \times \frac{\epsilon_1 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p}
-\end{equation*}
-\begin{equation*}
-R_{{corrected},\epsilon_2} = R_{M,\epsilon_2} \times \frac{\epsilon_2 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p}
+R_{{corrected},\epsilon_1} = R_{Mott,\epsilon_1} \times \frac{\epsilon_1 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p}
+\hskip .5 in
+R_{{corrected},\epsilon_2} = R_{Mott,\epsilon_2} \times \frac{\epsilon_2 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p}
 \end{equation*}
 
-In this two equation there are two unknown variables: $\sigma_{_L}^n$ and $\sigma_{_T}^n$.
-
-The dominant contribution to the uncertainty of $R_s^{n} = \sigma_{_L}^{n}/ \sigma_{_T}^{n}$ is coming the uncertainty in $R_s^{p}$ which is at \qsq=4.5 \gevcsq~is of 0.05 
-according to the global analysis~\cite{Christy2020ab}.
-
-This resulting in the equation with just one unknown variable $R_s^n$:
-
+In these two equations there are two unknown variables: $\sigma_{_L}^n$ and $\sigma_{_T}^n$.
+The dominant contribution to the uncertainty of the slope of the cross section vs. $\epsilon$,  
+$S_c^n = \sigma_{_L}^n/ \sigma_{_T}^n$, will come from the uncertainty of $S_c^p$.
+At \qsq=4.5 \gevcsq, according to the global analysis of $e-p$ cross section~\cite{Christy2020ab}, the value of $S_c^p$ is close to $\tau^{-1}(1/\mu_p)^2 = 0.107$ with uncertainty of 0.01.
+The resulting equation for $S_c^n$ is:
 \begin{equation*}
-A = B \times \frac{\epsilon_1 R_s^n + 1}{\epsilon_2 R_s^n  + 1} \approx B \times (1 + \Delta \epsilon \cdot R_s^n)
+A = B \times \frac{1 + \epsilon_1 S_c^n}{1 + \epsilon_2 S_c^n} \approx B \times (1 +  \Delta \epsilon \cdot S_c^n),
 \end{equation*}
 
-Where the variable $A = R_{{corrected},\epsilon_1}/R_{{corrected},\epsilon_2}$ will be measured with precision of 0.1\% and the variable 
-\mbox{$ B = {R_{M,\epsilon_1}}/{R_{M,\epsilon_2}} \times (\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p)/(\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p) \approx (1 + \Delta \epsilon \cdot R_s^p) $}
-which will be determined to precision $0.25 \times 0.05$.
-The final uncertainty of $R_s^n$ is 0.05 which dominated by current knowledge of the same proton parameter 1.91*(sqrt(0.057*2) -sqrt(0.057*2+0.05)).
+here the variable $A = R_{{corrected},\epsilon_1}/R_{{corrected},\epsilon_2}$ will be measured with precision of 0.1\%.  Assuming equal values of \qsq~for two kinematics (so, $\tau$ and $\sigma_{_T}$ for two kinematics are canceled out), the variable
+\mbox{$ B = {R_{M,\epsilon_1}}/{R_{M,\epsilon_2}} \times (1+ \epsilon_2 \, S_c^p)/( 1 + \epsilon_1 \, S_c^p) \approx (1 - \Delta \epsilon \cdot S_c^p)$}.
+The value of B could be determined to a precision of $0.25 \times 0.01$.
  
-At \qsq=4.5 \gevcsq~the combination $\mu_n$\gen/\gmn~has the value of 0.5 (see the review~\cite{Punjabi:2015bba}), 
-so the accuracy of our experiment (assuming the TPE portion of $R_s^n$ as large as for the proton) for will be $\delta (\mu_n \sqrt{ \tau \sigma_{_L}/\sigma{_{_T}}}$) = $\pm$0.08. 
+At \qsq=4.5 \gevcsq~the ratio $\mu_n$\gen/\gmn~is of $0.55 \pm 0.05$, see the review~\cite{Punjabi:2015bba}.
+%
+In a simplest model, the slope $S_c^n$ is a sum of the slope due to \gen/\gmn~and the TPE contribution.
+If we use for TPE the prediction~\cite{Blunden:2005ew}, shown in Fig.~2, the TPE leads to increase of $S_c^n$ by a factor of 2,
+so the result of this experiment for TPE will be $0.069 \pm 0.012 \pm 0.01$, where the first uncertainty due to accuracy 
+of \gen/\gmn~and the second one due to projected precision of this experiment.
+
+
+
+
+
 
 

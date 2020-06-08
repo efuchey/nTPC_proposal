@@ -1,0 +1,3853 @@
+%\input{../../33331/hwk/preamble.tex}
+
+
+%\documentclass[12pt,letterpaper,oneside,draft]{report}
+%\documentclass[12pt,letterpaper,oneside,draft]{article} % no actual figures!!
+\documentclass[12pt,letterpaper,oneside]{article}
+\pagestyle{plain}
+\setlength{\oddsidemargin}{-.25in}    % LaTeX add one inch to this
+\setlength{\evensidemargin}{-.25in}   % LaTeX add one inch to this
+\setlength{\topmargin}{0.in}        % LaTeX add one inch to this
+\setlength{\footskip}{0.5in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{7.0in}
+\setlength{\topskip}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\marginparwidth}{1.2in}
+
+\usepackage{epsfig}
+%\usepackage{graphX}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{cite}
+
+
+%%\setcounter{secnumdepth}{3}
+
+%\reversemarginpar
+\begin{document}
+%\baselineskip 24 pt
+%\parskip 24 pt
+%\baselineskip 18 pt
+%\parskip 18 pt
+%\baselineskip 18 pt
+%\parskip 18 pt
+
+\newcommand{\mMeV} {\,\mbox{MeV}/\mbox{c}^{2}}
+\newcommand{\pMeV} {\,\mbox{MeV}/\mbox{c}}
+\newcommand{\eMeV} {\,\mbox{MeV}}
+\newcommand{\mGeV} {\,\mbox{GeV}/\mbox{c}^{2}}
+\newcommand{\pGeV} {\,\mbox{GeV}/\mbox{c}}
+\newcommand{\eGeV} {\,\mbox{GeV}}
+%\newcommand{\q2} {Q$^2$}
+\newcommand{\gmn} {G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny M}}}~$}
+\newcommand{\gmnc} {G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny M}}}$}
+\newcommand{\gen} {G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny E}}}~$}
+\newcommand{\genc} {G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny E}}}$}
+\newcommand{\gmp} {G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}
+\newcommand{\gmpc} {G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}$}
+\newcommand{\gep} {G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny E}}}~$}
+\newcommand{\gepc} {G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny E}}}$}
+%\newcommand{\gmn} {G$^{\mbox{n}}_M~$}
+
+
+\title{A new proposal to the Jefferson Lab Program Advisory Committee
+  (PAC34)\\
+{\bf Precision Measurement of the\\
+ Neutron Magnetic Form Factor\\
+ up to $\mathbf Q^2=18.0\mbox{ \bf (GeV/c)}^2$ by the Ratio Method}}
+
+
+
+\vspace{0.1in}
+
+\author{ 
+%$\,$ \hskip 1.in G.B.~Franklin, B.~Quinn (spokesperson),\\
+F.~Benmokhtar, G.B.~Franklin, B.~Quinn (spokesperson),
+R.~Schumacher %\hskip 1.in $\,$
+\\ {\it Carnegie Mellon University, Pittsburgh, PA 15213 } \\
+%
+\and A.~Camsonne, J.P.~Chen, E.~Chudakov, C.~DeJager,\\
+ P.~Degtyarenko, J.~Gomez, O.~Hansen, D.~W.~Higinbotham,\\ 
+M.~Jones, J.~LeRose, R.~Michaels,  S.~Nanda, A.~Saha, V.~Sulkosky,\\
+ B.~Wojtsekhowski (spokesperson and contact person) 
+\\{\it Thomas Jefferson National Accelerator Facility, Newport News, VA 23606}
+%
+\and L.~El Fassi, R.~Gilman (spokesperson), G.~Kumbartzki, R.~Ransome, E.~Schulte
+\\ {\it Rutgers University, Piscataway, NJ  08854}
+%
+\and T. Averett, C.F.~Perdrisat, L.P.~Pentchev
+\\ {\it College of William and Mary}
+%
+\and E.~Cisbani, F.~Cusanno, F.~Garibaldi, \\ 
+S.~Frullani, G.~M.~Urciuoli, M.~Iodice, M.L.~Magliozzi
+\\ {\it INFN, Rome, Italy}
+%
+\and H.~Baghdasaryan, G.~Cates, D.~Day, N.~Kalantarians, R.~Lindgren, N.~Liyanage, \\
+V.~Nelyubin, B.~E.~Norum, K.~D. Paschke, S.~Riordan, M.~H.~Shabestari, X.~Zheng
+\\ {\it University of Virginia, Charlottesville, VA 22901}
+%
+\and W.~Brooks\\
+{\it Universidad Tecnica Federico Santa Maria, Valparaiso, Chile}
+%
+\and V.~Punjabi, M.~Khandaker \\
+{\it Norfolk State University}
+%
+\and W.~Boeglin, P.~Markowitz, J.~Reinhold \\
+{\it Florida International University, Fl }
+%
+\and J.~Annand, D.~Hamilton, D.~Ireland, R.~Kaiser, K.~Livingston, \\
+I.~MacGregor, B.~Seitz, and G.~Rosner \\
+{\it University of Glasgow, Glasgow, Scotland}
+%
+\and D.~Nikolenko, I.~Rachek, Yu.~Shestakov
+\\ {\it Budker Institute, Novosibirsk, Russia}  \\
+%
+\and $\,$  R.~De~Leo, L.~La~Gamba, S.~Marrone, E.~Nappi $\,$
+\\ {\it INFN, Bari, Italy}   \\
+%
+\and $\,$ M.~Mihovilovi\v{c}, M.~Potokar, S.~\v{S}irca $\,$
+\\ {\it Jo\v{z}ef Stefan Institute and Dept. of Physics, University of Ljubljana, Slovenia}   \\
+%
+%\and J.~Lachniet
+%\\ {\it Old Dominion University, Norfolk, VA}
+%
+\and J.~Gilfoyle
+\\ {\it University of Richmond, Richmond, VA}
+%
+%\and $\,$ \hskip 1.in E.~Piasetzky, G.~Ron \hskip 1.in $\,$
+\and $\,$ J.~Lichtenstadt, I.~Pomerantz, E.~Piasetzky, G.~Ron \hskip 1.in $\,$
+\\ {\it Tel Aviv University, Israel} \\
+%
+\and $\,$ \hskip 1.in A.~Glamazdin \hskip 1.in $\,$
+\\ {\it Kharkov Institute of Physics and  Technology, Kharkov 310077, Ukraine}
+%
+\and $\,$ \hskip 1.in J.~Calarco, K.~Slifer \hskip 1.in $\,$
+\\ {\it University of New Hampshire, Durham, NH 03824}
+%
+\and $\,$ \hskip 1.in B.~Vlahovic \hskip 1.in $\,$
+\\ {\it North Carolina Central University, Durham, NC 03824}
+%
+\and $\,$ \hskip 1.in A.~Sarty \hskip 1.in $\,$
+\\ {\it Saint Mary's University, Nova Scotia, Canada B3H 3C3}
+%
+%\and $\,$ \hskip 1.in Piotr Decowski \hskip 1.in $\,$
+%\\ {\it Smith College, Northampton, MA 01063 }
+%
+\and $\,$ \hskip 1.in K.~Aniol and D.~J.~Magaziotis \hskip 1.in $\,$
+\\ {\it Cal State University, Los Angeles, CA 90032} 
+%
+%\and S.~Abrahamyan, A.~Ketikyan, S.~Mayilyan, A.~Shahinyan, H.~Voskanyan
+\and S.~Abrahamyan, S.~Mayilyan, A.~Shahinyan, H.~Voskanyan
+\\ {\it Yerevan Physics Institute, Yerevan, Armenia}
+%
+\and $\,$ \hskip 1.in D.~Glazier and D.~Watts \hskip 1.in $\,$
+\\ {\it University of Edinburgh, Edinburgh, Scotland} 
+%
+\and $\,$ \hskip 1.in B.~Sawatzky \hskip 1.in $\,$
+\\ {\it Temple University, Philadelphia, PA 19122} 
+%
+\and $\,$ \hskip 1.in B.~Bertozzi and S.~Gilad \hskip 1.in $\,$
+\\ {\it Massachusetts Institute of Technology, Cambridge, MA 02139} 
+%
+\and and\\
+{\bf The Hall A Collaboration} \\% * - to be confirmed
+\\
+}
+\maketitle
+
+
+\newpage
+\begin{abstract}
+We propose to make a high-precision measurement of the
+  neutron's magnetic form factor, \gmnc, at nine kinematic points:
+  $Q^2=3.5$, 4.5, 6.5, 8.5, 10., 12., 13.5, 16. and 18.0 (GeV/c)$^2$.  Little data on \gmn
+  exists in this kinematic range and the existing data have large
+  systematic uncertainties.
+In the proposed experiment, systematic errors are 
+greatly reduced by the use of the ``ratio''
+  method in which \gmn is extracted from the ratio of
+  neutron-coincident to proton-coincident quasi-elastic electron
+  scattering from the deuteron.
+The experiment would be performed in  Hall A using the BigBite
+  spectrometer to detect the scattered electrons and the BigHAND to
+  detect both neutrons and protons.  A large aperture dipole magnet
+  on the nucleon flight path will greatly enhance particle
+  identification by slightly deflecting the protons.  Calibration reactions
+  will be used to produce tagged neutrons and protons at essentially
+  the same momentum as the quasi-elastic nucleons.  The efficiency of
+  BigHAND is expected to be high and stable and to be well
+  calibrated.  Projected systematic errors on the
+  measured ratio of cross sections vary from under 2\% to 5\% 
+(1.\% to 2.5\% on the ratio of the magnetic form
+  factor to that  of the proton).   
+  Statistical errors are projected to be similar, or smaller. 
+  This proposal overlaps and significantly extends the kinematics range of the
+  already approved 12 GeV CLAS proposal, E12-07-104, which predicts similar
+  uncertainties up to 13.5 (GeV/$c$)$^2$.  The present proposal
+  includes measurements at Q$^2$ beyond the range of that experiment 
+and  will have significantly
+  greater statistics for the highest-Q$^2$ points covered by E12-07-104.
+ We request a total of 49 days
+  divided among four beam energies, 4.4, 6.6, 8.8 and 11. GeV.
+\newpage
+\tableofcontents
+\newpage
+
+\end{abstract}
+
+
+
+
+
+
+
+\section{Introduction}
+
+%The elastic form factors of the nucleons give us some of the best
+%opportunities to make precise measurements related to the structure of
+%hadrons.
+The elastic form factors probe the four-current distributions of the
+nucleons, fundamental quantities that provide
+%The distribution of electromagnetism in the nucleon is a fundamental quantity
+%that provides 
+one of the best opportunities to test our understanding of 
+nucleon structure.
+A number of theoretical techniques exist to describe the
+nucleon's electromagnetic structure,
+%the distribution of electromagnetism in momentum space,
+including quark models, perturbative Quantum Chromo-Dynamics (pQCD), lattice QCD,
+effective field theories, vector-meson dominance (VMD) models, etc.
+Each at present has limitations, and its validity must be confirmed by experiment.
+In the examples given,
+\begin{itemize}
+\item  quark models, as constructed, are phenomenological with no firm basis in QCD,
+\item  pQCD is limited to high four-momentum transfer, and it is unknown at what
+momentum transfer it becomes valid,
+\item  lattice QCD is presently limited, by computational requirements, to describing the isovector 
+(proton minus neutron) form factors, since the effects of disconnected quark lines
+largely cancel in these,
+\item  effective field theories are limited to small momentum transfer, and
+\item  VMD models are constructed as fits to the existing data base.
+\end{itemize}
+
+Experimentally, the nucleon electromagnetic form factors are a central
+part of the Jefferson Lab 12 GeV program, and it is desirable to measure
+all four nucleon form factors over the widest possible $Q^2$ range, to similar 
+precision.
+This goal is particularly motivated so that one can construct the isovector form factors
+for comparison with lattice calculations.
+
+
+In the one-photon approximation the cross section for scattering of
+electrons from
+a spin-$\frac{1}{2}$ target can be written as
+$$\frac{d\sigma}{d\Omega}=\eta \frac{\sigma_{\mbox{\scriptsize
+    Mott}}}{1+\tau}\left((G_E)^2+\frac{\tau}{\epsilon}(G_M)^2
+  \right)$$
+where
+\begin{itemize}
+\item $\eta=\frac{1}{1+2\frac{E}{M_N}\sin^2(\theta/2)}$ is the recoil
+factor
+\item $\epsilon=(1+\vec{q}^2/Q^2\tan^2(\theta/2))^{-1}=
+(1+2(1+\tau)\tan^2(\theta/2))^{-1}$
+    is the longitudinal polarization of the virtual photon,
+\item $\tau=Q^2/4 M_N^2$, and
+\item $G_E(Q^2)$ and $G_M(Q^2)$ are the Sachs Electric and Magnetic form factors.
+\end{itemize}
+Alternately, the helicity conserving 
+$F_1$ and helicity nonconserving $F_2$ form
+factors can be written as simple linear combinations of the
+ electric $G_E$ and magnetic $G_M$ form factors.
+The measurement of these form factors for the proton and neutron
+    probes their electromagnetic structures.
+
+Little is known of the neutron's magnetic form factor, \gmnc, (and less of
+its electric form factor) for $Q^2>4$ (GeV/c)$^2$.
+{\it We propose to make several high precision measurements of  \gmn in the range
+$4.5<Q^2<18.0$ (GeV/c)$^2$, the largest $Q^2$ proposed measurements of \gmn to date.}
+
+
+Since the form factors are functions only of $Q^2$, they
+may be separated by the Rosenbluth technique, making cross section 
+measurements at
+the same $Q^2$ but different $\epsilon$ to obtain different linear
+combinations.  The apparent failure of this technique in extraction of \gep
+%$G_E^p$
+at $Q^2>1$ (GeV/c)$^2$ (as revealed by the recoil polarization 
+method \cite{jones,gayou})
+may indicate a failure of the one-photon exchange approximation \cite{afan}.
+This does not invalidate the form given above, however.  It just
+underscores the fact that the corrections may be non-negligible and
+may become important particularly when trying to separate a small contribution from
+a larger one.  This consideration does not present a great problem
+when trying to extract the magnetic form factor of the neutron since
+the electric form factor is generally much smaller, at least at low $Q^2$.
+%Since the experimental situation at several (Gev/$c$)$^2$ is undetermined,
+%it is quite possible that the neutron magnetic form factor is no longer dominant.
+
+
+These Sachs form factors are trivially related to the Dirac and Pauli
+form factors, F$_1$ and F$_2$, respectively,  which are
+the coefficients of the 
+helicity-conserving and -nonconserving currents to
+which the photon can couple.  Non-relativistically the Sachs form
+factors can be interpreted as the Fourier transforms of the charge and
+current distributions to which the photon couples in the target.  No
+such simple interpretation is available at higher $Q^2$.  The electric
+form factor at any $Q^2$ can still be related to the Fourier transform
+in the Breit frame.  But since the Breit frame is a different frame
+for each $Q^2$, this relationship cannot be inverted to extract a
+charge distribution without a prescription for boosting the nucleon. 
+Recent work \cite{Miller} by Miller offers an interpretation of 
+the infinite-momentum frame charge density of
+the nucleon as a function of impact parameter in terms of the Dirac
+form factor, $F_1=(G_e+\tau G_m)/(1+\tau)$.  Interestingly, this
+implies that knowledge of the {\em magnetic} form factor of the
+neutron is important to the understanding of its charge distribution.
+Furthermore, Miller concludes that 
+the neutron charge distribution is negative for small impact parameter,
+which contrasts, at least na\"ively, with the long-standing 
+belief that the neutron charge distribution is positive at the center.
+A positive central charge distribution is in accordance with 
+intuitive models --
+for example, the neutron charge distribution reflects a virtual $p\pi^-$
+pair, with the more massive proton closer to the center of mass.
+The interest in understanding the charge distribution is
+reflected by the appearance of a figure indicating 
+the positive central charge distribution in the recent
+Nuclear Physics long Range Plan.
+%Thus, it is important to understand whether or not the central charge
+%distribution of the neutron is indeed negative.
+%The uncertainty in Miller's result arises mainly from the lack of high
+%$Q^2$ measurements, necessitating measurements of the magnetic form factor,
+%which we propose here.
+
+
+
+In the approximation that the strange quark does not contribute to the
+electromagnetic structure of the nucleon, the form factors can be
+combined \cite{qf1,qf2,qf3}
+to extract information about  the contributions of individual
+quark flavors to the electromagnetic structure of the nucleon.
+Assuming isospin symmetry, the up-quark distribution of the proton is
+identical to the down-quark distribution of the neutron and {\it vice
+  versa}. Since the electromagnetic couplings to the individual quarks
+are known (and the coupling to gluons vanishes) the electric or
+magnetic form factor of each nucleon can be written as a linear
+combination of the electric and magnetic form factors of the two quark
+flavors.  Combining measurements on the neutron and proton then allows
+direct extraction of the ``up'' form factor (including contributions
+from $u$ and $\bar u$ quarks from the sea, as well as valence quarks)
+and the ``down'' form factor (also composed of all $d$ and $\bar d$ 
+contributions).  In particular, improved measurements of the neutron's
+magnetic form factor can be combined with existing measurements of the
+proton's magnetic form factor to allow extraction of the ``up-magnetic
+form factor'' and ``down-magnetic form factor''.  If, on the other
+hand, the contribution of strange quarks is {\em not} negligible, then
+the measurement of the neutron form factors would be critical to allowing
+the strange contribution to be measured. (At present, however, there
+are no plans to measure strange form factors in the $Q^2$ range in
+which we propose to measure.)
+
+
+%While the form factors may not lend themselves to simple interpretation
+%in terms of the structure of the nucleons, they are still pivotal as
+The form factors are pivotal as the meeting place between theory and experiment. 
+% First-principles 
+Calculations of nucleon structure (as opposed to parameterizations of form factors) can be
+tested by their ability to predict the experimentally accessible
+information on nucleon structure reflected in the form factors.  (Of
+course, polarization observables and structure functions will also be
+relevant.)  In particular, lattice QCD predictions will eventually
+have the capability to make meaningful predictions of hadronic
+structure.  Form factors of the proton and neutron will present
+important tests of those predictions.
+
+
+
+A great deal of experimental and theoretical effort
+\cite{GPD1,GPD2,GPD3} is being expended
+on an ambitious effort to greatly expand the knowledge of nucleon
+structure by determining the generalized parton distributions.
+Measurement of form factors plays an important role in that effort
+since the form factors set the values of sum rules which the generalized parton
+distributions must obey.
+
+
+The neutron's form factors are more difficult to measure, of course, because there is no free-neutron target.  
+Spin-asymmetry techniques have been used in extracting the tiny electric form factor of the
+neutron \cite{pol1,pol2,pol3,pol4,pol5,pol6,pol7} 
+and also in measuring the magnetic \cite{pol_gmn1,pol_gmn2,pol_gmn3} 
+form factor, particularly at low $Q^2$.  
+Generally at high $Q^2$, however, quasielastic
+scattering from the deuteron has been used \cite{sub1,sub2,sub3,sub4,
+SLAC_Rock,sub5,tag1,tag2,rat1,rat2,rat3,rat4,rat5,rat6,rat7,Will}
+to extract \gmnc.  
+This is based on the fact that the deuteron is a loosely coupled system, so
+high-$Q^2$ quasi-elastic scattering can be viewed as the sum of
+scattering from a proton target and scattering from a neutron target.
+This simple picture is complicated only slightly by the fact that the
+targets are not at rest but are moving with the ``Fermi motion''
+intrinsic to the deuteron's wave-function.
+
+Several techniques have been used to try to isolate the electron-neutron scattering of interest.  
+In the ``proton-subtraction'' technique \cite{sub1,sub2,sub3,sub4,SLAC_Rock,sub5} 
+single-arm quasi-elastic electron scattering from the deuteron is measured.  
+This is combined with a measurement of single-arm elastic scattering from the proton.  
+An attempt is made to fold in the expected effects of Fermi motion to
+simulate the expected contribution of the proton in the measured quasi-elastic spectrum.  
+This is then subtracted and the remainder is interpreted as a measure of quasi-elastic electron scattering off the
+neutron from which the (almost purely magnetic) form factor can be determined.  
+This technique tends to suffer from the error-propagation problems intrinsic to 
+subtraction of two large numbers.  
+At low $Q^2$ the proton electric form factor dominates (and the proton magnetic form factor is never
+small compared to the neutron's).  
+At high $Q^2$ inelastic background becomes a serious problem, to the extent that the quasi-elastic
+``peak'' may not be visible, even as a shoulder on the background peak.  
+Because these are single-arm measurements, no other information
+is available with which to selectively reject background events.
+
+The ``proton-tagging'' technique \cite{tag1,tag2} is a partial-coincidence method which takes
+advantage of the fact that protons are easier to detect than neutrons.  
+In that technique quasi-elastic electron scattering is
+measured with an additional charged-particle detector 
+%positioned where the recoiling nucleon is expected to pass (
+centered around the direction of the momentum-transfer vector, $\vec{q}$.  
+If no proton is detected, the event is ascribed to scattering from the neutron.  
+This technique generally requires substantial theory-based corrections 
+to account for the tail of the Fermi-motion which would cause a recoil proton to miss
+the charged-particle detector (or cause a spectator proton to hit it).
+Again, since the neutron is not detected, no cuts can be applied to
+selectively reject inelastic background events.
+
+We propose to use the ``ratio-method'' \cite{Durand} which is discussed in detail in the next section.  
+It relies on measurement of both the recoil protons and recoil neutrons \cite{rat1,rat2,rat3,rat4,rat5,rat6,rat7,Will}.  
+Inelastic background is substantially suppressed by even a crude nucleon-coincidence requirement.  
+As will be seen in simulations
+presented in section \ref{inelastic}, precise measurement of the
+final-nucleon direction permits the use of cuts which further reduce
+inelastic background down to manageable levels, even at the highest $Q^2$.
+If the particle detection, particularly the neutron
+detection is well understood, this technique is subject to the 
+smallest systematic errors as it enjoys substantial cancellation of
+many sources of systematic error which plague other techniques.
+
+There are relatively few measurements of \gmn beyond $Q^2=1$ (GeV/c)$^2$.  
+The few published measurements in the range $1<Q^2<4.5$
+(GeV/c)$^2$ (shown in Fig. \ref{old_data}) have been eclipsed, both 
+in number of points and in precision, by the recent CLAS data \cite{Will,Jeff} of
+Lachniet.  
+These (not yet published) data are shown in Fig. \ref{old_data} as the blue points.  
+Several of the proposers of the present experiment played key roles in the CLAS experiment (Quinn,
+Brooks and Gilfoyle).  
+The ratio-method was used for those measurements and will be used in the proposed experiment.
+
+In the figure, the value of \gmn is divided by the 'scaled dipole'.  The
+dipole is a vector-meson-dominance-inspired empirical parameterization
+of the proton's electric form factor: \gep $\approx G_D=(1+Q^2/.71$
+(GeV/c)$^2$)$^{-2}$.  This appeared to be a good approximation for
+\gep over a large $Q^2$ range until recent recoil-polarization 
+measurements  \cite{jones,gayou}) showed that \gep actually 
+fell rapidly below the
+dipole form for $Q^2>1$ (GeV/c)$^2$.  The scaling approximation
+hypothesizes that \gmp $\approx \mu_p G_D$ and \gmn $\approx \mu_n
+G_D$.  The CLAS data show that the `scaled dipole' is a surprisingly
+good approximation for \gmn out to $Q^2\approx 4.5$ (GeV/c)$^2$.
+
+Beyond $Q^2=4.5$ (GeV/c)$^2$ there are only a 
+few points, with large errors.  The
+points plotted in green in Fig. \ref{old_data} are SLAC measurements
+\cite{SLAC_Rock} made using the ``proton-subtraction'' technique.
+While these points have relatively large
+errors, they point to a trend which 
+%appears  inconsistent with
+is not seen in 
+the CLAS data.  This makes it particularly interesting to investigate
+the behavior of  \gmn  in the range $Q^2>4$ (GeV/c)$^2$  with a
+measurement which is independent of either of those shown in Fig.
+\ref{old_data}.  A similar plot is presented at the end of the
+proposal, with the projected errors of the proposed measurement superimposed.
+
+
+
+
+
+\begin{figure}
+\includegraphics[width=6in]{old_dat.pdf}\\
+\caption{\label{old_data}
+Existing data on \gmn in $Q^2>1$ (GeV/c)$^2$ range are plotted  as ratio to
+scaled dipole approximation.  Blue points are from CLAS e5 run
+\cite{Will,Jeff}.  Dark blue lines show the statistical error while
+light blue lines
+are the quadrature sum of statistical and systematic errors.  Green circle
+\cite{SLAC_Rock} and magenta circle \cite{sub5}
+points are from SLAC. Older data are shown as yellow squared
+\cite{rat2}, solid squares \cite{tag2}, and hollow triangles \cite{sub4}.
+Some points have been slightly displaced horizontally to avoid overlap.}
+\end{figure}
+
+
+\section{Technique}
+We propose to use the ``ratio method''\cite{Durand} to determine \gmn from
+quasi-elastic electron scattering on the deuteron for $3.5 < Q^2 < 18$
+(GeV/c)$^2$.  This method is far less sensitive to systematic errors than
+the ``proton-subtraction'' or ``proton-tagging'' techniques. 
+
+Use of the ``ratio method'' requires the measurement of both
+neutron-tagged, d(e,e$'$n), and proton-tagged, d(e,e$'$p), quasi-elastic
+scattering from the deuteron.  Simultaneous measurements of both
+these reactions provides a substantial reduction of systematic error
+because numerous experimental uncertainties 
+cancel in forming the ratio:
+\begin{equation}
+R''=\frac{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small d(e,e$'$n)}}
+}{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small d(e,e$'$p)}}}
+\label{r-double-prime-eqn}
+\end{equation}
+This is insensitive, for example, to target thickness, beam intensity,
+deadtime, electron trigger efficiency, electron acceptance, and the 
+detection and reconstruction efficiency for the scattered electron track.
+
+With a small and accurately-calculable nuclear correction,
+$\epsilon_{\mbox{\scriptsize nuc}}$,  this measured ratio of quasi-elastic
+cross sections can be used to determine the ratio of the elastic cross
+sections:
+$$ R'
+=\frac{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small n(e,e$'$)}}
+}{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small p(e,e$'$)}}}
+=\frac{R''}{1+\epsilon_{\mbox{\scriptsize nuc}}}$$
+Because of final-state interactions and other nuclear effects, there
+would be substantial corrections to the na\"ive assumption that the 
+coincident quasi-elastic cross section is equal to the cross section
+for elastic scattering from the free nucleon.  Further, these
+corrections would depend upon the fraction of the quasi-elastic peak
+which is integrated.  A great advantage of the ratio method (with
+a deuteron target) lies
+in the fact that these corrections are almost identical for the case
+of the neutron and the proton and so they cancel almost completely 
+in the ratio.  The
+small surviving correction, $\epsilon_{\mbox{\scriptsize nuc}}$, to the
+ratio arises due to small effects such as the neutron-proton mass difference.
+Figure \ref{aren_corr} shows detailed calculations\cite{Arenhovel} 
+by Arenh\"ovel 
+of the correction factor required in calculating the ratio of the nucleon 
+elastic cross sections from the ratio of the integrated nucleon-tagged
+quasi-elastic cross sections.  Here $\theta_{pq}$ is
+the angle between the struck nucleon's final momentum vector
+($\vec{p}$) and the momentum-transfer vector ($\vec{q}$). Final state
+interaction effects are minimized by putting a tight cut on
+$\theta_{pq}$ (i.e. requiring that the nucleon actually recoil in the
+direction which would be expected in the absence of Fermi motion and
+final state interactions).  It will be seen below that the region of
+interest in the present proposal has $\theta_{pq}<3$ degrees.
+Even at $Q^2=1.2$ (GeV/c)$^2$ the correction is seen to be less than
+1\%.  For higher $Q^2$ up to 5 (GeV/c)$^2$ calculations of the nuclear
+correction have been made \cite{Will,Jeff} using a model\cite{Jesch}
+which applies Glauber theory to model the final-state interactions.  Again,
+the corrections for the neutron and proton are almost identical and
+cancel in the ratio.  The residual correction on the ratio 
+$\epsilon_{\mbox{\scriptsize nuc}}$ was found to be under 0.1\%.  The
+corrections are expected to be very small and calculable in the range
+of interest here.  This correction is expected to contribute
+negligibly to the systematic error of the measurement.
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=5 in]{aren_corr.pdf}\\
+\end{center}
+\caption{\label{aren_corr}
+Arenh\"ovel predictions for (low $Q^2$) 
+nuclear corrections (including FSI) as a function of the maximum
+accepted value of $\theta_{pq}$.
+%the angle between the struck nucleon's final momentum vector
+%($\vec{p}$) and the momentum-transfer vector ($\vec{q}$). 
+The required
+correction is seen to be small for tight cuts on $\theta_{pq}$ and to
+{\em decrease} with increasing $Q^2$.}
+\end{figure}
+
+Writing $R'$ in terms of neutron form factors,
+$$ R'=\frac{\eta\frac{\sigma_{\mbox{\scriptsize Mott}}}
+{1+\tau}\left((G_E^n)^2+\frac{\tau}{\epsilon}(G_M^n)^2 \right)}
+{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small p(e,e$'$)}}}$$
+where
+$\eta$, $\epsilon$, and $\tau$ are defined above.  
+%, as above,\\
+%$\eta=\frac{1}{1+2\frac{E}{M_N}\sin^2(\theta/2)}$ \\
+%$\epsilon^{-1}=1+\vec{q}^2/Q^2\tan^2(\theta/2)=1+2(1+\tau)\tan^2(\theta/2)$\\
+%and $\tau=Q^2/4 M_N^2$
+
+%Then, with a minor correction ($\approx1$ \%, using the Galster
+%parameterization) for the electric form factor of the neutron,
+%this in turn allows determination of the ratio of interest,
+From this, then, can be extracted the ratio of interest,
+\begin{equation}
+R=R'-\frac{\eta\frac{\sigma_{\mbox{\scriptsize Mott}}}{1+\tau}(G_E^n)^2}{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small p(e,e$'$)}}}
+=\frac{\eta\sigma_{\mbox{\scriptsize Mott}}\frac{\tau/\epsilon}{1+\tau}(G_M^n)^2}
+{\left.\frac{d\sigma}{d\Omega}\right|_{\mbox{\small p(e,e$'$)}}}
+\label{r_eqn}
+\end{equation}
+The term subtracted to extract $R$ from $R'$ will be small ($\approx
+1$\% at most, and much less at high $Q^2$) if %$G_E^n$
+\gen follows
+the form of the Galster parameterization.  In section
+\ref{systematic_errors} we will allow for an error of 100\% of Galster
+(at low $Q^2$) up to 400\% of Galster (at high $Q^2$) and find that
+this correction still does not cause unacceptable systematic errors.
+A measurement of \gen up to $Q^2=10$ (GeV/c)$^2$ is planned\cite{new_GEN}
+in a time-frame which will make it useful for analysis of results from
+this measurement.
+
+This measurement of $R$ then allows \gmn to be determined, given 
+just the proton's
+elastic cross-section at the corresponding kinematics.  
+It may be noted that, because $R$ is proportional to the square of \gmnc, the
+fractional error on \gmn will actually be only half of the fractional
+error on $R$.  Since the quantity of greatest interest is \gmnc, it is
+conventional to report the expected size of the errors on \gmnc.  
+%The real result of the experiment, however, will be
+%measurements of R.  
+However, the experiment will actually be a direct measurement of 
+$R''$ (from which $R$ is
+inferred with small corrections, as described above).
+This distinction is significant only in that
+present uncertainties on the proton's form factors (and cross
+section) do not actually imply systematic errors on the quantity
+being measured, $R''$ (or $R$).  Subsequent improvements in the determination of the
+proton cross section, at the kinematics of interest, can be combined
+retrospectively with the results for $R$ from this measurement to
+obtain improved values for \gmnc.  There would be no need to repeat the
+analysis of this experiment to incorporate new proton measurements.
+
+Similarly, since the proton cross section is dominated by \gmp
+%{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}
+for these kinematics, the ratio of formfactors,
+\gmnc/\gmp
+%{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}
+can be cleanly extracted from the data.  In many ways this ratio is
+more fundamental than \gmnc, lending itself to direct comparison to
+theoretical predictions.  Extraction of this ratio does not suffer
+from a systematic error due to uncertainties in proton cross section
+measurements. Like \gmnc, this ratio enjoys a factor of two reduction
+in the fractional error compared to $R$.
+
+\section{Proposed Kinematics}
+The kinematic points at which we propose to measure are shown in Table
+\ref{Kin_table}.  The lowest-Q$^2$ points will overlap with existing
+CLAS measurements while the highest-Q$^2$ points will greatly extend
+the range in which \gmn is known with high precision
+
+\begin{table}
+\begin{center}
+\caption{Kinematics of proposed measurements \label{Kin_table}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Q$^2$ & E$_{\mbox{beam}}$ & $\theta_e$ & $\theta_N$ & E$'$ & P$_N$ \\
+(GeV/c)$^2$ & (GeV) & & & (GeV) & (GeV/c)\\
+\hline
+3.5 & 4.4& 32.5$^\circ$&31.1$^\circ$ & 2.5 & 2.6\\
+4.5 & 4.4& 41.9$^\circ$&24.7$^\circ$ & 2.0 & 3.2\\
+6. & 4.4& 64.3$^\circ$&15.6$^\circ$ & 1.2 & 4.0\\
+8.5 & 6.6& 46.5$^\circ$&16.2$^\circ$ & 2.1 & 5.4\\
+10. & 8.8& 33.3$^\circ$&17.9$^\circ$ & 3.5 & 6.2\\
+12. & 8.8& 44.2$^\circ$&13.3$^\circ$ & 2.4 & 7.3\\
+13.5 & 8.8& 58.5$^\circ$&9.8$^\circ$ & 1.6 & 8.1\\
+16. & 11.& 45.1$^\circ$&10.7$^\circ$ & 2.5 & 9.4\\
+18. & 11.& 65.2$^\circ$&7.0$^\circ$ & 1.4 & 10.5\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+While the scattered electron energy is relatively constant (mostly near 1 to 2
+GeV) across the kinematic points, the central nucleon momentum of
+interest is seen to vary from 2.65 GeV/c to 10.5 GeV/c.  Individual
+calibrations with 'tagged' protons and 'tagged' neutrons will be 
+carried out at the three lowest-Q$^2$ kinematic points to ensure that
+the neutron and proton detection efficiencies are well known.  As will
+be seen below, the efficiencies are large and stable for higher Q$^2$.
+%  Since
+%the variation in efficiency is expected to be quite small, more
+%extensive calibrations at lower momenta can be extrapolated to higher
+%nucleon momenta with guidance from more restricted measurements at the
+%higher momenta.
+
+\section{Apparatus}
+The use of the ratio method depends upon detection of both scattered
+neutrons and protons.  Potential sources of systematic error arise in
+%the understanding of the acceptance for these particles and in the
+%calibration of the efficiencies of their detection.
+determining the acceptance and detection efficiency of these particles.
+  Errors associated
+with nucleon acceptance can be reduced by matching the neutron and
+proton acceptances so they cancel in the ratio (as does the electron
+acceptance and efficiency). 
+% It is critical that the detection
+%efficiecies for neutrons and protons be well determined by calibration
+%rections. 
+
+We propose to use the existing BigBite spectrometer in Hall A to
+measure the momentum and angle of the scattered electrons and the 
+BigHAND detector  to detect both the scattered neutrons
+and protons.  Nucleons scattered toward the BigHAND detector
+will pass through the field of a large aperture dipole magnet which
+will be positioned  along the nucleon flight path to vertically deflect protons
+relative to neutrons.  The layout of the experiment is shown
+schematically in Fig. \ref{layout}.
+
+
+\begin{figure}
+\includegraphics[width=6in]{layout.pdf}\\
+\caption{\label{layout}
+A schematic view of one possible configuration of the 
+apparatus is shown. BigBite will detect
+scattered electrons while BigHAND will detect the scattered nucleons.
+The dipole magnet ``BigBen'' will deflect protons for the purpose of
+particle identification.  The coil configuration shown is one option
+for avoiding interference between the coils and the beamline.  A
+magnetically-shielded hole in the return iron will allow the
+unscattered beam to continue on to the beam dump.  
+The corrector coils ``CC'' will compensate
+for any effect of residual magnetic field on the beamline.  
+Note: the 17 m flight path to BigHAND 
+is not drawn to scale.
+}
+\end{figure}
+
+
+
+
+The targets will be 10 cm long liquid deuterium (and liquid hydrogen
+for calibration) cells with 100 $\mu$m aluminum windows.   This
+gives about 1.7 g/cm$^2$ of target compared to about 0.054 g/cm$^2$ in
+the windows.  As discussed below, selection cuts will reduce the
+contribution of quasi-elastic events from aluminum below this 3.2\% ratio.
+To obtain percent-level precision, however, it will be necessary to
+subtract the contribution from the windows.  A dummy target cell will
+be used, having windows at the same position as the real cell but with
+windows thick enough to give the same luminosity as for a full cell.
+Sufficient statistics for subtraction of the windows will be obtained
+by running on the dummy cell for about four percent of the beam time
+used for the full target.
+
+As discussed below, past experience suggests the BigBite and 
+BigHAND detector rates will
+be reasonable  at a luminosity of $6.7\times10^{37}$/A /cm$^2$/s
+where A is the number of nucleons in the target.  For a luminosity of
+3.3 $\times 10^{37}$ on a 10 cm deuterium target, the beam current
+would be 10.5 $\mu$A.
+
+%{\bf XXX  Bogdan, please review and update. \\}
+BigBite, shown in Fig. \ref{fig_BigBite}, is a large acceptance non-focusing
+magnetic spectrometer.  It has a large 
+acceptance (roughly 53 msr in the
+intended configuration) and has been used successfully at high
+luminosity ($\approx 10^{37}$/cm$^2$/s).  It will be configured for
+high momentum measurements, with the entrance aperture of the 
+dipole 1.55 m from the target and
+%{\bf XXX} 
+widely spaced coordinate-measuring detector  planes %spaced over 85 cm.
+For the high luminosity of the experiment, the spectrometer will be
+instrumented with GEM detector planes.  These detectors are planned
+for use in the polarimeter of the new Super BigBite Spectrometer (SBS) and so
+will be available for use as the tracking detectors for BigBite.
+The GEM detectors are designed in a modular form specifically chosen
+to allow them to be configured to instrument BigBite as well as the
+new SBS spectrometer.  Figure \ref{GEM} shows how the modules will be
+assembled to form four tracking planes for BigBite.
+ In this configuration,
+the expected momentum resolution will be $\sigma_p/p\approx$ 
+.5\% because of the high resolution and small
+multiple-scattering resulting from the relatively thin GEM detectors.
+The angular resolution is
+expected to be better than 1 mr in both horizontal and vertical angles 
+\cite{bb_simulation}.
+
+%The addition of a gas Cerenkov detector in BigBite is expected to
+%eliminate the majority of the trigger rate which was seen in the GEn
+%experiment.  Analysis of that data showed that most BigBite triggers
+%were not associated with any charged tracks, indicating that the
+%shower counters had been triggered by high energy photons from $\pi^0$
+%decay.  Elimination of this source of false triggers is expected to
+%reduce the trigger rate in BigBite to a few hundred Hz.  Therefore we
+%intend to run using just BigBite (with the gas Cerenkov required) as
+%a trigger
+
+We intend to run with a single-arm trigger based only upon the
+electron spectrometer.  This eliminates any neutron/proton bias from
+the trigger and ensures that the trigger efficiency cancels completely
+in the ratio of interest, R.
+The lead-glass electromagnetic calorimeter will be used for the
+trigger of the experiment.  
+As will be discussed in section \ref{rates}, this is expected to allow
+a modest single-arm trigger rate of less than 1 kHz.  
+If the gas Cerenkov has been successfully commissioned, it may also be
+used for redundant rejection of pions in BigBite.
+
+
+\begin{figure}
+%\includegraphics[width=5in]{bb_diagram.pdf}
+\includegraphics[width=5in]{bb_gem_02.jpg}
+\caption{\label{fig_BigBite}The BigBite spectrometer, 
+configured for high momentum, high luminosity running.  
+Tracking is performed with GEM detectors 
+and a gas Cerenkov counter is located between the
+detector packages. (The target label refers to another experiment.)}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=5in]{BigBite-tracker.pdf}
+\caption{\label{GEM}
+The layout of a 40 cm X 50 cm GEM module is shown along with the
+arrangements in which the modules would be used to form the four tracking
+layers for BigBite.  The required active area for each layer is shown
+as a blue dashed line.  One Amplification Unit is removed in the
+diagram to show the U-V readout board. }
+\end{figure}
+
+The BigHAND (Hall A Nucleon Detector), shown in Fig.
+\ref{fig_BigHAND}, 
+is a large array of scintillators interspersed with seven half-inch
+thick iron converters
+which initiate hadronic showers.  A ``veto'' layer on the front face
+was intended to distinguish neutrons from protons.  (An alternative
+technique will be employed for this measurement, as will be discussed
+below.)  Heavy shielding (2 inches of lead and 1 inch of iron) reduces
+the electromagnetic rate in the scintillators.  
+
+The observed r.m.s. 
+spatial resolution
+of reconstructed hadronic showers for the GEn experiment \cite{GEn-proposal} 
+ is typically
+4.3 cm. vertically and
+7 cm. horizontally.  The detector will be located 17 meters from the
+target so the corresponding angular resolution will be 2.5 mr and 4 mr
+(0.15$^\circ$ and .24$^\circ$),
+respectively.  With the higher nucleon momentum of the present
+proposal, the resolution may be be somewhat improved, especially in
+the horizontal direction.  This excellent resolution will permit
+critical cuts on the direction of the recoil nucleon relative to the 
+$\vec q$-vector direction.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{figures/bighand.pdf}
+\end{center}
+\caption{\label{fig_BigHAND}The BigHAND (Hall A Nucleon Detector). 
+Iron converters initiate hadronic showers which are detected by
+the large scintillators. }
+\end{figure}
+
+The r.m.s. time-of-flight resolution of the overall detector array is
+approximately 400 ps\cite{Rob_F}.  Since the momenta of the nucleons
+of interest are sharply defined, this will allow tight timing cuts to
+reject accidentals.With a 17 meter flight path, this
+will allow clean rejection of low energy nucleons from break-up of nuclei.
+
+
+%\begin{table}
+%\begin{center}
+%\caption{Flight time for nucleon vs. photon for 17 m flight path\label{ToFs}}
+%\vspace{.2in}
+%{\begin{tabular}{|l|l|l|l|l|}
+%\hline
+%Q$^2$  & $\theta_N$  & P$_N$ & T$_N$ & T$_N-$T$_\gamma$ \\
+%(GeV/c)$^2$ & & (GeV/c) & (ns) & (ns)\\
+%\hline
+%3.5 &28.7$^\circ$ & 2.65&60.1&3.4\\
+%4.5 &21.7$^\circ$ & 3.2 &59.0&2.4\\
+%5.25  &22.7$^\circ$ & 3.6 &58.7&2.0\\
+%6  &18.7$^\circ$ & 4.0 &58.2&1.54\\
+%7  &18.7$^\circ$ & 4.6 &57.8&1.17\\
+%8  &14.9$^\circ$ & 5.1 &57.6&0.95\\
+%\hline
+%\end{tabular}}
+%\end{center}
+%\end{table}
+
+
+
+
+The efficiency predicted by simulation \cite{BH_simulation}  for 
+conversion and detection of neutrons and protons
+in the momentum range of interest is shown in Fig. \ref{np_eff}
+for a 20 MeV (electron equivalent) threshold.
+For neutrons, the predicted efficiency is seen to be over 70\% at the
+lowest $Q^2$ of interest and to rise to over 90\% at the highest
+$Q^2$.  The proton efficiencies are even higher.
+
+
+As described in the next section, a magnetic 'kick' will be used to
+distinguish protons from neutrons.
+We have identified a large-aperture magnet at Brookhaven National
+Laboratory which could be used for this purpose.  
+This same dipole will serve as the
+spectrometer magnet for the Super BigBite spectrometer.
+In its present
+configuration, this ``48D48'' magnet, shown in Fig. \ref{48D48} 
+has a 120 cm $\times$ 120 cm
+(48 in. $\times$ 48 in.) pole face with a 47 cm gap.
+
+The magnet will be modified so it can be positioned near 
+%$19^\circ$ with respect to 
+the beam line.  This will involve machining a hole through
+the return yoke to provide a low-field, iron-free region 
+for passage of the outgoing
+beam.  Asymmetric field coils will be needed to avoid interfering
+with the outgoing beam,  One possible solution,
+shown in Fig. \ref{layout}, involves the use of an existing
+standard-coil/booster-coil pair originally designed to drive half of a
+100 cm gap magnet.   Correcting coils would be used to compensate
+for beam steering due to any residual fields.
+
+The details of the yoke hole,
+field coils, field clamps, and correcting coils will be finalized using a
+magnetic field simulation program such as TOSCA.  The magnet
+%will be constructed so that the it 
+modifications will be designed such that the magnet 
+can also be used for the
+recently-approved high-Q$^2$ proton elastic cross section
+experiment\cite{E12-07-108}.  
+
+
+\section{Neutron/Proton Identification}
+
+If neutron/proton identification were based
+solely upon the response of the 'veto' layer, then
+contamination by mis-identification would be a significant problem.
+Experience from the GEn experiment\cite{GEn-proposal}  
+indicates that about 2.5\% of
+(independently identified) protons fail to fire the veto layer and would be
+mis-identified as neutrons \cite{Seamus}.  More troublesome is the fact that a
+significant fraction ($\approx 40\%$) of the detected neutrons
+actually fire the veto layer (because the hadronic shower is initiated
+in the front shielding).  Event topology could be used to more cleanly
+identify a subset of more unambiguous neutrons or protons but at the
+cost of a large reduction in detection efficiency.
+
+
+\begin{figure}
+\includegraphics[width=6. in]{np_eff.pdf}\\
+\caption{\label{np_eff}
+The predicted \cite{BH_simulation}  detection efficiency 
+of BigHAND is shown for neutrons
+(blue squares) and protons (red circles) as a function of the central nucleon
+momentum associated with each $Q^2$.
+}
+\end{figure}
+
+A much more clean separation of neutrons from protons can be made,
+without loss of efficiency, by introducing a dipole magnet to
+deflect the protons vertically.  If the initial direction of the
+nucleon could be accurately predicted, then only a small deflection
+would be needed to distinguish charged particles from neutral ones.
+In the case of quasi-elastic scattering, the
+measured $\vec q$-vector does not precisely predict the direction of the
+struck nucleon's final momentum since the initial momentum of the
+nucleon within the deuteron also contributes.  Using a reasonable
+model of the deuteron's wave-function\cite{Lomon}, the momentum
+distribution can be determined.  It is found that, with 95\% probability,
+the component of the nucleon's momentum along any chosen direction is
+less than 100 MeV/c.  A magnetic 'kick' of 200 MeV/c, then would
+separate quasi-elastic protons from neutrons at the 95\% level.  
+In the simplest analysis, a horizontal line could be defined across 
+the face of BigHAND (for any given event detected in BigBite) such that the struck nucleon
+would have a 95\% probability of falling below the line if the
+particle were a neutron and a 95\% probability of falling above the
+line if the particle were a proton.  
+
+The remaining 5\%
+mis-identification can still be accurately corrected by 
+using the 'veto' layer (and possibly event topology) to determine the actual
+%measuring the 
+distribution of neutron and proton events relative to the ideal
+positions they would have for elastic kinematics.  In particular the
+spread of the neutron distribution relative to the $\vec q$-vector can
+be investigated by
+studying the sample which do not fire the veto (and making a modest
+correction for protons).
+Also, since
+the initial momenta of the nucleons are vertically symmetric, the
+actual distributions of neutron and proton events can be empirically
+determined by observing the distributions of those neutrons which are
+displaced downward from the point predicted for elastic kinematics and
+those protons which are displaced upwards from the (magnetically
+deflected)  point predicted for elastic kinematics.  
+Either of these correction techniques 
+should allow the systematic errors due to neutron/proton
+mis-identification to be reduced to well below 1\%, and the
+comparison of the two techniques should allow the confident
+determination of this contribution to systematic error.
+
+%The 200 MeV/c kick required to separate quasi-elastic protons from
+%neutrons can be achieved by applying a dipole field, near the beginning
+%of the flight path, having a field integral of $\int{B dl}\approx .85$ T$\cdot$m.
+%We have identified a large-aperture magnet (a 48D48 spectrometer
+%magnet from BNL) which could serve the purpose.  The recently-approved
+%high-Q$^2$ proton elastic cross section experiment\cite{E12-07-108}
+%will make use of the same magnet.  Some modification of the flux
+%return yoke of the magnet will be needed to allow it to be placed
+%close to the beam.
+
+
+%48D48 
+The 200 MeV/c kick required to separate quasi-elastic protons from
+neutrons can be achieved by applying a dipole field, near the beginning
+of the flight path, having a field integral of 
+$\int{B dl}\approx 0.85$ T$\cdot$m.
+
+For high Q$^2$, a 200 MeV/c kick would give a relatively small spatial
+separation on the BigHAND detectors.  A proportionally larger field
+will be used to ensure an adequate displacement. Table \ref{field_tab}
+gives the field integrals assumed in the Monte Carlo simulations
+presented below.  Also given are the resulting mean separations
+between the undeflected neutrons and the deflected protons.  For low
+Q$^2$ a larger deflection not be an advantage as it would deflect
+protons out of BigHAND acceptance so they would be lost.  (See the
+discussion of fiducial cuts below.)  
+
+An alternate technique may be employed, at low Q$^2$, to use the 
+deflection magnet to achieve neutron/proton identification.   This involves
+making two sets of measurements, one with the field on and and one
+with the field off.  The field-on measurements would be used only to
+measure neutron-coincident events, 
+indicated by the proximity of the BigHAND hit to the
+position expected based on the $\vec{q}$-direction.  The field-off measurement
+would be used to measure the sum of the  neutron-coincident and
+proton-coincident events.
+The number of proton coincidences would then be determined as the difference
+between these measurements. There are two advantages of this technique over the
+simultaneous measurements described above.  The BigHAND
+acceptance is guaranteed to be identical for both types of event since
+they are both detected in the same region of BigHAND, with no deflection.
+Also there is no loss in acceptance resulting from the use of a 
+strong dipole field so the separation can be improved by using as
+strong a field as practical.  The apparent disadvantages of the technique are
+that more beam time is needed to make the two separate measurements
+and that there is a loss in statistical accuracy for the proton-tagged
+events due to error propagation.  Both of these disadvantages are
+negligible for the very high coincidence rates which will occur for
+the low-Q$^2$ points.  The choice between these techniques for 
+low-Q$^2$ measurements will be based on further simulation.  For the
+higher-Q$^2$ points, simultaneous measurements present a clear
+advantage in rates.  For the purpose of the discussion and 
+simulations presented in section \ref{inelastic}
+here, simultaneous measurement of proton-coincident and
+neutron-coincident events have been assumed.
+
+
+\begin{table}
+\begin{center}
+\caption{Field strength for deflection dipole is given for each
+  of the proposed kinematics.  Also given are $\Delta_{\mbox{pn}}$,
+  the separation on BigHAND between an undeflected neutron and a
+  deflected proton having the same $\vec{q}$-vector, and
+  $P_{\mbox{kick}}$, the effective vertical momentum 'kick' given by
+  the dipole. \label{field_tab}}
+\vspace{.2in}
+{\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Q$^2$ (GeV/c)$^2$&3.5 & 4.5& 6.0& 8.5& 10.& 12.& 13.5& 16.& 18.\\
+\hline
+$\int B dl$ (T-m)&0.85&0.85&0.85&0.91&1.05&1.24&1.37&1.60&1.88\\
+\hline
+$\Delta_{\mbox{pn}}$(cm)&129&107&85&68&68&68&68&68&68\\
+\hline
+$p_{kick}$(MeV/c)&200&200&200&214&247&292&322&376&442\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+% Hmmmm... 6.5 M file... got to find something smaller!
+%\includegraphics[width=8.5 in,angle=90]{d12-m-2408-5-1.jpg}\\
+%pdflatex doesn't know about tif
+%\includegraphics[width=8.5 in,angle=90]{d12-m-2408-5-1.tif}\\
+\includegraphics[width=6. in,angle=0]{48D48_photocopy.pdf}\\
+\caption{\label{48D48}
+Assembly diagram for generic 48D48 spectrometer magnet. Magnet is shown mounted
+for horizontal bend-plane but will be used for vertical bend plane.
+Coil configuration shown is that used at BNL.
+}
+\end{figure}
+
+\section{Acceptance and Fiducial Cuts}
+
+
+
+\label{fiducials}
+
+Here we discuss event-selection cuts which will be applied to
+ensure that the
+systematic errors due to acceptance losses remain very small.
+
+
+In the case of elastic kinematics (applicable for the calibration
+reactions discussed in the next section) there is a direct mapping of
+scattered-electron direction to recoiling-nucleon direction.  The
+acceptance of both BigBite and BigHAND can be conveniently expressed
+in terms of the electron-scattering angles.  The solid angle for
+acceptance of coincidence events is then found from the overlap of
+the acceptance of the two detector systems.  This is shown,
+for the nine kinematic points, in 
+Fig. \ref{Theta-Phi-accept} with the full geometric acceptance of
+BigBite and a reduced acceptance of BigHAND, as discussed below.
+At the lowest-Q$^2$ points, BigHAND is a limiting aperture and
+fiducial cuts will be needed to restrict events for which the nucleon
+misses it.  At large Q$^2$ the acceptance is limited by BigBite and
+the coincident events fall in a small region at the center of BigHAND.
+
+
+\begin{figure}
+\includegraphics[width=2.in]{figures/acceptance_32_del_0.jpg}\hfill
+\includegraphics[width=2.in]{figures/acceptance_30_del_0.jpg}\hfill
+\includegraphics[width=2.in]{figures/acceptance_36_del_0.jpg}\\
+\includegraphics[width=2.in]{figures/acceptance_42_del_0.jpg}\hfill
+\includegraphics[width=2.in]{figures/acceptance_56_del_0.jpg}\hfill
+\includegraphics[width=2.in]{figures/acceptance_52_del_0.jpg}\\
+\includegraphics[width=2.in]{figures/acceptance_53_del_0.jpg}\hfill
+\includegraphics[width=2.in]{figures/acceptance_66_del_0.jpg}\hfill
+\includegraphics[width=2.in]{figures/acceptance_68_del_0.jpg}\\
+\caption{\label{Theta-Phi-accept}
+The acceptance of BigBite as a function of electron scattering angles
+($\theta,\phi$) is shown in red, the acceptance of
+BigHAND for elastically scattered neutrons {\em as a function of the
+electron scattering angles} is shown in blue.  Overlap
+(corresponding to coincident acceptance for elastic events) is shown
+in green.  
+The acceptance of BigHAND used for the plot is a subset for which
+an elastic proton would also fall in the active area.
+The plots 
+correspond to the kinematics of the experiment (see Table
+\ref{Kin_table}).  From left to right, the plots represent: Upper
+row, $Q^2=3.5$, 4.5, 6.0; Middle row, $Q^2=8.5$, 10., 12.; 
+lower row, $Q^2=13.5$, 16., 18. (GeV/c)$^2$.}
+\end{figure}
+
+%\subsection{Fiducial Cut on $\vec{q}}
+
+For quasi-elastic events, the $\vec q$-vector can be reconstructed  
+based on the scattered-electron momentum and direction measured by
+BigBite. 
+A fiducial cut can
+be placed on the direction of $\vec q$ to choose the central direction
+of the scattered nucleons.  While Fermi motion will widen the image,
+the ideal case of elastic scattering can be used to map the acceptance
+to a position distribution of neutrons on BigHAND (and a similar
+proton distribution, taking into account the 
+deflection by the dipole magnet).
+The green overlap regions in
+Fig. \ref{Theta-Phi-accept}
+represent the angular region of the BigBite acceptance for
+which scattering at elastic kinematics would send a nucleon into the
+BigHAND acceptance regardless whether it was a neutron or proton.
+%For the purpose of
+%defining this fiducial region, the effective size of the BigHAND
+%detector was reduced from the
+%full geometric acceptance, as will now be described.  
+Potential systematic errors are greatly
+reduced by {\em using the same fiducial region for both neutron-coincident
+and proton-coincident measurements}.  The `image' of the fiducial
+region projected onto BigHAND will differ  for protons and neutrons
+because of the vertical kick given to the protons by the dipole
+magnet.  To first order, the effect of this offset can be prevented
+from introducing a difference in acceptance by using a reduced
+fiducial region. 
+To determine whether a particular $(\theta,\phi)$ point is within the
+fiducial, the direction and magnitude of the corresponding $\vec{q}$
+for elastic scattering are determined.  The trajectories are evaluated
+for both a neutron and a proton with that momentum.  Only if both such
+particles would fall in the active region of BigHAND is the angular
+point within the fiducial.
+
+As a result of the fiducial cut, the neutron image for the accepted
+elastic events would leave an empty strip at the top of the BigHAND 
+acceptance.   The size of this strip is
+determined by the shift in the proton image relative to the neutron
+image.
+Similarly the elastic protons occupy the top of BigHAND acceptance, 
+leaving an unoccupied strip at the bottom of acceptance.  The size of the
+strip follows from the vertical kick given to the 
+protons by the dipole, the nucleon momentum, $p_N$, and the distance, $L$ from the
+target to BigHAND.  While quasi-elastic protons (and neutrons) are not
+guaranteed to remain within the acceptance, the matching of the 
+acceptance losses is improved by this reduced fiducial cut.
+Reducing the size of BigHAND by this strip of size
+$D=\frac{\Delta p}{p_N}L$ at the top when calculating the elastic
+neutron acceptance gives the BigHAND coverage shown in Fig. 
+\ref{Theta-Phi-accept}.
+
+
+
+%\begin{table}
+%\begin{center}
+%\caption{
+%Top rows give the fraction, $f_{\mbox{\scriptsize fid}}$, of
+%quasi-elastic electrons in BigBite which pass the fiducial cut.  
+%Bottom rows give calculated probability, $P_{\mbox{\scriptsize coinc}}$
+%for a quasi-elastic electron which passes 
+%the fiducial cut, that the corresponding nucleon will
+%fall within the BigHAND active area.   
+%For the lowest $Q^2$ kinematic points, results for several
+%fiducial cuts are presented with 'safety margin' set by $\delta$.
+%For convenience, lower rows also give $\mathcal{F}_{\mbox{\scriptsize
+%acc}}(\delta)=f_{\mbox{\scriptsize fid}}(\delta)/f_{\mbox{\scriptsize
+%fid}}(0)$, the fraction of events surviving a cut given by $\delta$.
+%\label{coincidence-prob}}
+%\vspace{.2in}
+%{\begin{tabular}{|ll|ll|l|l||l|}
+%\hline
+%$Q^2=$&3.5& &4.5& 6.0&8.0(GeV/c)$^2$&$\delta$(MeV/c)\\
+%\hline
+%$f_{\mbox{\scriptsize fid}}$(\%)&&$f_{\mbox{\scriptsize fid}}$(\%)&&$f_{\mbox{\scriptsize fid}}$(\%)&$f_{\mbox{\scriptsize fid}}$(\%)& \\
+%67.2&&78.0&&87.8&98.8&0\\
+%59.9&&74.0&& & &20\\
+%50.2&&68.6&& & &40\\
+%39.4&&61.7&& & &60\\
+%28.5&&52.3&& & &80\\
+%17.7&&41.0&& & &100\\
+%8.1&&28.9&&  & &120\\
+%\hline
+%\hline
+%$P_{\mbox{\scriptsize coinc}}$(\%)&$\mathcal{F}_{\mbox{\scriptsize acc}}(\delta)$(\%)&
+%$P_{\mbox{\scriptsize coinc}}$(\%)&$\mathcal{F}_{\mbox{\scriptsize acc}}(\delta)$(\%)&
+%$P_{\mbox{\scriptsize coinc}}$(\%)&$P_{\mbox{\scriptsize coinc}}$(\%)&\\
+%\hline
+%86.5&100&93.0&100&95.5&97.5&0\\
+%90.4&89.&94.1&95.&&&20\\
+%92.9&75.&95.3&88.&&&40\\
+%94.7&59.&96.4&79.&&&60\\
+%96.0&42.&97.1&67.&&&80\\
+%96.5&27.&98.1&53.&&&100\\
+%97.0&12.&98.4&37.&&&120\\
+%\hline
+%\end{tabular}}
+%\end{center}
+%\end{table}
+
+
+A further refinement will be used 
+for the two lowest-$Q^2$ kinematic points,
+to reduce systematics.  For 
+%those kinematics, especially 
+the $Q^2$=3.5 and 4.5 (GeV/c)$^2$ points, the combined 
+elastic acceptance would be largely determined by
+BigHAND if the full BigBite acceptance shown in Fig.
+\ref{Theta-Phi-accept} were used.   
+So elastic events selected by such a fiducial would have
+scattered nucleons extending to the edge of the BigHAND acceptance.
+With the addition of Fermi motion, the quasi-elastic events may be
+expected to have a larger loss, by falling outside the BigHAND
+acceptance, than would be the case at the other kinematic points.
+Monte Carlo simulation (described in section \ref{QE-simulation})
+confirms that the acceptance losses are larger at these kinematics,
+amounting to 14.4\% and 9.4\% for the lower and higher Q$^2$,
+respectively.  To the extent that these acceptance
+losses are equal for protons and neutrons, they cancel in the ratio
+$R''$ (Eqn. \ref{r-double-prime-eqn}).  Systematic errors may arise,
+however, due to difference in the acceptance-corrections resulting from
+effects such as horizontal steering by the dipole's field, 
+multiple-scattering, or edge effects in nucleon detection efficiency.
+It is therefore prudent to reduce the acceptance corrections where
+practical.  This can be effected by choosing a new smaller fiducial, 
+based on BigBite measurements, by demanding that the $\vec q$ vector
+point towards a 
+further-reduced portion of the BigHAND face.   A margin of
+safety, $d$, is excluded around all edges.
+This defines a smaller 'active' area of BigHAND to be used in defining
+the fiducial cut.
+%This is represented graphically in
+%Fig. \ref{BB-with-BH-superimposed} which shows the BigBite acceptance
+%(in local coordinates) and superimposed images of the trajectories
+%which would give elastic events at the edge of BigHAND (green) or at the edge
+%of such a safety margin(red).  
+If $d$ is chosen as $d=\frac{\delta}{p_N}L$
+then, to first order, quasi-elastic coincidences with the electron
+within the fiducial cut will be lost only if the struck nucleon had a
+component of momentum of at least $\delta$ directed towards the edge
+of BigHAND.  
+%Table \ref{coincidence-prob}
+%gives the resulting fractional acceptance, $P_{coinc}$, in BigHAND 
+%for various choice of $\delta$.
+In addition, to match neutron and proton acceptances, events are
+ rejected if {\em either} a neutron or a proton with the corresponding 
+$\vec{q}$ would pass near the top or bottom of BigHAND, within a
+ distance corresponding to $\delta=100$ MeV/c.
+ The cost of applying this tighter
+fiducial cut is a smaller fractional acceptance for quasi-elastically
+scattered electrons.
+%, also summarized in Table \ref{coincidence-prob}.
+The rate calculations in this proposal are based upon fiducial cuts
+corresponding to $\delta=80$ MeV/c for $Q^2=$3.5 (GeV/c)$^2$ and 
+$\delta=40$ MeV/c for the  $Q^2=$4.5.
+With these cuts, the
+estimated loss of acceptance due to Fermi motion will be less than 5\%
+at all kinematic points.  This limits the potential for systematic errors
+due to the difference in the loss of protons compared to neutrons.
+The cost of these cuts is a reduction by 60\% in the counting rate at 
+the lowest $Q^2$ point and by 17\% at  $Q^2=$4.5 (GeV/c)$^2$.
+Since the count rates are very high at these kinematic points, the
+loss of acceptance is justified by the decreased sensitivity to
+systematic error.
+
+
+%\begin{figure}
+%%too many dots!!
+%\includegraphics[width=3.in]{figures/BBwK1.jpg}
+%\includegraphics[width=3.in]{figures/BBwK2.jpg}\\
+%\includegraphics[width=3.in]{figures/BBwK3.jpg}
+%\includegraphics[width=3.in]{figures/BBwK4.jpg}\\
+%\caption{\label{BB-with-BH-superimposed}
+%The acceptance of BigBite (rectangle) in terms of the horizontal ($y$)
+%and vertical ($x$) position of a track at the entrance.  Also shown is
+%the locus of elastically scattered electrons which would result in a
+%nucleon a) at the edge of the BigHAND acceptance (green) and b) at the edge
+%of the reduced acceptance corresponding to a safety margin at the edge
+%of BigHAND (red).  The part of the BigBite acceptance within this region
+%corresponds to the fiducial cut for elastic kinematics.  Dots show
+%position at entrance of BigBite for simulated quasi-elastic electrons which
+%satisfy the fiducial cut.
+%The four plots
+%correspond to four kinematic points (see Table \ref{Kin_table}): Upper
+%left, $Q^2=3.5$, upper right, $Q^2=4.5$, lower left, $Q^2=6.0$, lower
+%right, $Q^2=8.0$ (GeV/c)$^2$
+%}
+%\end{figure}
+
+
+
+%Table \ref{final-acceptance} gives the combined solid angle
+%$\Delta\Omega$ of BigBite
+%and BigHAND for elastic events at several kinematic points.
+%Also given (based on the quasi-elastic Monte Carlo described in section
+%\ref{QE-simulation}) are  $f_1$, the fraction of events for which the electron
+%and nucleon still fall into the combined acceptance once Fermi
+%motion is included and $f_2$, the fraction of those events which would
+%pass the fiducial cut.  The product $f_1 f_2 \Delta \Omega$ can be
+%treated as an effective solid angle for accepting quasi-elastic events
+%with the fiducial cut.  This is intended only to give an estimate of
+%the size of these separate effects.  In final rate estimates, these
+%effects are not treated as separate factors but are included
+%event-by-event in the Monte Carlo integration of cross section over 
+%acceptance.  For convenience, the last line of
+%Table \ref{final-acceptance}  summarizes the
+%motivation for the fiducial cuts by giving the 
+%the fraction, $P_{coinc}$, of quasi-elastic events within the fiducial cut for 
+%which the scattered nucleon also falls
+%within the BigHAND acceptance.  The resulting acceptance fraction $P_{coinc}$
+%are seen to be near unity and are expected to be nearly equal for neutrons
+%and protons.  ($P_{coinc}$ is also given in Table
+%\ref{coincidence-prob} but here it is given for the selected fiducial cuts.)
+
+
+%\begin{table}
+%\begin{center}
+%\caption{Combined acceptance of BigBite and BigHAND for elastic
+%events and for quasi-elastic events with fiducial cut.  The quantities
+%$f_1$ and $f_2$ are defined in the text.
+%\label{final-acceptance}}
+%\vspace{.2in}
+%{\begin{tabular}{|l|l|l|l|l|}
+%\hline
+%$Q^2$ (GeV/c)$^2$&3.5& 4.5& 6.0&8.0\\
+%\hline
+%$\Delta\Omega_{el}$ (msr)&39.6&53.6&53.6&53.2\\
+%$f_1$ (\%)&78.6&87.2&92.0&96.3\\
+%$f_2$ (\%)&28.5&65.7&87.8&98.8\\
+%$\Delta\Omega_{eff}=f_1f_2\Delta\Omega_{el}$ (mSr)&8.86&32.1&43.1&50.6\\
+%\hline
+%\hline
+%$P_{coinc} $ (\%)&96.0&95.3&95.5&97.5\\
+%\hline
+%\end{tabular}}
+%\end{center}
+%\end{table}
+
+
+\section{Nucleon Detection Efficiency Calibration}
+While the efficiency of electron-detection cancels in the ratio,
+$R''$(equation \ref{r-double-prime-eqn}), that is not true for the neutron or proton detection
+efficiencies.  The efficiency of BigHAND's detection of these
+particles could be calculated in Monte Carlo, as has been done for
+lower energies\cite{BH_simulation}, but a reliable determination of
+the efficiency at the percent level will require calibration with
+tagged sources of known protons and neutrons over part of the
+kinematic range.  As shown in Fig. \ref{np_eff}, the efficiency is
+large and quite constant for Q$^2 > 8$ (GeV/c)$^2$.  Below that,
+however it changes rapidly as a function of nucleon momentum.  In that
+region, 
+the calculation of efficiency is likely to be more sensitive to the
+details of the detector description.  It is important to have reliable
+efficiency calibrations there.  
+
+Fortunately the
+efficiency may be expected to be quite stable since it is largely
+determined by the mass distribution in the detector and the resulting
+probability of hadronic shower initiation.  Factors, such as gain,
+threshold, and light yield have a relatively minor effect since most showers
+produce large numbers of secondaries and so 
+their total light output is well above threshold.
+This stability is demonstrated in Fig. \ref{np_ratio} which shows
+the {\em ratio} of the efficiency found \cite{BH_simulation}  
+for a threshold of 20 MeV (electron equivalent) to that found with a
+threshold of only 5 MeV (electron equivalent).  Even at the lowest $Q^2$ of
+interest, 3.5 (GeV/c)$^2$, such a huge change in threshold would result in only
+$\approx 10$\% change in efficiency.
+This is in contrast to detection of
+low energy neutrons in scintillator, for which the detection
+efficiency is a strong function of effective threshold.  Furthermore,
+since BigHAND's detection is based purely on scintillation, it is
+immune to the rapid changes in efficiency and background which can
+more typically occur in wire chambers.
+Because the efficiency will be stable, it is sufficient to have separate
+calibration runs, rather than simultaneously taking calibration data
+by having the calibration target in place
+along with the deuterium target.  
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.5 in]{np_ratio.pdf}\\
+\end{center}
+\caption{\label{np_ratio}
+The predicted \cite{BH_simulation}  {\em ratio} of the detection efficiency 
+of BigHAND with a threshold of 20 MeV(ee) compared to a threshold of 5
+MeV(ee) is shown for neutrons
+(blue squares) and protons (red circles) as a function of the central nucleon
+momentum associated with each $Q^2$.  (Displacement of individual
+points from the overall curve is due to finite
+Monte Carlo statistics in the simulation.)
+}
+\end{figure}
+
+Efficiency measurements, as described below, are planned for the three
+lowest kinematic settings, Q$^2 = 3.5$, 4.5 and 6.0 (GeV/c)$^2$. In
+addition, the analysis of this data may benefit from calibration
+measurements planned as part of the proposed GEN experiment
+\cite{new_GEN} which plans to make similar efficiency measurements at 
+Q$^2 = 5$, 7 and 9.5 (GeV/c)$^2$. 
+
+For both protons and neutrons, the basis of the calibrations is a
+cleanly identified reaction on the proton which produces a 'tagged'
+nucleon with a known momentum vector, (p(e,e$'$)p for proton
+calibration and p($\gamma$,$\pi^+$)n for neutron calibration).  
+BigHAND is then searched for
+the nucleon near the expected position and the detection efficiency is
+determined as the ratio of the number of tagged events for which the
+nucleon is found to the total number of tagged events.
+
+\subsection{BigHAND Calibration Coverage}
+
+%As will be seen below, the neutron calibration, like the proton 
+%calibration will be done with essentially elastic-scattering kinematics.
+The $p(e,e'p)$ proton-calibration reaction and the $p(\gamma,\pi^+n)$
+neutron calibration reaction have essentially the same
+(elastic-scattering) kinematics.
+A disadvantage of the use of elastic kinematics for calibration is
+that the acceptance of BigBite for electrons maps into a well-defined
+corresponding angular range on the BigHAND detector face 
+(see Fig. \ref{calzone1}).  Regions
+beyond that, which would not be illuminated by calibration particles, may
+still be of interest for quasi-elastic events since the particles are
+then smeared beyond the strict elastic kinematic boundaries by the nucleon's
+initial momentum.  To reduce the impact of the larger `footprint' of
+quasi-elastic events, calibration data will
+be taken at two positions of the BigBite spectrometer so the face of
+BigHAND will be more widely illuminated by calibration nucleons.
+This expanded calibration region is illustrated in Fig. \ref{calzone2}
+which also shows the distribution of quasi-elastic nucleons coincident
+with electrons within the fiducial region selected by  BigBite.
+(The simulation is described in section \ref{QE-simulation}.) Table
+\ref{calzone-table} shows the predicted fraction of quasi-elastic coincidence
+events for which the detected nucleon will fall inside this
+ calibration region. While the use of two calibration positions is not
+ required at the Q$^2$=3.5 (GeV/c)$^2$ point, it affords an
+ excellent opportunity to illuminate the entire BigHAND face with
+ calibration events.  For the Q$^2$=6.0 (GeV/c)$^2$ point, further 
+improvement could be made in the fraction of quasielastic events within
+the calibrated region by using three BigBite positions (91.5\%
+calibrated) or even four BigBite positions (93.1\% calibrated) but 
+the results obtained with two positions (83.4\% calibrated) are
+sufficient.  The extrapolation of the calibration at this setting will
+be included in the systematic error analysis.
+ As described below, extrapolation of lower-momentum 
+calibration data will also be used to estimate efficiencies for those
+events which are outside the elastic-calibration region at the
+momentum of interest.
+
+Calibration measurements will be made only at the three kinematic points
+shown in Fig. \ref{calzone2} and listed in Table \ref{calzone-table}.
+The systematic errors due to the extrapolation of the
+nucleon detection efficiencies can be conservatively estimated to
+be under 2\%.
+ The hadronic cross sections change quite slowly in the
+region in which these interpolations will be made (above the nucleon
+momenta indicated by arrows in  Fig.\ref{pdg-sigmann}), as a result of which the estimated
+efficiencies shown in Fig. \ref{np_eff} change only moderately in the
+regions of interest.  The method of interpolation is described in the next paragraph.
+
+\begin{table}
+\begin{center}
+\caption{
+Fraction of detected quasi-elastic nucleons 
+which fall inside the region calibrated
+(at the same kinematic point) with a) a single BigBite position for
+calibration or b) two off-set calibration positions.
+\label{calzone-table}}
+\vspace{.2in}
+{\begin{tabular}{|l||l|l|}
+\hline
+$Q^2$&a) Fraction (\%) in&b) Fraction (\%) in\\
+(GeV/c)$^2$&Single Cal. Zone&Double Cal. Zone\\
+\hline
+3.5& 97.7  &100.\\
+4.5& 82.3  &99.7\\
+6.0& 56.9  &83.4\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.2in]{figures/bhek32cz.jpg}\hfill
+\includegraphics[width=3.2in]{figures/bhek30cz.jpg}\\
+
+\vspace{.35in}
+\includegraphics[width=3.2in]{figures/bhek36cz.jpg}
+
+\vspace{.35in}
+\caption{\label{calzone1}
+The face of the BigHAND detector is shown (rectangle) with a
+superimposed blue outline of the region covered by elastically scattered
+(calibration) nucleons for which the corresponding electron falls within the
+acceptance of BigBite when BigBite is positioned at the
+nominal scattering angle.  For clarity the image for neutrons and
+protons are shown side-by-side rather than superimposed.  
+Note that positive-x is downward, so the images are inverted.
+ Dots indicate
+positions of neutron (black) or proton (red) hits from simulated
+quasi-elastic events subject to the fiducial cut.
+The three plots
+correspond to the kinematic points at which calibration measurements
+will be made: 
+Top left, $Q^2=3.5$; Top right, $Q^2=4.5$; Bottom, $Q^2=6.0$
+(GeV/c)$^2$.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.2in]{figures/bhek32cz2.jpg}\hfill
+\includegraphics[width=3.2in]{figures/bhek30cz2.jpg}\\
+
+\vspace{.35in}
+\includegraphics[width=3.2in]{figures/bhek36cz2.jpg}
+
+\vspace{.35in}
+% too many dots!!
+%\includegraphics[width=2.8in]{figures/bhek32cz2.jpg}
+%\includegraphics[width=2.8in]{figures/BHwK2.jpg}\\
+%\includegraphics[width=2.8in]{figures/BHwK3.jpg}
+%\includegraphics[width=2.8in]{figures/BHwK4.jpg}\\
+%\includegraphics[width=6in,angle=-90]{figures/framescalzones.eps}
+\caption{\label{calzone2}
+The face of the BigHAND detector is shown (rectangle) with a
+superimposed blue outline of the region covered by elastically scattered
+(calibration) nucleons for which the corresponding electron falls within the
+acceptance of BigBite when BigBite is positioned at two planned
+calibration angles.  For clarity the images for neutrons and for
+protons are shown side-by-side rather than superimposed.  
+Note that positive-x is downward, so the images are inverted.
+ Dots indicate
+positions of neutron (black) or proton (red) hits from simulated
+quasi-elastic events subject to the fiducial cut.
+The three plots
+correspond to the kinematic points at which calibration measurements
+will be made: 
+Top left, $Q^2=3.5$; Top right, $Q^2=4.5$; Bottom, $Q^2=6.0$
+(GeV/c)$^2$.}
+\end{center}
+\end{figure}
+
+
+
+Those 
+regions of BigHAND which are not directly calibrated at a particular nucleon
+momentum will be illuminated by the lower momentum
+calibration nucleons at other kinematic points.  In this case
+Monte Carlo simulation, tuned using the lower energy measurements, will
+be used to extrapolate the efficiency calibration to the momentum of
+interest.  Essentially, the observed efficiency at lower momentum can
+be used to determine an effective number of interaction lengths in
+sub-regions of the detector.  The effective thickness can then be
+scaled to higher momentum by taking into account the known variation
+of hadronic cross-sections with momentum and a new efficiency can be 
+predicted.  This is a modest extrapolation
+since the hadronic cross sections change slowly as the nucleon
+momentum changes over the range from 2.6 to 10.5 GeV/c (see Fig.
+\ref{pdg-sigmann}).
+This results in the slow variation in BigHAND's efficiency seen in
+Fig. \ref{np_eff}.  The efficiency variation is expected to be quite modest
+over the entire range of interest ($3.5\le Q^2\le 18.0$ (GeV/c)$^2$)
+and to be almost constant at the highest $Q^2$.
+%Table \ref{calzone-table} shows that 
+%$\approx$95\% or more of the quasielastic events are expected to 
+%fall within the calibrated region except at the $Q^2=$8.0 (GeV/c)$^2$
+%point for which 11.4\% of events will require the use of an
+%extrapolated calibration.  
+Since Fig. \ref{np_eff} shows the
+efficiency to be changing very slowly in this kinematic range
+(Fig.  \ref{pdg-sigmann} shows the nucleon cross-section 
+to be essentially flat for the corresponding
+momentum ($p_N>$4.3 GeV/c).), this extrapolation is expected to have
+small uncertainty. 
+%The same technique will be used to interpolate
+%efficiencies for the two kinematic points for which calibration data
+%will not be taken.  The effective thickness will be determined for
+%both the higher and lower calibration points, and will be
+%interpolated. 
+Despite the large size of BigHAND, a portion (one tenth)
+of its structure could be brought to the tagged neutron
+beam at Dubna for calibration.  This could  provide a cross check of the 
+Monte Carlo simulation of momentum-dependence of efficiency at high
+nucleon momentum.
+
+%This is confirmed in Fig. \ref{np_eff} which
+%shows simulated neutron and proton efficiencies to change slowly and
+%to be almost constant at $Q^2=8$ (GeV/c)$^2$.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{figures/pdg.pdf}
+\end{center}
+\caption{\label{pdg-sigmann}
+Total cross section \cite{PDG} for proton-proton (red) 
+and proton-neutron(blue).  Some
+points with large errors have been suppressed.  Green arrows indicate
+the central nucleon momenta for the three kinematic points at which
+calibration data will be taken.  }
+\end{figure}
+
+%\begin{figure}
+%\includegraphics[height=6in,angle=-90]{np_eff.pdf}
+%\caption{\label{np_eff}
+%Simulated efficiency of BigHAND for thresholds of 5 or 20 MeV
+%(electron equivalent).}
+%\end{figure}
+
+\subsection{Proton Calibration}
+
+Calibration of the detection efficiency for protons can be done
+straightforwardly, using a hydrogen target in place of the deuterium
+target and using BigBite to select elastic-scattering events.  The
+recoil elastic protons have the same momentum as the protons at the
+center of the quasi-elastic peak, and so are ideal for calibrating the
+efficiency.  
+%This kinematic match is shown in Fig. \ref{momdist_a} and
+%\ref{momdist_b} where
+%BigHAND is divided into strips of polar angle and the momentum spectrum of
+%quasi-elastic nucleons in each strip is overlaid with the spectrum of
+%calibration nucleons.
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=5in]{figures/momdistr1.pdf}
+%\end{center}
+%\caption{\label{momdist_a}
+%For the lowest $Q^2$ kinematic point, the kinematic overlap of the
+%(elastic-kinematics) calibration nucleons with the quasi-elastic
+%nucleons of interest is shown.  The BigHAND acceptance is divided into
+%ten strips in polar angle.  Each plot represents the nucleon momentum spectrum
+%falling on a strip (blue) and the momentum spectrum of calibration
+%nucleons reaching that strip (red).  Note that zero is suppressed on
+%the horizontal scale.  Horizontal scale on each plot is 2.4 to 3.0
+%GeV/c. The width of the quasi-elastic nucleon momentum
+%distribution is seen to be modest and reasonably 
+%centered on the calibration data.
+%}
+%\end{figure}
+
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=6in]{figures/momdistr4.pdf}
+%\end{center}
+%\caption{\label{momdist_b}
+%Same as \ref{momdist_a}, but for the highest $Q^2$ kinematic point.
+%Horizontal scale on each plot is 4.6 to 5.6 GeV/c.
+%}
+%\end{figure}
+
+
+Clean selection of tagged protons requires that BigBite
+be able to distinguish elastic events with negligible
+contamination from inelastic events, for which the 'tagged' nucleon
+might be absent or at a significantly different angle than
+predicted.  Figure \ref{fig-elastic-inelastic-kin} shows the
+kinematic locus for elastic scattering kinematics (in the region of each of the
+highest-Q$^2$ kinematic point for which calibration measurements are
+planned) and the locus of the scattered-electron
+kinematics for pion-production threshold.  The two are seen to be
+cleanly separated in both angle and energy.  The bars superimposed on
+the plots indicate the anticipated resolution of BigBite in angle and energy.
+
+As discussed above, the coverage of the calibration will be
+extended across a wider region of BigHAND by taking calibration data
+in two BigBite positions, as represented in Fig. \ref{calzone2}.
+
+
+\begin{figure}
+\begin{center}
+%\includegraphics[width=2.8in]{figures/single_arm_1.jpg}
+%\includegraphics[width=2.8in]{figures/single_arm_2.jpg}\\
+%\includegraphics[width=2.8in]{figures/single_arm_3.jpg}
+%\includegraphics[width=3.4in]{figures/single_arm_4.jpg}\\
+\includegraphics[width=3.4in]{figures/single_arm_36.jpg}\\
+\end{center}
+\caption{\label{fig-elastic-inelastic-kin}
+%\vspace{.25 in}
+Scattered electron energy versus angle for elastic scattering from the
+nucleon (green) and for pion-production threshold (red).  The bars
+indicate the BigBite resolution in momentum and angle.  
+The plot shows the clean kinematic separation at the $Q^2=6.0$
+(GeV/c)$^2$ kinematic point.  The separation is even cleaner at the other
+kinematics for which calibration measurements are planned.}
+\end{figure}
+
+
+
+\subsection{Neutron Calibration}
+
+\label{n-cal}
+A clean {\it in situ} source of tagged neutrons at essentially 
+elastic-scattering kinematics 
+ can be generated using a radiator to produce real photons
+which, in turn,  produce neutrons through the p($\gamma,\pi^+$)n reaction on a
+Hydrogen target.  The calibration for each kinematic setting 
+will be done at the same two BigBite
+settings discussed above for proton efficiency calibration.
+Since the kinematics of the reaction are essentially those of elastic
+scattering, the overlap of the calibration neutron spectrum with the
+quasielastic spectrum is the same.
+% as that shown in  Fig. \ref{momdist_a} and \ref{momdist_b}.
+  
+The end-point method can be used to select the
+reaction of interest and exclude multi-body final states.  In
+particular, for each beam energy, the maximum possible $\pi^+$
+momentum for three-body p($\gamma,\pi^+$)$\pi$N reaction 
+sets the scale of the lowest $\pi^+$
+momentum which can safely be used to select the desired two-body channel.
+Clear identification of the exclusive p($\gamma,\pi^+$)n reaction will
+be ensured by requiring that the $\pi^+$ momentum be at least 1.5\%
+above the kinematic limit for the three-body channel. 
+With 0.5\% momentum resolution in BigBite, the 1.5\% gap between the
+lowest $\pi^+$ momentum used and the highest momentum from
+$2\pi$-production provides an adequate safety margin. Production of
+$2\pi$ background at this kinematic limit will be negligible both
+because it requires photons at the bremsstrahlung end point and
+because the phase-space vanishes.  This minimum
+acceptable $\pi^+$ momentum, in turn sets the limit for the minimum
+usable photon energy and the part of the bremsstrahlung end-point
+region which will actually be used for calibration events.  Table \ref{brem-end-point} shows
+the region of the photon end point which can be used for neutron
+calibration at each kinematic setting.  For the lowest $Q^2$ point,
+for example, the three-body reaction cannot produce pions above 2.453
+GeV.  For safety, pions will be identified as coming from the two-body
+calibration reaction only if they lie between 2.494 GeV and the
+kinematic limit of 2.54 GeV.
+
+
+\begin{table}
+\begin{center}
+\caption{Kinematics limiting the part of bremsstrahlung spectrum which
+can be used for neutron efficiency calibration. \label{brem-end-point}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+Q$^2$ & E$_{\mbox{beam}}$ & 
+$\theta_e $&
+$E^{max}_{\pi}$&
+$E^{max}_{\pi}$&
+$E^{limit}_{\pi}$&
+$E^{min}_\gamma$ &
+$\int ~\Gamma ~dk$\\
+ & & & $(\gamma,\pi)$ &$(\gamma,2\pi)$ &$(\gamma,\pi)$ & & \\
+(GeV/c)$^2$ & (GeV) & &
+ (GeV) &
+ (GeV) &
+ (GeV) &
+ (GeV) &
+\\
+\hline
+3.5 & 4.4& 32.5$^\circ$& 2.54 & 2.453 & 2.494 & 4.25 & 0.0023\\
+4.5 & 4.4& 41.9$^\circ$& 2.00 & 1.928 & 1.96 & 4.21 & 0.0030\\
+%6.0 & 4.4& 77.8$^\circ$ &  0.936& 0.904 & 0.92 & 4.02 & 0.00641\\
+6.0 & 4.4& 64.3$^\circ$ &  1.20& 1.16 & 1.18 & 4.12 & 0.0046\\
+\hline
+\end{tabular}}\\
+\end{center}
+{For each kinematic point, the values given are: 
+$E^{max}_{\pi}(\gamma,\pi)$, the end-point energy for $\pi$ production; 
+$E^{max}_{\pi}(\gamma,2\pi)$, the $\pi$ end-point energy for $2\pi$ production; 
+$E^{limit}_{\pi}(\gamma,\pi)$, the minimum $\pi$ energy to be used
+for calibration (to exclude  $E^{max}_{\pi}(\gamma,2\pi)$ by 1.5\%);
+$E^{min}_\gamma$, minimum photon energy giving $E_{\pi}(\gamma,\pi)$
+above $E^{limit}_{\pi}(\gamma,\pi)$;
+$\int ~\Gamma ~dk$, the photon flux (per electron) integrated
+\cite{matthews}  from  
+$E^{min}_\gamma$ to the photon end point (assuming $6\%$ Cu radiator).
+}
+\end{table}
+
+
+
+The real photons used for the p($\gamma,\pi^+$)n calibration reaction
+will be generated using a copper 6\%  radiator upstream of the LH$_2$
+target.  Maintaining the same limit on rate in BigBite then requires that
+the beam current be reduced by a factor of four for these
+measurements.  While real photons interacting with well-defined 2-body
+kinematics will dominate, roughly one quarter of the rate is expected to
+originate from virtual-photon interactions.  The virtual-photon
+contribution can be studied (along with the corresponding distribution
+of neutrons in BigHAND) by running without a radiator and 
+measuring neutrons associated with the
+p(e,$\pi^+$) reaction.  Because this is a relatively small correction,
+allocation of beam time would be optimized to yield the minimal error
+on the real-photon calibration by spending only a fraction as much
+beam time on running without a radiator.  (Taking the virtual and real
+cross sections to be equal and the neutron acceptance and
+efficiencies to be as large for virtual production implies that
+the error bar would be minimized by dedicating 20$\%$ of the
+neutron-calibration time to running without a radiator.)  
+%Since the
+%same running conditions, LH$_2$ target without a radiator, are used
+%for the proton efficiency calibration, the data needed to subtract the
+%real photon contribution to the neutron calibration is partly available 
+%parasitically from those efficiency calibrations.
+
+\section{Simulations}
+
+At high $Q^2$ the kinematic separation of quasi-elastic and inelastic
+events becomes more washed-out by the kinematic-broadening effects of 
+Fermi motion in the deuteron.  Also the size of the inelastic
+cross section relative to the quasi-elastic grows rapidly with
+increasing $Q^2$.  A simulation is needed to determine whether there
+is a serious problem with contamination of the quasi-elastic coincidence
+signal by inelastic events for which a nucleon accidentally hits
+the BigHAND near where a quasi-elastic nucleon would be expected.
+
+This section will present the technical details of the implementation
+of the simulations, including the normalization of the inelastic
+spectrum relative to the quasi-elastic.  The next section will present
+the results of the simulations.
+
+\subsection{Quasi-elastic}
+
+\label{QE-simulation}
+Simulation of the quasi-elastic signal was carried out in a spectator model
+in which the virtual photon was assumed to interact with only one nucleon
+while the other simply escaped.  This implies that the spectator
+nucleon is projected into `on-shell' kinematics by the interaction
+(with whatever initial momentum it has) and so the initial off-shell
+mass of the struck nucleon is determined by the requirements of energy
+conservation.  While off-shell effects were included at the kinematic
+level, no attempt was made to modify the electron-nucleon scattering
+cross section to reflect the off-shell nature of the struck nucleon.
+For these simple signal-to-noise estimates, the scaled dipole
+form factors were assumed for the nucleons (except the Galster
+parameterization was used for the neutron electric form factor).
+As described below, kinematic effects of the initial motion of 
+the nucleon were reflected by
+calculating the cross section based on the electron energy and
+scattering angle as determined in the rest frame of the scattered
+nucleon. 
+
+The momentum distribution of nucleons was taken from the
+momentum-space wave-function (non-relativistic Fourier transform of
+spatial wave-function) for a Lomon and Feshbach deuteron
+potential. The particular model used (\#10 from reference
+\cite{Lomon}) gave 5.79\% D-state and included a hard core. The hard
+core is reflected in a high-momentum tail in the momentum-space
+wave-function making this a somewhat 'worst case' simulation.
+
+In brief, the steps of each quasi-elastic event simulation are summarized
+here.  A Fermi momentum was chosen for the struck nucleon based on the
+probability distribution for magnitude of $p$ derived from the
+deuteron wave-function.  A direction was chosen isotropically.
+  The corresponding kinetic energy of the the on-shell
+spectator was subtracted from the deuteron mass to find the
+kinematically-consistent initial energy of the struck nucleon from
+which the (off-shell) invariant mass of the struck nucleon was found.
+The beam electron was then rotated and boosted to a frame in which the
+nucleon was at rest (and the electron was rotated back onto the
+z-axis).  A scattering angle was then chosen isotropically (flat in
+$\phi$ and in $\cos\theta$) and the elastic scattering cross section
+was evaluated for these rest-frame initial kinematics.  The scattered
+energy was calculated with the added requirement that the off-shell
+initial-state nucleon be promoted to an on-shell nucleon in the final
+state. Some 'sanity cuts'
+were applied to eliminate extreme cases in which the quasi-elastic
+model was clearly pushed beyond the range of applicability, such as
+cases with off-shell invariant mass of the struck nucleon being less
+than 10\% of the nucleon mass or final electron energy being unphysical.
+All boosts and
+rotations were then inverted on the final-state particles to return
+them to the lab frame.  No kinematic weighting was done on the 
+distributions of Fermi momentum or scattering angle to reflect the
+greater probability of scattering at small angles and at kinematics
+which lead to lower electron energy in the nucleon rest frame.  The
+higher weighting of these events was reflected in the calculated cross
+section, which was then used to weight the entries made to the
+final-state distributions.  Thus the simulation not only properly
+accounted for these kinematic effects, it also resulted in properly
+normalized cross sections for the simulated reaction. To select the
+quasi-elastic events of interest, an acceptance cut was imposed to
+require that the electron fell into the BigBite acceptance while the
+scattered nucleon fell into the BigHAND acceptance.  The effects of
+finite-resolution were then incorporated by smearing the final
+electron-energy angle and energy by Gaussian distributions to simulate
+the BigBite resolution and similarly smearing the detected nucleon
+angle to reflect the BigHAND resolution.  
+ The resulting quantities were
+then used to calculate $W^2$ and $\theta_{pq}$
+and the  simulated distributions
+of the quantities of interest were incremented, weighted by cross section.
+Here $\theta_{pq}$, introduced above, is the 
+angle between the calculated $\vec{q}$ 
+direction and the observed scattered nucleon direction while $W^2$ is
+the squared missing-mass of the hadronic system as calculated assuming
+a stationary proton target (i.e. $W^2=(m_p+\omega)^2-(\vec{q})^2=
+m_p^2+2m_p\omega-Q^2$).
+
+
+\subsection{Inelastic}
+
+The term ``inelastic'' is used here to imply particle production
+and is exclusive of quasi-elastic events.
+Simulation of inelastic events required a more sophisticated model for
+the basic interaction on the nucleon.  This was done with the use of
+the  Genev physics Monte-Carlo \cite{genev} written by the Genoa
+group and used extensively in simulations for CLAS.  This program is
+designed to simulate with, reasonable empirical distributions,
+production of multi-pion final states and production and decay of
+Delta's, rho mesons, and omega meson (phi meson production was not
+enabled when the simulations were run).  It can simulate 
+neutron or proton targets and both were used in simulating
+inelastic events from the deuteron.  
+
+
+The smearing effects of Fermi motion for quasi-free inelastic
+production from the nucleons in the deuteron were included in a
+similar way to that described above for the quasi-elastic production.  
+There was, however, no mechanism to
+put the initial-state nucleon off-shell for the initial state used by
+Genev.  The spectator model was therefore implemented by treating the
+initial state as two on-shell nucleons with equal and opposite
+Fermi-momentum (in the deuteron rest frame).  The effective violation
+of conservation of energy implied by this approximation is modest
+(a few tens of MeV) and is expected to have the effect of
+widening tails and so causing backgrounds to be over-estimated if anything.
+
+
+Final-state distributions were simulated separately for
+electro-production off the neutron and proton.
+The same momentum-state wave-function was used to generate the initial
+momentum distribution of the target nucleons.  After rotating and
+boosting to the nucleon rest frame the energy of the incident electron
+was passed to a Genev-based subroutine which simulated a single
+inelastic event for the chosen effective beam energy.  The scattered
+electron direction was selected randomly (both $\theta$ and azimuthal
+angle, $\phi$) 
+by Genev based on cross-section-weighting subject to constraints on
+$W^2$ and $Q^2$, discussed below.  The predicted final-state particles
+were then boosted and rotated back to the lab frame by reversing all
+boosts and rotations done to the initial-state particles.  In order to
+make effective use of simulated events without biasing 
+distributions, those events which had
+a final electron azimuthal angle outside the range of
+$-20^\circ$ to $+20^\circ$ were rotated about the beam direction by an
+angle chosen to give a final azimuthal angle chosen randomly within
+that range.  This enhanced the yield of events within the BigBite
+acceptance but didn't affect distributions which had, at minimum, a
+requirement of a hit in BigBite.
+
+The range of $Q^2$ and $W^2$ to be generated by Genev was selected
+empirically since the effects of Fermi motion made it difficult to
+predict the significant range {\it a priori}.  A low-statistics run of
+the simulation with a broad range was subjected to the acceptance cut
+of BigBite for the angle(s) of interest for the beam energy being
+simulated.  The resulting $Q^2$ and $W^2$ distribution showed clear
+peaks in the regions which were relevant for scattering into BigBite.
+High statistics runs were then done with those ranges selected for generation
+of Genev events.
+
+Full kinematic information was written out for each event (including
+particle identification for each four-vector).  These were then
+selected to produce samples of interest for each kinematic point which
+would have an electron within the BigBite acceptance.  The effects of
+finite detector resolution were folded in (by smearing of
+each four-vector) before calculation of kinematic quantities of
+interest such as $W^2$ and $\theta_{pq}$. 
+
+
+
+
+\subsection{Inelastic Background Normalization}
+
+A fundamental difference between the quasi-elastic and inelastic
+simulations is that the inelastic simulation produced simulated events
+without a corresponding cross section by which to weight them.  While
+the relative cross sections were accounted for in the probability of
+generation of different types and topologies of events, an overall
+normalization is needed to allow comparison of the inelastic events
+(from each target nucleon) with the quasi-elastic results.  
+
+Normalization of inelastic to quasi-elastic cross sections was done
+empirically, using SLAC spectra for single-arm electron scattering
+from the deuteron. Figure \ref{SLAC_data} shows spectra from
+\cite{SLAC_Stuart} and \cite{SLAC_Rock} used for the normalization.
+The kinematic coverage of those measurements (truncated to the $W^2$
+range of relevance) is shown in Fig. \ref{SLAC_kin} with the same
+colors as in Fig. \ref{SLAC_data} to distinguish the two data sets.
+Two conveniently chosen ranges were used to characterize the cross
+sections in the quasi-elastic and inelastic regions.  These are
+indicated in Fig. \ref{SLAC_data}  as green bars indicating the limits selected
+for the 
+``Quasi-elastic region'' ($0.5<W^2<0.88$ GeV$^2$) and red bars
+indicating the limits selected to define the ``Inelastic region''  ($1.3<W^2<1.7$ GeV$^2$).
+As can be seen from the figures, the regions were chosen to give
+samples which were almost purely representative of the indicated final
+state, without significant contamination of inelastic events in the
+Quasi-elastic region or {\it vice versa}.  The Inelastic region was
+also chosen close to the quasi-elastic peak so it would be
+representative of the events which would be likely to cause
+background.
+
+\begin{figure}
+\includegraphics[width=6in]{figures/fig_slac.pdf}
+\caption{\label{SLAC_data}Measured single-arm spectra from SLAC
+covering the quasi-elastic and inelastic regions.  Blue points were
+taken at E=5.507 GeV and indicated angle (in degrees).  Magenta points were taken
+at indicated energy and $\theta=10^\circ$.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{figures/fig_slac_kin.pdf}
+\caption{\label{SLAC_kin}The $Q^2$ vs. $W^2$ coverage corresponding to
+the spectra of the previous figure.
+}
+\end{figure}
+
+Within the quasi-elastic model, the kinematic variation of
+cross-section within the Quasi-elastic region would be expected to follow
+the sum of the elastic cross sections for scattering from the proton 
+and neutron.  The numerically summed cross section in the Quasi-elastic
+region of each spectrum was divided by the predicted sum of
+proton-elastic and neutron-elastic (based on scaled-dipole and
+Galster) to obtain a measured strength (which was quite stable at a
+value of $\approx 0.35$).  Similarly, based on
+$$\frac{d^2\sigma}{d\Omega dE'}=\frac{\alpha E' (W^2-m_p^2)/(2m_p)}
+{4\pi^2 Q^2E}\frac{2}{1-\epsilon}(\sigma_T(W^2,Q^2)+\epsilon\sigma_L(W^2,Q^2))$$
+the kinematic factors were divided
+out of each bin of the double-differential cross section in the Inelastic region to
+yield the corresponding value of ($\sigma_T+\epsilon\sigma_L$).  Since 
+the non-resonant background
+dominates over $\Delta$ production in these spectra, a non-resonant
+empirical scaling of $\sigma_L/\sigma_T\approx 0.25/\sqrt{Q^2}$ was used
+to allow $\sigma_T$ (summed over the Inelastic region) to be
+extracted for each spectrum.  (An alternate extreme would be to treat
+the inelastic cross section as purely transverse, as it might be if
+the $\Delta$ dominated.  This was tried and resulted in only a modest
+change in the predicted inelastic strength at the the kinematics of
+interest.)  The inelastic/quasi elastic strength can then be
+characterized as the ratio of the extracted $\sigma_T$ from the
+Inelastic region divided by the
+scaled cross-section from the Quasi-elastic region.  This ratio (for
+both sets of SLAC kinematics)  was
+found to be reasonably well parameterized as a simple parabolic function of 
+$Q^2$ ($r=0.015 \frac{Q^2}{(\mbox{GeV/c})^2}$).  This form was then used to predict the
+inelastic cross section within the Inelastic region for the $Q^2$
+applicable for the beam energy and scattering angle of the kinematics
+of interest.  These were found as multiples of the summed simulated
+cross section in the Quasi-elastic region (divided by the sum of
+proton and neutron elastic cross sections).  
+
+This gave the total normalization of the inelastic cross section.
+It remained to find individual scaling factors for the proton-target
+and neutron-target inelastic cross section to simulate the deuteron
+cross section.  The inelastic cross section on the neutron was taken
+to be half of the inelastic cross section on the proton.  Since the
+final state distributions (including individual measure of 
+proton-coincidences or neutron-coincidences) were almost identical for
+the two assumed targets, the final results are almost insensitive to
+this choice of relative strength.  This then allowed scaling factors
+to be determined to scale the number of simulated events to a
+double-differential cross section.  These normalized results are shown
+in the next section.
+
+
+
+%Figure \ref{seamus_nocoinc} compares one example predicted deuterium
+%spectrum to our actual spectra \cite{GEn-proposal,Seamus}  on Hydrogen and 
+%$^3$He at similar kinematics taken with BigBite.  The beam energy and
+%scattering angle of
+%the measurements are different (see caption)  but they are at 
+%very similar $Q^2$ to
+%the lowest proposed kinematic point.  Quantitative comparisons are not possible,
+%but the Hydrogen peak is seen to be much narrower than the predicted
+%deuterium peak (as expected) while the $^3$He quasi-elastic peak is so
+%wide it is not resolved from the inelastic background.  The height of
+%the inelastic background (relative to the height of the quasi-elastic
+%peak) can be seen to be qualitatively similar indicating, at least,
+%that the background is not grossly underestimated in the simulation.
+
+%Similarly, Fig. \ref{seamus_coinc} shows an example predicted deuterium
+%spectrum, with a proton coincidence in BigHAND.  This is compared 
+%to our actual 
+%spectra \cite{GEn-proposal,Seamus}  on Hydrogen and 
+%$^3$He at similar kinematics taken with BigBite and with a coincidence
+%(neutron or proton) demanded in BigHAND.   The Hydrogen spectrum is
+%now seen to be much narrower than the deuterium quasi-elastic peak,
+%confirming that instrumental resolution is a small effect compared to
+%Fermi smearing.  The inelastic background at $W^2\approx2$ GeV$^2$ in $^3$He
+%is seen to be similar to the height of the quasi-elastic peak. 
+%Quantitative evaluation of the inelastic-to-quasielastic ratio of the 
+%simulation is not possible since the
+%conditions are not identical.  The narrower deuterium peak would be
+%expected stand out more than the more Fermi-smeared $^3$He peak.
+%Also, random-time coincidence have not been subtracted from the $^3$He
+%data and, as can be seen from Fig. \ref{seamus_nocoinc}, are expected
+%to preferentially fall in the inelastic region.
+%The estimated background (relative to quasi-elastic) in the simulation 
+%is seen to be comparable to that observed.
+
+A test of the Monte-Carlo at a previously calculated kinematic point 
+($Q^2=8$ (GeV/c)$^2$) is shown in Fig. \ref{slac_overlay}.
+SLAC data \cite{SLAC_Rock} taken at a similar $Q^2$, but different
+beam energy and angle is compared to the Monte-Carlo prediction
+for single-arm electron
+scattering from  deuterium.  The SLAC data was taken at  E=18.5 GeV
+and $\theta=10^\circ$.  It  is compared
+to the Monte-Carlo prediction at the same momentum-transfer at E=6.0
+GeV and
+$\theta=52.0^\circ$.  {\em\bf There are no adjustable parameters.}  The
+Monte-Carlo spectrum has simply been scaled up by the ratio of
+prediction for the ratio of deuteron quasi-elastic cross sections.
+This cross section was predicted (at each set of kinematics) as the
+sum of the dipole-prediction cross-section on the proton plus that on
+the neutron.  The agreement is seen to be excellent and the inelastic
+background is, if anything, overestimated.
+
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=3in]{figures/fig_sum1a.jpg}\\
+%\includegraphics[width=3.4in]{seamus_H.pdf}\\
+%\includegraphics[width=3.4in]{seamus_3He.pdf}
+%\end{center}
+%\caption{\label{seamus_nocoinc}
+%Predicted spectrum on Deuterium (Top) at $Q^2=3.5$ GeV$^2$ (E=4 GeV,
+%$\theta=37.5^\circ$) is compared to measured spectra taken with BigBite
+%on Hydrogen (Middle) and $^3$He (Bottom) targets 
+%at $Q^2=3.4$ GeV$^2$ (E=3.29 GeV,
+%$\theta=51.6^\circ$).  All spectra are single-arm spectra with no
+%coincidence requirement.
+%}
+%\end{figure}
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=3in]{figures/fig_sum1b.jpg}\\
+%\includegraphics[width=3.4in]{seamus_H_nucleon.pdf}\\
+%\includegraphics[width=3.4in]{seamus_3He_nucleon.pdf}
+%\end{center}
+%\caption{\label{seamus_coinc}
+%Predicted spectrum on Deuterium (Top) at $Q^2=3.5$ GeV$^2$ (E=4 GeV,
+%$\theta=37.5^\circ$) is compared to measured spectra taken with BigBite
+%on Hydrogen (Middle) and $^3$He (Bottom)  targets 
+%at $Q^2=3.4$ GeV$^2$ (E=3.29 GeV,
+%$\theta=51.6^\circ$).  The simulated spectrum demands a proton in
+%coincidence anywhere in BigHAND.  The real spectra demand a hit in
+%BigHAND but do not distinguish between proton and neutron coincidences.
+%Accidental coincidences have not been subtracted in the measured spectra.
+%}
+%\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{figures/slac_overlay.pdf}\\
+\end{center}
+\caption{\label{slac_overlay}
+A measured spectrum \cite{SLAC_Rock} for single-arm electron
+scattering from  deuterium (E=18.5 GeV, $\theta=10^\circ$) is compared
+to the Monte-Carlo prediction at the same momentum-transfer (the
+$Q^2=8$ point in the present proposal, at E=6.0 GeV,
+$\theta=52.0^\circ$).  The data points are shown in magenta, the
+Monte-Carlo prediction in black.  (The quasi-elastic contribution is
+shown in red, while the inelastic prediction is in blue.) 
+{\em\bf There are no adjustable parameters.}  The
+Monte-Carlo spectrum has simply been scaled up by the ratio of
+(dipole-approximation) prediction for the ratio of deuteron
+quasi-elastic cross sections.
+}
+\end{figure}
+
+
+
+
+\section{Inelastic Background}
+
+\label{inelastic}
+Results from the simulations of inelastic contributions are
+shown in Figures \ref{kin1_sim} through \ref{kin4_sim} for a selection
+of kinematic points across the range of interest.  Each figure
+represents one of the kinematics shown in Table \ref{Kin_table}.  
+The simulation was run for each kinematic point but typical example 
+results are shown here for the 
+for the $Q^2=3.5$, 8.5, 13.5 and 18
+(GeV/c)$^2$ kinematic points. 
+
+
+%In each figure the upper left plot gives the missing-mass spectrum 
+%integrated over the acceptance of the experiment. These are single-arm
+%spectra such as would be obtained using BigBite alone.    These 
+%figures are not of direct relevance
+%to the coincidence experiment proposed here.  They are intended only to
+%set the scale of how difficult single-arm quasi-elastic measurements
+%would be and to demonstrate that the simulated single-arm spectra are
+%qualitatively similar to the measurements show in
+%Fig. \ref{SLAC_data}.  
+
+In all simulated spectra, the statistical
+fluctuations reflect the statistics of the Monte-Carlo simulations
+and are not intended to simulate the statistics acquired by the
+proposed experiment.
+
+\begin{figure}
+\includegraphics[width=3.1in]{figures/fig_sum1a.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum1b.jpg}\\
+\vfill
+\includegraphics[width=3.1in]{figures/fig_sum1c.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum1d.jpg}\\
+\vfill
+\caption{\label{kin1_sim} Projections onto $W^2$ and $\theta_{pq}$ 
+for simulations of inelastic
+background (blue) and quasi-elastic (red) cross section for the $Q^2=3.5$
+(GeV/c)$^2$ kinematic point.   Vertical axes are efficiency- and
+acceptance-weighted cross section integrated over the combined
+spectrometer acceptance, in fb/bin.  The effect of applying the tight fiducial
+cuts on the inelastic background is shown by the green curves.
+}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=3.1in]{figures/fig_sum2a.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum2b.jpg}\\
+\vfill
+\includegraphics[width=3.1in]{figures/fig_sum2c.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum2d.jpg}\\
+\vfill
+\caption{\label{kin2_sim}  Projections onto $W^2$ and $\theta_{pq}$ 
+for simulations of inelastic
+background (blue) and quasi-elastic (red) cross section for the $Q^2=8.5$
+(GeV/c)$^2$ kinematic point.   Vertical axes are efficiency- and
+acceptance-weighted cross section integrated over the combined
+spectrometer acceptance, in fb/bin.
+}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=3.1in]{figures/fig_sum3a.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum3b.jpg}\\
+\vfill
+\includegraphics[width=3.1in]{figures/fig_sum3c.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum3d.jpg}\\
+\vfill
+\caption{\label{kin3_sim} Projections onto $W^2$ and $\theta_{pq}$ 
+for simulations of inelastic
+background (blue) and quasi-elastic (red) cross section for the $Q^2=13.5$
+(GeV/c)$^2$ kinematic point.   Vertical axes are efficiency- and
+acceptance-weighted cross section integrated over the combined
+spectrometer acceptance, in fb/bin.
+}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=3.1in]{figures/fig_sum4a.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum4b.jpg}\\
+\vfill
+\includegraphics[width=3.1in]{figures/fig_sum4c.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_sum4d.jpg}\\
+\vfill
+\caption{\label{kin4_sim} Projections onto $W^2$ and $\theta_{pq}$ 
+for simulations of inelastic
+background (blue) and quasi-elastic (red) cross section for the $Q^2=18$
+(GeV/c)$^2$ kinematic point.   Vertical axes are efficiency- and
+acceptance-weighted cross section integrated over the combined
+spectrometer acceptance, in fb/bin.
+}
+\end{figure}
+
+
+The plots on the left in each figure show the neutron-coincident
+quasi-elastic (red) and inelastic (blue) spectra and their sum
+(black), integrated over the acceptance of the experiment.
+The plots
+on the right show the equivalent proton-coincident spectra.  
+Proton- and neutron- coincidence here, as in the proposed experiment,
+are defined based on proximity of the simulated BigHAND hit to the
+position which would be predicted based on the $\vec{q}$-vector
+constructed based on the resolution-smeared information from BigBite.
+
+The upper plots show the W$^2$ spectra   Kinematic
+broadening and the large inelastic cross sections are seen to result
+in a large contribution of inelastic events under the quasi-elastic
+peak, particularly at high $Q^2$.  (At the lowest Q$^2$ the
+apparently-large inelastic background is greatly reduced by the use of
+the fiducial cuts discussed above, leaving only the background spectra
+shown in green.)  Without additional cuts to reduce
+this contamination, this would present a significant problem for these
+measurements.
+
+The lower plots show  the
+distributions of $\theta_{pq}$.  As mentioned above, $\theta_{pq}$ is
+the angle between direction of the nucleon's momentum ($\vec{p}$),
+reconstructed from the position of the hit on BigHAND, and the 
+momentum-transfer vector ($\vec{q}$), as reconstructed based on the
+scattered-electron's energy and direction.  For elastic scattering
+from a nucleon at rest, $\theta_{pq}$ would peak sharply at zero,
+having a finite width only due to measurement resolution.  For
+quasi-elastic scattering, $\theta_{pq}$ is broadened by
+the unknown initial momentum of the struck nucleon.  However, it is
+seen to still be sharply peaked.  At the $Q^2=4.5$ (GeV/c)$^2$ point
+shown in Fig. \ref{kin2_sim}, the quasi-elastic $\theta_{pq}$
+distribution is seen to be almost entirely contained below 
+$\theta_{pq}=2^\circ$ while at the $Q^2=18$ (GeV/c)$^2$ point
+shown in Fig. \ref{kin4_sim}, the quasi-elastic $\theta_{pq}$
+distribution is even sharper, being almost entirely below
+$\theta_{pq}=1^\circ$.  The distribution for inelastic events is seen
+to be much wider. This provides an additional cut which can be used to
+select the quasi-elastic events of interest and reject the background
+from inelastic events.  Furthermore, the linear rise of the inelastic
+distribution (which is a geometric effect, reflecting a roughly constant
+density of nucleon hits per unit area in the region pointed to by the
+$\vec{q}$ vector) suggests the possibility of correcting for residual
+inelastic contamination by extrapolating the large-angle $\theta_{pq}$
+spectrum into the region of the cut and predicting the contribution of 
+inelastic events surviving the cut.
+
+
+\begin{figure}
+\vspace{-.25in}
+\includegraphics[width=3.1in]{figures/fig_pqa.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_pqb.jpg}\\
+\vfill
+\includegraphics[width=3.1in]{figures/fig_pqc.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_pqd.jpg}\\
+\vfill
+\includegraphics[width=3.1in]{figures/fig_pqe.jpg}\hfill
+\includegraphics[width=3.1in]{figures/fig_pqf.jpg}\\
+\vfill
+
+\vspace{-.2in}
+\caption{\label{kin4_additional}
+Quasi-elastic (red) and inelastic (blue)  cross-section vs. $W^2$ with coincident
+neutron detection with different cuts on $\theta_{pq}$.  The cuts
+applied to $\theta_{pq}$ are indicated on each plot.  The vertical axis
+for each plot is the efficiency- and acceptance-weighted integrated
+cross section in fb/bin.
+   }
+\end{figure}
+
+From the figures presented above, it is clear that the 
+inelastic background is largest in the
+case of neutron-coincident measurements at the highest $Q^2$.  For
+this case, Fig. \ref{kin4_additional} presents additional results 
+from the simulation demonstrating the effect of cuts on $\theta_{pq}$.
+The signal-to-noise ratio is seen to improve as the cut is tightened.
+For a cut tighter than $\theta_{pq}<1^\circ$ the accepted
+quasi-elastic coincidence cross section is seen to decrease (as expected from the 
+$\theta_{pq}$ plot shown in Fig. \ref{kin4_sim}). 
+
+The optimal choice of cuts on $W^2$ and $\theta_{pq}$ involves a
+trade-off of statistics against signal purity.
+Integration of the spectra for the
+$\theta_{pq}<.5^\circ$ cut, for example, indicates that the 
+inelastic background can be reduced to a 23\% contamination by a cut selecting
+$-0.95<W^2<0.5$ GeV$^2$ at a cost of
+77\% of the quasi-elastic acceptance.  The signal could be about
+doubled by increasing the upper $W^2$ cut-off to 1.0 GeV$^2$ while
+only increasing the background to 26\%.  Similarly  increasing the
+cut-off to 1.5 GeV$^2$ would add another 50\% to the integrated signal
+but would increase the background contamination to 37\%. (We refer to
+background contamination at background/signal.  The fraction of
+background relative to total counts would be a smaller number.
+e.g. A 50\% background, meaning that background is 50\%
+of signal, is equivalent to 33.3\% of total events being background events.)
+
+The best cuts will have to be chosen based on the observed data,
+estimated background contamination and estimated systematic error on
+the determination of the background.  For the simulated data presented
+here, a set of cuts was chosen to minimize the error on the extracted
+value of R.  These were based on the simulated spectra, the
+anticipated luminosity and running time requested in the present
+proposal, and an assumed 20\% systematic error (in addition to
+$\sqrt{n}$ statistical error) on the background contamination.  The
+fractional systematic error was assumed to be common in the neutron
+and proton contamination and so partly canceled in the evaluation of
+R.  For the actual analysis, a locus in $W^2-\theta_{pq}$ space might
+be used to select events.  For the purpose of rate estimates, a simple
+rectangular region was selected by optimizing separate cuts on $W^2$
+and $\theta_{pq}$.
+
+The resulting optimal cuts and anticipated contamination are
+presented in Table \ref{inelastic_contam}.  
+These results are used
+below in estimation of systematic errors.  The contamination
+fractions listed in  Table \ref{inelastic_contam} are the values
+before correction.  Given a 20\% systematic error, the majority of the
+contamination would be subtracted off.  Since the inelastic
+backgrounds in the neutron and proton spectra are expected to be of
+similar shape (and will be extrapolated into the quasi-elastic region 
+using similar shapes) if one background is underestimated the other may
+also be expected to be underestimated.  Similarly, if the neutron
+background is oversubtracted, the proton background will also be
+oversubtracted.   As mentioned above, this common error in the
+numerator and denominator partly cancels in evaluation of the ratio,
+$R''$.  The cancellation is not complete because the fractional errors
+in the numerator and denominator will differ. But the partial
+cancellation results in a fractional error on the ratio, due to
+systematic background error, which is
+smaller than the fractional error contributed to the neutron or proton counts.
+
+
+
+\begin{table}
+\begin{center}
+\caption{
+Estimated fractional contamination of inelastic events in the
+quasi-elastic sample after $W^2$ and $\theta_{pq}$ cuts but {\it before any correction
+  is applied}
+\label{inelastic_contam}}
+\vspace{.2in}
+{\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.\\
+\hline
+\hline
+Max. $\theta_{pq}$ (deg.)&2.5&2.3&1.9&1.1&0.9&0.8&0.7&0.6&0.6\\
+\hline
+Max. $W^2$ (GeV$^2$)&1.1&1.2&1.3&1.3&1.4&1.4&1.6&1.6&1.7\\
+\hline
+\hline
+Proton contamination (\%)&5.3&5.5&8.8&13.&15.&21.&26.&28&33.\\
+\hline
+Neutron contamination (\%)&13.5&11.&15.4&26.&30.&34.&43.&50.&51.\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+\section{Rates and Trigger}
+
+\label{rates}
+In this section we review the inputs used in the rate calculations and
+give the expected rates for the quasi-elastic coincidence measurements
+and for the calibration reactions.
+
+Since background rates are roughly proportional to the number of
+target nucleons, rate estimates are based on a luminosity of
+$\mathcal{L}=6.7\times 10^{37}/A$ cm$^{-2}$s$^{-1}$, where $A$ is the number of
+nucleons in the target.  While this exceeds our experience in the
+GEn experiment \cite{GEn-proposal}  using the same equipment, there
+are several factors which decrease the susceptibility of the present
+experiment to accidental background. 
+The observed rate of
+accidental events above threshold in BigHAND was $\approx 2$ MHz for that
+measurement.  BigHAND will be significantly further back from
+the target (17 m compared to 6.5 to 12 m for GEn running) so a much
+smaller solid angle is subtended. Further, the deflector magnet will
+reduce rates due to low-energy particles.  BigBite will be
+instrumented with GEM detectors which should be able to handle a
+significantly higher luminosity than proposed here. 
+
+% The gas Cerenkov
+%detector will eliminate pion-induced triggers, bringing the trigger
+%rate down to an acceptable level.
+
+A Monte Carlo\cite{Seamus} simulation has been done to predict the background trigger rates
+which will may be expected as a function of the threshold applied to
+the electromagnetic calorimeter.  The simulation included a
+parameterization of expected light-generation by hadrons.
+Pion rates were based on an empirical fit to
+observed charged pion production rates measured at SLAC.  A
+parameterization of electron-scattering rates from deep
+inelastic scattering was also included.
+The results of the simulations at the kinematic points of this
+experiment are shown in Fig. \ref{trig_rates}. 
+For each kinematic point, the 
+threshold must be chosen chosen low enough so that quasielastic events
+are accepted with reasonable efficiency.  An advantage of the ratio
+method is that there is no systematic error introduced by such an
+inefficiency since it would be independent of the type of recoiling
+nucleon.  Table \ref{thresholds} lists, for each kinematic point, the
+lower limit for scattered-electron energy for quasielastic events, as
+determined from the quasi-elastic Monte Carlo.  The table also lists
+suitable threshold values which are $\approx$10\% below this minimum.
+Comparing those thresholds to Fig. \ref{trig_rates} shows that the
+expected background trigger rates are comfortably low, generally well
+below 1 kHz.  
+
+The threshold on the electromagnetic calorimeter will serve to reduce
+the trigger rate due to low energy scattered 
+electrons from inelastic events.  While suppression of
+inelastic events is generally advantageous, it is necessary to have a
+measure of the inelastic rate near the quasi-elastic peak in order to
+test and calibrate inelastic predictions which can then be used to
+correct for contamination under the quasielastic peak.  Monte Carlo
+simulations of the effect of a threshold-cut on scattered electron
+energy have determined that these thresholds will cause negligible
+distortion of the inelastic background for $W^2<$ 2.5 (GeV/c)$^2$.
+
+%The pion rates are based on a parameterization of charged pion
+%production measured at SLAC found in D. E. Wiser, Ph.D. Thesis,
+%University of Wisconsin-Madison (1977) (unpublished).  Charged pions are
+%convoluted with an energy deposition spectrum based on a MC Bogdan had
+%done for the first GEn experiment.  This supresses them considerably.
+%pi0 rates we say are half pi+ rate plus half pi- rate.  I will also say
+%that the pi0s are not decayed and are treated as something that will
+%entire deposit it's energy in the calorimeter.  This is likely a reason
+%that this overpredicts the rates.  Electron rates are included from DIS
+%cross sections (but don't contribute very much).
+%Seamus
+
+
+
+\begin{table}
+\begin{center}
+\caption{Suitable thresholds for the electromagnetic calorimeter
+  trigger are listed.  For comparison, the lower limit for
+  quasi-elastically scattered electrons is also given.
+}
+\label{thresholds}
+\vspace{.2in}
+{\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$Q^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.\\
+\hline
+\hline
+Quasi-elastic E'$_{\mbox{min}}$ (GeV)&2.4&1.8&1.1&1.8&3.0&2.0&1.4&2.1&1.2\\
+\hline
+Threshold (GeV)&2.1&1.6&1.0&1.6&2.7&1.8&1.2&1.9&1.0\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+\begin{figure}
+\includegraphics[width=6in]{gmn_trigrates.pdf}\\
+\caption{\label{trig_rates}
+The predicted trigger rates from background particles as a function of
+the threshold applied to the electromagnetic calorimeter.  Each curve
+represents one of the proposed kinematic points.
+}
+\end{figure}
+
+
+
+
+For all rate calculations  the 
+%neutron detection efficiency was taken
+%to be 75\% and the proton detection efficiency to be 80\%.  These
+%are the calculated efficiencies \cite{BH_simulation} for a 25 MeV
+%threshold with relatively low energy (1.7 GeV kinetic energy)
+%nucleons and so should be a lower limit on the efficiency.  
+%Figure \ref{np_eff} suggests that the actual efficiencies will be
+%significantly better at high $Q^2$, but that simulation was done with a
+%lower threshold than we intend to use. The
+track-reconstruction efficiency in BigBite was taken to be 75\% and
+the trigger live time was taken to be 80\%.  
+%The fraction of data
+%surviving geometric cuts to reject target windows was taken to be 75\%.
+The estimated efficiencies for neutron and proton detection (shown in
+Fig. \ref{np_eff}) are given in Table \ref{rates_input}.  
+
+The cross section for quasi-elastic scattering was numerically
+integrated over the combined acceptance of BigBite and BigHAND,
+subject to the fiducial cut, as described in section \ref{QE-simulation}.
+The integrals, labeled as ``$\int \frac{d\sigma}{d\Omega} d\Omega$'', 
+ are given in Table \ref{rates_input}.  
+The line labeled ``$W^2/\theta_{pq}$ cut'' gives the fraction of quasi-elastic
+events surviving the cuts, described in the previous section, used  to reject
+inelastic events.
+ Defining 
+$\mathcal{L}_0=6.7\times 10^{37}$  cm$^{-2}$s$^{-1}=240$/fb/hr, the luminosity
+for the quasi-elastic measurements on deuterium will be
+$\mathcal{L}_0/2=120$/fb/hr.
+The resulting predicted rates of electron-nucleon coincidences are
+given in the first two lines of Table \ref{count_rates}.
+\begin{table}
+\begin{center}
+\caption{
+Values used in calculating count rates.
+\label{rates_input}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0&8.5&10.&12.&13.5&16.&18.\\
+$E$ (GeV)&4.4&4.4&4.4&6.6&8.8&8.8&8.8&11.&11.\\
+$\theta_e$&32.5$^\circ$&
+41.9$^\circ$&64.3$^\circ$&46.5$^\circ$&33.3$^\circ$&44.2$^\circ$
+&58.5$^\circ$&45.1$^\circ$&65.2$^\circ$\\
+\hline
+\hline
+p efficiency (\%)&78.4&86.0&93.8&98.2&96.5&99.0&99.0&99.0&99.0\\
+\hline
+n efficiency (\%)&73.0&80.9&86.6&86.6&91.3&91.1&91.1&91.1&91.1\\
+\hline
+\hline
+Quasi-elastic\\
+\hline
+p-coinc. $\int \frac{d\sigma}{d\Omega} d\Omega$ (fb)&
+890&570&69&30.4&32.&5.9&1.35&1.21&.20\\
+\hline
+n-coinc. $\int \frac{d\sigma}{d\Omega} d\Omega$ (fb)&
+380&250&31&13.9&15.&2.7&0.63&0.56&.093\\
+\hline
+$W^2/\theta_{pq}$ cut (\%)&80&85&74&67&64&61&63&60&63\\
+\hline
+\hline
+Proton elastic (calibration)\\
+\hline
+Full $\Delta\Omega$ (msr)&22.6&38.4&53.6&---&---&---&---&---&---\\
+\hline
+$\frac{d\sigma}{d\Omega}_{p(e,e')}$ (pb/sr)&107&17&1.3&---&---&---&---&---&---\\
+\hline
+\hline
+$p(\gamma,\pi^+)n$ (calibration)\\
+\hline
+$\int \Gamma dk$&0.0023&0.0030&.0046&---&---&---&---&---&---\\
+\hline
+$\theta^*_{\gamma\pi}$&86.5$^\circ$&102$^\circ$&128$^\circ$&---&---&---&---&---&---\\
+\hline
+$\frac{d\sigma}{d\Omega}_{p(\gamma,\pi^+n)}$ (pb/sr)&2100&1190&1770&---&---&---&---&---&---\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+For proton efficiency measurements using elastic scattering on Hydrogen, 
+the full combined solid angle of
+BigBite and BigHAND can be used, without a fiducial cut.  This 
+is given as ``Full
+$\Delta\Omega$'' in Table \ref{rates_input}.  The (scaled dipole
+approximation) cross section is also given.  For this calibration on
+an LH2 target, the full luminosity $\mathcal{L}_0$ can be used.  The 
+resulting rates are given in the third line of Table
+\ref{count_rates}.
+Dashes indicate the kinematic points for which proton efficiency is
+high and will be estimated rather than based directly on calibration runs.
+
+For the neutron efficiency measurements using the $p(\gamma,\pi^+n)$
+reaction the full combined solid angle, ``Full $\Delta\Omega$''  can 
+again be used.   Because
+the 6\% radiator will approximately quadruple the reaction rates in
+the target, the luminosity must be reduced to $\mathcal{L}_0/4$.
+Table \ref{rates_input} gives the number of useful end-point photons
+per incident electron ($\int \Gamma dk$), from Table
+\ref{brem-end-point}. 
+Dashes indicate the kinematic points for which neutron efficiency is
+high and will
+be estimated rather than being based directly on calibration runs.
+Table \ref{rates_input} also
+lists the center of mass angle, $\theta^*_{\gamma\pi}$,  for 
+the $(\gamma,\pi^+)$ reaction and
+the estimated cross section for the reaction.  The latter is
+calculated using the scaling predicted by the constituent counting
+rule:
+$$s^7\frac{d\sigma}{dt}=\mbox{ constant}$$
+where $s$ and $t$ are the Mandelstam variables (invariant mass squared
+and four-momentum transfer squared).  The constant value was
+conservatively taken to
+be $0.5\times 10^7$ GeV$^{14}$ nb/GeV$^2$ at
+$\theta^*_{\gamma\pi}=90^\circ $ based on 
+measurements \cite{E94-104} made in the
+range of $s$ of interest.  The cross section for  the
+actual $\theta^*_{\gamma\pi}$ was then found based upon an
+empirical fit \cite{Anderson} 
+to the angular distribution:
+$$s^7\frac{d\sigma}{dt}\propto(1-\cos\theta^*_{\gamma\pi})^{-5}
+(1+\cos\theta^*_{\gamma\pi})^{-4}$$
+Finally $\frac{dt}{d\cos\theta}$ was numerically evaluated to convert
+from$ \frac{d\sigma}{dt}$ to $\frac{d\sigma}{d\Omega}$.
+The resulting estimated count rates are given in the last line of Table
+\ref{count_rates}.  % {\bf XXX  Better check the neutron rates!!!} 
+
+
+
+\begin{table}
+\begin{center}
+\caption{
+Predicted coincidence rates (counts per hour)
+\label{count_rates}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.\\
+\hline
+\hline
+$d(e,e'p)$&40700&26600&3110&1345&1240&244&56.7&47.0&7.9\\
+\hline
+$d(e,e'n)$&17600&12000&1600&627&580&114&26.5&22.0&3.72\\
+\hline
+$p(e,e'p)$&273000&82000&9300&4400&5000&850&200&175&30\\
+\hline
+$p(\gamma,\pi^+n)$&2920&4030&13500&---&---&---&---&---&---\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+\section{Systematic Errors}
+
+\label{systematic_errors}
+In this section we will estimate (or set upper limits on)
+contributions to the systematic error on the ratio $R$ determined by
+this experiment.  This sets the scale for the statistical accuracy
+for which we should aim since there would be little gain in achieving
+statistical errors which are much smaller than the systematic errors.
+
+The use of the ratio method eliminates many potential sources of
+systematic error.  Because $d(e,e'p)$ and $d(e,e'n)$ are measured
+simultaneously, their ratio is insensitive to target thickness, target
+density, beam current, beam structure, live time, trigger efficiency, 
+electron track reconstruction efficiency, etc.
+So the fractional error achieved on the ratio can be much smaller that
+which could be achieved on the measurement of
+either cross section in itself.
+
+Table \ref{systematic_summary} lists the estimated contributions to
+systematic errors, which are discussed in detail below.
+
+The corrections needed to convert from the measured value $R''$
+(Equation \ref{r-double-prime-eqn}) to the quantity of interest, $R$
+(Equation \ref{r_eqn}) are only of the order of 1\%, so systematic
+errors on them will be neglected.  
+
+
+The errors on the proton elastic
+cross section (needed to extract \gmn from $R$) do not contribute to
+the error on the ratio \gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}.
+This is a more fundamental result than \gmnc, itself, or the ratio of
+\gmn to the scaled dipole.  The ratio 
+\gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$} is generally
+more directly calculable within a given theoretical model.
+While subsequent
+improvements in proton cross section measurements 
+can be combined retrospectively with the $R$ values from this
+experiment to improve the extraction of \gmnc, we include an estimated
+contribution to the error based on projected errors on 
+\gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$} from 
+an approved 12 GeV experiment\cite{E12-07-108}.  We assume a 1.7\%
+fractional error on the proton cross section across the region of
+interest except 4\% at the highest Q$^2$, which is beyond the region
+to be 
+covered in that measurement.  
+This error should be included as a systematic in extraction
+of (\gmnc)$^2$, but not of the ratio 
+\gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}.
+
+
+If {G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny E}}}~$} behaves like the
+Galster parameterization at high Q$^2$, then its contribution 
+to the neutron cross section is small.  Thus, even large fractional
+errors in {G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny E}}}~$} would
+produce only small errors in (\gmnc)$^2$.  The contribution listed as 
+{G$^{\mbox{\scriptsize n}}_{_{\mbox{\tiny E}}}~$} in Table 
+\ref{systematic_summary} are based on an assumed error of 100\% of the
+Galster parameterization, growing to 200\% for Q$^2=10$ (GeV/c)$^2$
+and growing to 400\% for the two highest-Q$^2$ points.
+
+
+
+
+\begin{table}
+\begin{center}
+\caption{
+Estimated contributions (in percent) to systematic errors on R.
+\label{systematic_summary}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.\\
+\hline
+\hline
+ proton cross-section&1.7&1.7&1.7&1.7&1.7&1.7&1.7&1.7&4.\\
+\hline
+\hline
+%$G_E^n$
+\gen&1.7&1.1&0.49&0.51&0.56&0.69&0.38&.89&.39\\
+\hline
+Nuclear correction,&-&-&-&-&-&-&-&-&-\\
+\hline
+Accidentals&-&-&-&-&-&-&-&-&-\\
+\hline
+Target windows&.2&.2&.2&.2&.2&.2&.2&.2&.2\\
+\hline
+Acceptance losses&0.45&0.5&0.3&0.4&0.16&0.18&0.1&0.1&.08\\
+\hline
+Inelastic contamination&1.5&1.14&1.32&2.64&2.94&2.62&3.24&4.4&3.64\\
+\hline
+Nucleon mis-identification&0.6&0.6&0.6&0.6&0.6&0.6&0.5&0.5&0.5\\
+\hline
+BigHAND calibration&0.3&0.3&0.5&2&2&2&2&2&2\\
+\hline
+\hline
+Without proton err.\\
+%\hline
+%Total (quadrature sum)&
+%1.72&1.43&1.59&3.4&3.63&3.36&3.85&4.86&4.19\\
+\hline
+Syst. error on \gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}&
+1.21&0.9&0.81&1.72&1.83&1.72&1.93&2.47&2.1\\
+%&1.2&0.89&1.01&1.72&1.81&1.72&1.93&2.47&2.1\\
+%%%%&1.2&0.9&1.2&1.85&2.23&2.09&2.68&3&3.62\\ & oops with stat
+\hline
+\hline
+With proton err.\\
+\hline
+Syst. error on \gmnc&
+1.48&1.24&1.17&1.92&2.02&1.91&2.11&2.61&2.9\\
+%&1.47&1.23&1.32&1.92&2&1.91&2.11&2.61&2.9\\
+%%%1.47&1.24&1.47&2.04&2.39&2.26&2.81&3.12&4.14\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+
+Accidental coincidences of background events in BigHAND are not
+expected to cause significant systematic errors.  Previous experience
+in the GEn experiment\cite{GEn-proposal}  
+showed a background rate of $\approx$2 MHz
+across the entire detector at a similar luminosity (BigHAND saw about 
+half the proposed luminosity, although BigBite viewed only a third of
+that).  BigHAND will be
+significantly further from the target for this measurement so lower
+rates may be expected.  Even with a 1 MHz rate, the probability of an
+accidental coincidence within a 5 ns timing gate will be only 0.5\%
+across the entire detector.  The area searched for coincident protons
+or neutrons is limited by the $\theta_{pq}<2^\circ$ cut to about 1.1
+m$^2$ of the 8.4 m$^2$ face.  So the rate of accidental coincidences
+is expected to be less than 0.07\% for each nucleon species.
+Furthermore, this accidental contamination can be accurately estimated
+and subtracted by measuring the accidental coincidence rate in other
+parts of BigHAND, where true coincidences are not expected.
+
+
+The target windows contain about 3.4\% as many nucleons as the LD2
+target.  We use this as an upper limit on the background contribution
+since many of the events from aluminum will be rejected by the
+$\theta_{pq}<2^\circ$ cut.  This contribution will be subtracted off
+by running on a dummy target with thick aluminum windows.  It should
+be possible to apply this correction with at least 5\% accuracy (allowing for
+uncertainty in window thickness).  So the systematic error on the
+correction should be under 0.17\%.
+
+
+\subsection{Acceptance Losses}
+
+As discussed above, loss of nucleons from the acceptance of BigHAND
+can cause a systematic error, to the extent that the losses differ for
+neutrons and protons.  At the higher $Q^2$ points, the distribution of
+nucleons (shown in Fig. \ref{calzone2}) are centered in BigHAND,
+with only modest acceptance losses.  At the lower $Q^2$ points a
+fiducial cut will be applied to select events which are similarly
+centered in BigHAND (as discussed in section \ref{fiducials}) so the
+acceptance losses are kept small. 
+% As shown in Table \ref{final-acceptance}, 
+The acceptance corrections are less than 5\%
+in all cases, and considerably smaller at the highest $Q^2$ points.  
+These losses
+result from the high momentum tail of the deuteron wave-function, which
+is identical for the neutron and proton.  The cause of a difference in
+the corrections for the two nucleon species would be a difference in
+placement of the proton and neutron 'images' relative to the edges of
+BigHAND.  It very conservative to allow for a possible 10\%
+uncorrected difference in these corrections.  This is entered as the
+systematic error contribution in Table \ref{systematic_summary}.
+
+
+This systematic error can be investigated (and perhaps even reduced)
+by examining the stability of the extracted ratio, $R$, as the
+fiducial cut is tightened or loosened from its normal value.
+Additionally, choosing a ``window-frame'' fiducial which
+preferentially selects events scattered near the edge of the BigHAND
+acceptance would allow investigation of the actual loss of protons and
+neutrons, which can be compared to Monte-Carlo estimates.  Perhaps
+more importantly, such a study can be used to determine how closely
+the fractional losses of neutrons and protons are matched.
+
+\subsection{Inelastic Contamination}
+
+With the $W^2$ cuts described at the end of  section \ref{inelastic}
+the predicted
+residual contamination of inelastic events in the quasi-elastic sample
+{\em before any corrections are made}
+are given in Table \ref{inelastic_contam}.
+These may be overestimated since the kinematics used for the inelastic
+simulation tend to exaggerate the effects of Fermi broadening.
+In the ratio $R$ the contamination tends to cancel.  More importantly,
+it should be possible to accurately estimate and subtract the
+inelastic contamination.  The $\theta_{pq}$ distribution
+(such as that shown in Fig. \ref{kin4_sim}) beyond
+2$^\circ$ gives a measure of the amount of inelastic
+contamination.  The measured distribution can be
+extrapolated to small angle to estimate the residual
+contamination.   It should certainly be possible
+to estimate the inelastic contamination at the 20\% level.  Assuming
+the numbers in Table \ref{inelastic_contam} are reduced by such a
+factor, gives the contributions listed in 
+Table \ref{systematic_summary}.   This is generally the largest contribution to
+the systematic error.
+
+
+
+\subsection{Nucleon mis-identification}
+Because of the long tail of the momentum distribution of the deuteron
+wave-function, some nucleons will be displaced far from the position
+predicted based on their $\vec q$ vector and charge.  This will result
+in mis-identification if a neutron is displaced sufficiently far
+upwards or a proton sufficiently far downwards.  In the
+model used for the deuteron wave-function, about 5\% of the nucleons
+have a component of momentum exceeding 100 MeV/c in any chosen
+direction.  With a 200 MeV/c 'kick' being given to protons by the
+dipole, this would result in 5\% mis-identification rates.  The cut on
+$W^2$ preferentially rejects events with large Fermi momentum, however
+and so the mis-identification rate is reduced to 3\% or less for the
+cuts considered here.  The misidentification of one species as the
+other and {\it vice versa} do not cancel because the proton rate is
+higher and protons have a higher efficiency of being detected.   If the
+mis-identification went uncorrected, the number of detected 'neutrons'
+would be increased by proton contamination while the number of detected
+'protons' would be decreased by a loss of protons which would not be
+offset by misidentified neutrons.  Thus the effect would be an
+overestimate of $R$.  The fractional overestimate of $R$ depends on
+the actual ratio of proton/neutron cross sections and efficiencies.
+Taking the ratio of cross sections to be 
+$\left.\frac{d\sigma}{d\Omega}\right|_p/\left.\frac{d\sigma}{d\Omega}\right|_n
+\approx 2.4$ and the detection efficiencies to be
+$\epsilon_p=80$\% and $\epsilon_n=75$\%, this 3\% kinematic spread of
+nucleons would cause the neutron rate to be overestimated by 4.7\% and
+the protons to be underestimated by 1.8\% and so $R$ would be overestimated by 
+6.6\%.  
+
+The contamination will not go uncorrected, however, and at least two
+techniques will be used to measure this kinematic tail.  The neutron
+tail below the predicted point on the face of BigHAND 
+can be measured without contamination
+from protons. Similarly the proton tail above the predicted point on
+BigHAND will
+be free of neutrons.  Symmetry can then be used to predict the
+contamination of neutrons in the proton peak and, with minor kinematic
+corrections because of the deflection magnet, the proton contamination
+of the neutron peak.  
+Since these tails originate from the same Fermi motion, the neutron and
+proton tails should be almost identical apart from minor distortion
+due to the deflection magnet.  Another technique for determining the
+tails in the 'contamination region' will be to use the vetos to
+preferentially select neutrons or protons.  In particular a clean
+sample of neutrons can be selected (with only a few percent proton
+contamination, which can be subtracted off) to separately determine 
+the kinematic spread.  It should be possible to measure at the 10\%
+level, the 'leakage' of neutrons/protons into the regions in which the
+other species is expected.   A 10\% error in the measurement of such a
+3\% tail would cause a systematic error of $\approx$0.6\% in the extracted
+value of $R$.  In fact, stronger field settings used for higher-Q$^2$
+points should reduce the misidentification, so the error estimates in 
+Table \ref{systematic_summary} are probably significantly overestimated.
+
+
+\subsection{Nucleon Detection Calibration}
+
+There are several potential issues involved in determining the systematic errors
+associated with the calibration of the BigHAND efficiencies for
+detection of neutrons and protons.  A useful attribute of the 
+$p(\gamma,\pi^+)n$ reaction is that the neutrons used for calibration
+have essentially the same energy as those in the middle of the
+quasielastic peak.  This is a significant advantage relative to our
+previous CLAS experiment \cite{Will,Jeff} at lower $Q^2$ in which $p(e,e'\pi^+)n$ was used for 
+calibration.  There, the three-body final state gave lower neutron
+energies than those of interest so it was necessary to parameterize
+the efficiency as a function of energy to estimate the efficiency at
+the energy of interest.  Thus, the largest source of systematic
+errors in the earlier experiment is avoided here.
+
+In principle the statistical error on the calibration of the detection
+efficiencies represents a systematic error on the measurements of the
+quasi-elastic reaction of interest.  In fact it is not prohibitive to
+obtain sufficient statistics on the calibration reaction so that the
+error on the efficiencies are comparable to the statistical error on
+the quasi-elastic measurements.  We treat this as a statistical error
+in subsequent discussions, and so don't include it in 
+Table \ref{systematic_summary}.
+
+As shown in Table \ref{calzone-table}, up to 17\% of the
+quasi-elastic nucleons (in the $Q^2=6.0$ (GeV/c)$^2$ case) will fall
+outside the region which can be calibrated at elastic kinematics at
+the same beam energy and BigHAND position.  The ``uncalibrated'' regions
+of the detector could reasonably be assigned the average efficiency
+obtained from the calibration, since they share the same
+shower-generation geometry and
+are, in fact, mostly just different positions on the same physical
+detector bars.  A further refinement can be made, as has been
+described in section \ref{n-cal}, by extrapolating calibrations made
+at lower energies to take into account the slightly different
+interaction probability.  Since the efficiency is high, and unlikely
+to change rapidly, it is unreasonable to expect the efficiency in
+the ``uncalibrated'' region to differ by more than 2\% from the
+efficiency predicted by these methods.
+%, as the 
+%actual change in efficiency from one calibration point to the next
+%(shown in Table \ref{rates_input} and Fig. \ref{np_eff} does not
+%exceed 8\% from one calibration point to the next.  
+%the nucleon cross section
+%shown in Fig. \ref{pdg-sigmann} doesn't change by more 
+%than 4\%. 
+(Copious calibration data will
+be taken at the low $Q^2$ point, so any anomalous regions, such as
+dead PMT's will be identified and either repaired or corrected for.)
+We assign an upper-limit systematic error of 2\% of the fraction of
+the events which fall outside the calibrated region.  Since this error
+appears in both the numerator and denominator of $R$, it is multiplied
+by $\sqrt{2}$.
+% to give an error of 2.8\% of the fraction of
+%nucleons outside the calibrated region (found from the last column of
+%Table \ref{calzone-table}).
+
+%For the $Q^2=5.25$ and 7 (GeV/c)$^2$ points, the BigHAND efficiency will
+%be estimated by interpolation of calibration points at higher and
+%lower $Q^2$.  (As described above, the interpolation will be guided by
+%the expected efficiency variation so an 'effective thickness' will be
+%interpolated.)  Table \ref{rates_input} shows that the total change in
+%efficiency between the points at $Q^2=4.5$ and 6.0(GeV/c)$^2$ is only
+%5.7\% for neutrons and 7.8\% for protons. Taking one quarter of this
+%range as a generous estimate of the error bar on the interpolation 
+%of the efficiency to $Q^2=5.25$ (GeV/c)$^2$ for
+%each species gives a systematic error on the efficiency-corrected 
+%ratio of 2.8\%.  Similarly interpolation to $Q^2=7$ (GeV/c)$^2$ would
+%be assigned errors of one quarter of 4\% and of 3.8\% for neutrons and
+%protons respectively, to give an error of 1.5\% on the
+%efficiency-corrected ratio.
+
+For the highest-Q$^2$ points, no direct calibrations will be made.
+The proton and neutron
+efficiencies there are both large and stable, we assign a systematic error
+2\% in the efficiency correction for those points.
+
+The final line of Table \ref{systematic_summary} shows the estimated
+total systematic error on $R$, found by adding the individual
+contributions in quadrature.  
+
+\section{Installation}
+
+All the equipment used for this experiment is either already existing
+or planned
+for use in the Super-BigBite-Spectrometer (SBS) in Hall A.
+\begin{itemize}
+\item The BigBite spectrometer exists, but with different 
+  tracking instrumentation than is planned for this measurement.
+\item The GEM detector planes are planned as instrumentation of the
+  polarimeter in the SBS
+\item The BigHAND detector array exists  and has been used in Hall A.
+  It is presently in storage at JLab
+\item The BigBen magnet is needed for an already-approved
+\cite{FPP} 12 GeV experiment.  Although we are using it only as a
+deflector magnet, it will eventually be the heart of the SBS.
+\end{itemize}
+
+Two major pieces of equipment will need to be installed in the Hall
+for this experiment.  
+
+Since the BigHAND nucleon detector has been used in
+the past \cite{GEn-proposal}, there is operational experience
+on rigging it in and out of the Hall.  In preparation for the GEn
+experiment, it was rigged into the Hall in six weeks, with no previous
+operational experience and with the BigBite spectrometer being rigged
+in parallel.
+
+The 48D48 (BigBen) 'spectrometer' magnet (here being used as a
+particle-identification magnet) is available from BNL but 
+will required major modifications in
+advance of installation to allow it to be placed close to the beam line
+without mechanical or magnetic interference with the beam on its way
+to the beam dump.  We expect to play a leading role in the magnetic 
+and mechanical
+design for modifications to the magnet and for beam line shielding
+and/or correctors.  We will also participate in the design of
+mechanical systems to allow the magnet to be re-positioned for
+different scattering angles.
+These
+modifications are needed independently for the approved GEP
+\cite{FPP} experiment.
+
+The same equipment is needed for the proposed high-Q$^2$ measurement of 
+\genc\cite{new_GEN} and the BigBen magnet would be used for the
+proposed transversity experiment and as part of the SBS facility.
+Installation time could be economized by scheduling the \gen
+experiment to follow the presently proposed experiment.  Then only the
+polarized $^3$He target would need to be installed for the change-over
+to the next experiment. Similarly the BigBen magnet could then be
+instrumented to form the SBS spectrometer for the transversity
+measurement.  This would obviate the need for rigging the magnet back
+out of the Hall.
+
+A significant upgrade of the
+BigHAND electronics is planned, to reduce the dead time of the veto
+detectors.  That can be carried out independently of Hall operations.
+
+Based on past experience, including the installation of the GEn
+experiment, we estimate that six to eight weeks will be required to
+install the equipment needed for this experiment.  Ideally, of course,
+this will be carried out during an accelerator down-time, or when beam
+is unavailable because the three other halls are running.
+
+
+
+\section{Beam Time Request}
+
+Given the simulation results for rate estimates and background
+contamination, an evaluation was made of the trade-off of statistical
+and systematic errors.  Since the dominant systematic error is due to
+background contamination, that was the error considered in choosing
+running times which allowed a good trade-off of cuts which were tight
+enough to reduce systematic errors but not so tight as to require
+prohibitive running times.  Table \ref{R_stat_syst} gives the
+resulting contributions of statistical errors and background-related
+systematic errors to the determination of R for the  requested
+beam times listed below, in Table \ref{beam_request}.  
+
+\begin{table}
+\begin{center}
+\caption{
+Estimated statistical and systematic (from background subtraction
+only) errors on R for $W^2-\theta_{pq}$ cuts optimized for the requested
+running times.
+\label{R_stat_syst}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.\\
+\hline
+\hline
+Statistical (\%)&0.3&0.3&0.8&1.4&1.3&2.4&3.2&3.4&5.9\\
+\hline
+Systematic (\%)&1.5&1.2&1.3&2.6&2.9&2.6&3.2&4.4&3.6\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+Table \ref{R_stat_syst} demonstrates that the beam hour requests have
+been chosen to give a reasonable match of systematic and statistical
+errors.  The four lowest-Q$^2$ points appear to be exceptions to this,
+with statistical errors which are significantly smaller than the 
+systematic errors.  Decreasing the running times at those kinematics
+to match the statistical and systematic errors would have only a very
+minor impact on the overall beam time request.  The run times have
+been chosen to take advantage of the high rates and allow copious
+statistics to be accumulated to enable careful studies of small
+systematic effects using the data.
+
+
+Because binomial statistics apply for the efficiency measurements,
+the number of required events is considerably smaller than might be
+expected for Poisson statistics.  If $N_{in}$
+particles are incident on the detector, each with probability $p$ of
+being observed, then the variance on the number of observed particles
+$N_{obs}$ is
+$$\sigma^2=N_{in}~p(1-p)\approx N_{obs}~(1-p)$$
+So the fractional error in the efficiency $\eta=N_{obs}/N_{in}$ is
+$$\frac{\sigma_\eta}{\eta}=\frac{\sigma}{N_{obs}}=\frac{\sqrt{1-p}}{\sqrt{N_{obs}}}$$
+The required statistics for a given fractional error is therefore
+reduced by a factor of $(1-p)$ compared to counting statistics.  With 
+conservatively estimated neutron and proton efficiencies of at 
+least $p_n=0.70$ 
+and $p_p=0.75$ this reduces the required number of calibration
+coincidences by factors of 0.3 and 0.25, respectively.
+
+
+\begin{table}
+\begin{center}
+\caption{
+Beam Time Request (beam hours).  ``Normal $\mathcal{L}$'' refers to
+running at the standard luminosity of 6.7 $\times 10^{37}$ /A/cm$^2$/sec.
+Reduced luminosity running is indicated as ``Half $\mathcal{L}$'' or
+``10\% $\mathcal{L}$''.
+\label{beam_request}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.&\\
+\hline
+$E$ (GeV)&4.4& 4.4& 4.4&6.6&8.8&8.8&8.8&11.&11.&\\
+\hline
+$\theta_e$&32.5$^\circ$&
+41.9$^\circ$&64.3$^\circ$&46.5$^\circ$&33.3$^\circ$&44.2$^\circ$
+&58.5$^\circ$&45.1$^\circ$&65.2$^\circ$&\\
+\hline
+$\theta_{N}$&31.1$^\circ$&
+24.7$^\circ$&15.6$^\circ$&16.1$^\circ$&17.9$^\circ$&13.3$^\circ$
+&9.8$^\circ$&10.7$^\circ$&7.0$^\circ$&\\
+\hline
+\hline
+d$(e,e')$\\
+\hline
+Normal $\mathcal{L}$&12&12&18&18&24&36&96&108&216&\\
+\hline
+Dummy target&2&2&2&2&3&4&8&8&16&\\
+\hline
+Half  $\mathcal{L}$&12&12&12&12&&&&&&\\
+\hline
+Dummy half $\mathcal{L}$&2&2&2&2&&&&&&\\
+\hline
+ 10\% $\mathcal{L}$&12&12&&&&&&&&\\
+\hline
+Dummy 10\% $\mathcal{L}$&2&2&&&&&&&&\\
+\hline
+\hline
+H$(e,e')$\\
+\hline
+Normal $\mathcal{L}$&3&3&24&4&4&4&5&6&24&\\
+\hline
+Half  $\mathcal{L}$&3&6&2&2&2&2&2&2&2&\\
+\hline
+10\%  $\mathcal{L}$&18&18&&&&&&&&\\
+\hline
+BigBen off&6&6&6&2&2&3&6&6&24&\\
+\hline
+Dummy target&2&2&2&&&&&&&\\
+\hline
+\hline
+H$(\gamma,\pi^+)$\\
+\hline
+Radiator&24&24&12&&&&&&&\\
+\hline
+Dummy target&2&2&2&&&&&&&\\
+\hline
+No radiator&6&6&3&&&&&&&\\
+\hline
+\hline
+
+
+Total&
+106&106&89&42&35&49&118&130&282&
+%106&106&89&50&56&56&120&132&248&
+$\Rightarrow$ 957\\
+\hline
+\hline
+Commissioning&&&&&&&&&&96\\
+\hline
+3 Energy changes&&&&&&&&&&124\\
+\hline
+%15 angle changes&&&&&&&&&&60\\
+6 BigBite angle changes&&&&&&&&&&24\\
+\hline
+8 BigHand angle changes&&&&&&&&&&48\\
+\hline
+6 polarity changes&&&&&&&&&&24\\
+\hline
+\hline
+Beam request&&&&&&&&&&1173\\
+&&&&&&&&&&$\approx$49 days\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+Requested beam times are tabulated in 
+Table \ref{beam_request}. 
+The first line lists the times, discussed above, found to give a
+suitable trade-off of statistical and systematic errors.  Additional
+time is requested at lower luminosity to ensure that rate-related
+effects, such as accidentals, are well understood.  At each
+luminosity, running time on the dummy target is included to ensure
+that accidental background can be distinguished from target-window
+background.
+Time is also requested for calibration of the BigHAND detector with
+tagged protons and tagged neutrons.
+ In some cases the requested time greatly
+exceeds the minimum to allow us to take advantage 
+of data which is readily
+available.  The proton calibration rate is so high at the lowest
+$Q^2$ points, for example, that adequate statistics could be
+acquired in a few minutes.  This high rate provides an excellent
+opportunity to study efficiency variation across the face of BigHAND,
+so far more data taking time is scheduled.  Just a few hours of running
+will give a million events, allowing the BigHAND face to be finely
+subdivided and precisely calibrated in many separate regions.  For several
+calibration points or high-rate quasi-elastic points we also allow
+time for running at reduced luminosity to ensure that accidental rates
+are well understood. 
+Elastic scattering measurements with the 48D48 deflector dipole turned
+off will be useful for checking the alignment of the $\vec{q}$
+inferred from BigBite measurements with the actual hit positions in BigHAND.
+For the
+neutron calibration, time is included for running without a radiator
+to measure the virtual photon contribution. 
+ Time is also allowed for running on dummy
+targets for subtraction of target window contributions.  
+ Eight hours are allowed for each beam energy change. 
+In addition to the time required to position the spectrometers for
+each measurement, each elastic calibration requires two
+spectrometer-moves and two reversals of the BigBite polarity.  Four
+hours are allowed for each operation.
+Finally, 72 beam hours are requested for commissioning of the system
+including the new 48D48 deflector magnet.  In total, 28 days are requested.
+
+
+
+\begin{table}
+\begin{center}
+\caption{
+Estimated contributions (in percent) to errors on R, and resultant
+errors on \gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}.
+\label{error_summary}}
+\vspace{.2in}
+{\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$Q^2$ (GeV/c)$^2$&3.5& 4.5&6.0& 8.5&10.&12.&13.5&16.&18.\\
+\hline
+\hline
+ proton cross-section&1.7&1.7&1.7&1.7&1.7&1.7&1.7&1.7&4.\\
+\hline
+\hline
+%$G_E^n$
+\gen&1.7&1.1&0.49&0.51&0.56&0.69&0.38&.89&.39\\
+\hline
+quadrature sum of other syst.&
+1.72&1.43&1.59&3.4&3.63&3.36&3.85&4.86&4.19\\
+Statistical error&
+0.3&0.3&0.8&1.4&1.3&2.4&3.2&3.4&5.9\\
+\hline
+\hline
+Without proton err.\\
+\hline
+Total error on R&
+2.43&1.83&1.81&3.71&3.89&4.19&5.02&6&7.25\\
+\hline
+Error on \gmnc/{G$^{\mbox{\scriptsize p}}_{_{\mbox{\tiny M}}}~$}&
+1.22&0.91&0.9&1.85&1.94&2.09&2.51&3&3.62\\
+\hline
+\hline
+With proton err.\\
+\hline
+Error on \gmnc&
+1.48&1.25&1.24&2.04&2.12&2.26&2.65&3.12&4.14\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+
+
+Figure \ref{projected_gmn} shows the size of the errors on the
+extracted values of \gmn which would be obtained with the desired statistics
+and the systematic errors given in Table \ref{systematic_summary} 
+(added in quadrature), see Table \ref{error_summary}.  The value is
+arbitrarily plotted at unity. 
+The fractional error
+on \gmn has been calculated using the projected error on the proton
+cross section. 
+Because \gmn is proportional to $\sqrt{R}$, the error is scaled 
+down by a factor of two to give the fractional error
+on \gmnc.   The errors are seen to be far smaller than those on the few
+existing data points covering part of this kinematic range.
+
+\begin{figure}
+\includegraphics[width=6in]{projected_err.pdf}\\
+\caption{\label{projected_gmn}
+Existing data on \gmn in the $Q^2$ range of the proposed measurement
+are plotted as ratio to
+scaled dipole approximation. (See caption of Fig. \ref{old_data}.)
+Red points (arbitrarily plotted at unity) show projected size of error
+bars for this experiment.  Thick error bars include projected
+statistical and systematic errors of the proposed experiment but do not
+include errors on other measurements.  Thin error bars include
+statistical and systematic errors and also estimated errors on \gen %G$_E^n$
+and on the proton elastic cross section.  Solid light-blue circles 
+with error bars
+(arbitrarily plotted at 0.8 for clarity) indicate the position and
+projected total errors\cite{Jerry} of the CLAS12 experiment. 
+}
+\end{figure}
+
+
+
+
+
+
+\section{Relation to Other Experiments}
+
+This experiment uses much of the same detector equipment as the GEn experiment
+(E02-013)\cite{GEn-proposal}  and many of the 
+collaborators most involved in that
+experiment are also involved here.
+Technical expertise in tracking in BigBite and in calibration of BigHAND 
+will be available for this analysis.
+%%%%
+The large dipole magnet, which is proposed for deflection of protons,
+is a part of an approved 12 GeV experiment which will measure Electric
+Form Factor of the proton at very large $Q^2$ \cite{FPP}.
+
+High precision measurements of the neutron magnetic form factor were
+made at lower $Q^2$ in the CLAS e5 measurement (E94-017).
+Many of the principle people involved in the analysis \cite{Jeff} of 
+that data set are involved in the present proposal.
+This measurement will complement the CLAS measurement by 
+extending the precision measurements to a far higher $Q^2$.  
+We will draw on much expertise and experience in
+controlling systematic errors in such a ratio measurement.
+
+A 12 GeV experiment (E12-07-104) has been approved to extend
+the high-precision measurements of \gmn out to beyond $Q^2=13$
+(GeV/c)$^2$ using the CLAS12 detector.
+Some of the spokespersons of that experiment are also involved in the
+present proposal.
+The results from the two experiments will be complementary in that 
+the CLAS12 data will have generally larger systematic 
+errors (3\% estimated systematic error on \gmnc)\cite{Jerry} 
+but will cover a subset of the  range of $Q^2$ (up to about 14
+(GeV/c)$^2$) with contiguous coverage which
+can be subdivided into many data points.  
+The proposed experiment would measure nine discreet  $Q^2$
+values and extend the coverage $Q^2=18$ (GeV/c)$^2$). The present
+proposal aims to have significantly
+smaller systematic errors (and for high Q$^2$ points, smaller
+statistical errors) in the 
+region of overlap.  
+CLAS12 is a large-acceptance device which, by its nature, collects data
+simultaneously at many scattering angles but with low luminosity.  
+The proposed experiment collects data only at predetermined angles but can
+run at far higher luminosity (the planned luminosity for this proposal is 
+over 600 times the design luminosity for CLAS12).  
+Systematic errors are more easily controlled for single-position detectors 
+than for large acceptance detectors.
+The use of the same detector for both nucleon species also
+helps control the systematic errors in the proposed measurement.
+%%%
+In the present proposal, the large baseline between the target
+and the hadron detector (17 m) also provides a major advantage in 
+selection of quasi-elastic events
+due to superior angular and momentum resolution.
+
+Since neutron-detection statistics dominate the statistical errors,
+Table \ref{CLAS_vs_us} compares the expected statistics of 
+Quasi-elastic neutrons
+detected in each experiment.  Because of the CLAS12 measurements are all
+made simultaneously, the statistics fall off rapidly at high Q$^2$.  In
+the present experiment the high luminosity can be combined with beam
+times tailored to each kinematic point to make the statistics more
+even.  It is seen that the present experiment not only extends the
+coverage to higher Q$^2$ than the CLAS12 experiment, but also beyond
+$Q^2=10$ (GeV/c)$^2$ it has significantly higher statistics.
+
+\begin{table}
+\begin{center}
+\caption{\label{CLAS_vs_us}
+Comparison of expected statistics of detected neutrons between CLAS12
+experiment and present proposal.  Dashes indicate points beyond the
+kinematic range of an experiment, asterisks indicate points for which
+no measurement is made.  The last column lists the time allocated for
+data-taking in the present experiment.  This may be compared to the
+total or 56 days (1344 hours) over which the CLAS12 experiment would
+acquire the statistics given in column 2.}
+\vspace{.2in}
+{\begin{tabular}{|l|r|r|l|}
+\hline
+Q$^2$ &CLAS12&Present&Hours\\
+(GeV/c)$^2$&&proposal&\\
+\hline
+2.5&$1.6\times 10^5$&---&\\
+3.5&$2.3\times 10^6$&$2.1\times 10^5$&12\\
+4.5&$6.6\times 10^5$&$1.4\times 10^5$&12\\
+5.5&89000&*&\\
+6.0&*&28000&18\\
+6.5&35000&*&\\
+7.5&16000&*&\\
+8.5&7700&11300&18\\
+9.5&4000&*&\\
+10&*&13900&24\\
+10.5&2200&*&\\
+11.5&1300&*&\\
+12&*&4100&36\\
+12.5&800&*&\\
+13.5&500&2550&96\\
+16&---&2380&108\\
+18&---&800&216\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+Our experience on the CLAS e5 experiment showed it to be very valuable
+to have overlapping measurements.  
+There, two beam energies and two neutron detection systems allowed up 
+to four redundant measurements in some regions.  
+This was beneficial as a way to protect against
+unsuspected systematic problems in each of the measurements.
+Ultimately each of the experiments will benefit from the partial
+overlap of the kinematic coverage.  
+The CLAS12 data will serve as a useful check 
+of the lower-Q$^2$ results of the present proposal.  
+Inspection of the existing data (Fig. \ref{projected_gmn}) suggests 
+that the proposed measurement must either see an 
+abrupt change in the behavior of the form
+factor in this kinematic range or  
+be in conflict with either the CLAS \cite{Jeff} or SLAC 
+\cite{SLAC_Rock} data sets.
+In any of those cases, the CLAS12 data would then be an important confirmation.
+
+
+\section{Group Contributions to 12 GeV Upgrade}
+%{\bf XXX ...This needs to be written before submitting the proposal to the PAC}
+The following is a list of personnel from the institutions and their intended
+contribution to the proposed experiment:
+
+\begin{itemize}
+
+
+\item 
+The CMU spokesperson and collaborators have long experience with neutron
+  detectors and recent experience with the BigHAND detector (which
+  includes 100 scintillator detectors provided by CMU).  This group
+  will perform the work necessary to prepare the BigHAND detector and
+  to ensure that its elements and readout are ready for operation.
+
+
+\item 
+The Hall A spokesperson and collaborators will be 
+responsible for infrastructure of 
+the 48D48 magnet, which is a part of three Form Factor experiments.
+
+\item 
+The Rutgers spokesperson and collaborators will be responsible
+  for preparation of the data acquisition components including
+  front-end electronics and customized software.
+
+
+
+\end{itemize} 
+
+In addition to equipment specific to this experiment, many
+collaborators are involved in projects in support of equipment for use
+in Hall A in the 12 GeV era.   Many of these components are parts of
+the Super BigBite spectrometer (SBS) which will use the BigBen
+spectrometer and GEM detectors, among other components.
+
+
+\begin{itemize}
+\item 
+The INFN collaborators of are committed 
+to provide a reconfigured tracker in BigBite and its operational support. 
+They will also have a major role in implementation of the RICH 
+in Hall A.  The source of funding for this group is INFN.
+INFN has approved about \$150k for prototyping of the large GEM chambers
+and expected to support whole front tracker in GEP5 experiment including
+electronics for high resolution operation in SBS and BB.
+
+\item 
+The UVA collaborators are responsible for construction and operation
+of high polarization high luminosity He target, which is a major part
+of the new GEN proposal to this PAC.
+The UVA collaborators are also responsible for reconfiguration of the tracker
+in the Super BigBite Spectrometer and its operation. 
+The source of funding for this group is DOE.
+The University of Virginia group, which recently developed a major new tracker
+for the BigBite spectrometer, will  submit an MRI proposal to NSF 
+for construction of a GEM-based tracker for SBS. 
+
+
+\item 
+The Glasgow group intends to work on GEM-based detectors for the 
+PANDA experiment and will share their results in hardware design and readout 
+software with this effort, effectively contributing several FTE's.
+
+\item 
+The Florida International University also intends to contribute in
+the development of a GEM-based tracker at least 1 FTE and put
+a graduate PhD thesis student in this experiment.
+
+\item 
+The CMU group
+will use their expertise  to implement the hadron calorimeter
+and the beam line magnetic shielding, both of which also required in
+the GEP5 experiment E12-07-109. 
+This group has also become involved in the development of Compton
+polarimeter equipment for Hall A, and will continue that development
+into the 12 GeV era.
+The source of funding for this group is DOE.
+
+\item 
+Along with the CMU group, College of William and Mary group, together with Dubna collaborators, 
+intends to prepare the hadron calorimeter elements and their 
+implementation in time for the experiment around 2014. 
+
+\end{itemize}
+
+
+
+
+\newpage\noindent
+\begin{thebibliography}{}
+\newcommand {\etal} {{\it et al.}}
+\newcommand {\PRL}  {Phys. Rev. Lett.}
+
+\bibitem{rosenbluth} M.N. Rosenbluth, Phys. Rev. {\bf 79}  615 (1950).
+
+\bibitem{jones} M.K.~Jones \etal, \PRL {\bf 84} 1398 (2000).
+
+\bibitem{gayou} O.~Gayou \etal, \PRL  {\bf 88}  092301 (2002).
+
+\bibitem {afan} A.V. Afanansev \etal, Phys. Rev. D {\bf 72} 013008 (2005).
+
+
+\bibitem{Miller}
+G. Miller, Phys. Rev. Lett. {\bf 99}  112001 (2007).
+
+\bibitem{qf1}
+D. Kaplan and A. V. Manohar, Nucl. Phys. B {\bf 310}, 527 (1988).
+
+\bibitem{qf2}
+R. D. McKeown, Phys. Lett. B {\bf 219}, 140 (1989).
+
+\bibitem{qf3}
+D.H. Beck, Phys. Rev. D {\bf 39}, 3248 (1989).
+
+\bibitem{GPD1}
+D. M\"uller, D.~Robaschik, B.~Geyer, F.M.~Dittes, J.~Horejsi,
+Fortsch.\ Phys.\  42 (1994) 101.
+
+\bibitem{GPD2}
+X. Ji, Phys. Rev. Lett. {\bf 78}, 610 (1997); 
+Phys. Rev. D {\bf 55}, 7114 (1997).
+
+\bibitem{GPD3}
+A.V. Radyushkin, Phys. Lett. B {\bf 380}, 417 (1996); Phys. Lett. B {\bf 385}, 333 (1996); 
+Phys. Rev. D {\bf 56}, 5524 (1997).
+
+
+\bibitem{pol1}
+T. Eden {\it et al.}, Phys. Rev. C {\bf 50}, R1749 (1994).
+
+\bibitem{pol2}
+M. Ostrick {\it et al.}, Phys. Rev. Lett. {\bf 83}, 276 (1999).
+
+\bibitem{pol3}
+C. Herberg {\it et al.}, Eur. Phys. Jour. A {\bf 5}, 131 (1999).
+
+\bibitem{pol4}
+Jefferson Lab experiment E93-038, spokespersons: R. Madey, S. Kowalski.
+
+\bibitem{pol5}
+I. Passchier {\it et al.}, Phys. Rev. Lett. {\bf 82},  4988 (1999).
+
+\bibitem{pol6}
+H. Zhu {\it et al.}, Phys. Rev. Lett. {\bf 87}, 081801, 2001.
+
+\bibitem{pol7}
+M. Meyerhoff {\it et al.}, Phys. Lett. B {\bf 327}, 201 (1994).
+
+\bibitem{pol_gmn1}H.~Gao {\it et al.}, Phys. Rev. C {\bf 50}, R546 (1994);
+H.~Gao, Nucl. Phys. A {\bf 631}, 170c (1998).
+
+\bibitem{pol_gmn2}
+W. Xu {\it et al.}, Phys. Rev. Lett. {\bf 85}, 2900 (2000).
+
+\bibitem{pol_gmn3}
+W. Xu {\it et al.}, Phys. Rev. C. {\bf 67}, R012201 (2003). 
+
+
+\bibitem{sub1}
+E.B. Hughes {\it et al.}, Phys. Rev. {\bf 139},  B458 (1965); {\it ibid.} 
+{\bf 146}, 973 (1966).
+
+\bibitem{sub2}
+B. Grosset\^{e}te, S. Jullian, and P. Lehmann, Phys. Rev. {\bf 141}, 
+1435 (1966). 
+
+\bibitem{sub3}
+A.S. Esaulov {\it et al.}, Sov. J. Nucl. Phys. {\bf 45}, 258 (1987).
+
+\bibitem{sub4}
+R.G. Arnold {\it et al.}, Phys. Rev. Lett. {\bf 61}, 806 (1988).
+
+\bibitem{SLAC_Rock}
+S. Rock {\it et. al.}, Phys. Rev. D {\bf 46} 24 (1992).
+
+\bibitem{sub5}
+A. Lung {\it et al.}, Phys. Rev. Lett. {\bf 70}, 718 (1993).
+
+
+
+\bibitem{tag1}
+R.J. Budnitz {\it et al.}, Phys. Rev. {\bf 173}, 1357 (1968).
+
+\bibitem{tag2}
+K.M. Hanson {\it et al.}, Phys. Rev. D {\bf 8}, 753 (1973).
+
+
+
+\bibitem{rat1}
+P. Stein {\it et al.}, Phys. Rev. Lett. {\bf 16}, 592 (1966).
+
+\bibitem{rat2}
+W. Bartel {\it et al.}, Phys. Lett. B {\bf 30}, 285 (1969); {\it ibid.} 
+{\bf 39}, 407 (1972); Nucl. Phys. B {\bf 58}, 429 (1973).
+
+\bibitem{rat3} P.~Markowitz {\it et al.}, Phys. Rev. C {\bf 48}, R5 (1993).
+
+\bibitem{rat4}H.~Anklin {\it et al.}, Phys. Lett. B {\bf 336}, 313 (1994).
+
+\bibitem{rat5}E.E.W.~Bruins {\it et al.}, Phys. Rev. Lett. {\bf 75}, 21 
+(1995).
+
+\bibitem{rat6} H.~Anklin {\it et al.}, Phys. Lett. {\bf B428}, 248 (1998).
+
+\bibitem{rat7} 
+G. Kubon {\it et al.}, Phys. Lett. {\bf B524} 26 (2002).
+
+\bibitem{Will}
+J. Lachniet et al, nucl-ex 0811.1716, submitted to Phys. Rev. Lett.\\
+JLab Experiment E94-071\\
+``The Neutron Magnetic Form Factor from Precision Measurements
+of the Ratio of Quasielastic Electron-Neutron to
+Electron-Proton Scattering in Deuterium'', W. Brooks and M. Vineyard
+{spokespersons}.
+
+\bibitem{Durand}
+L. Durand, Phys. Rev. {\bf 115}  1020 (1959).
+
+\bibitem{Jeff}
+J, Lachniet thesis, Carnegie Mellon University, unpublished, June,
+2005\\
+http://www-meg.phys.cmu.edu/~bquinn/jeff\_thesis.pdf
+
+
+\bibitem{new_GEN}
+``Measurement of the Neutron Electromagnetic Form Factor Ratio GEn/GMn at
+High Q2'' proposal to PAC34, S. Riordan, G. Cates and 
+B.Wojtsekhowski (spokespersons).
+
+
+
+\bibitem{Arenhovel}
+H. Arenh\"ovel, private communication.
+
+\bibitem{Jesch}
+S. Jeschonnek and J.W. Van Orden, Phys. Rev. C, {\bf 62} 044613, 2000.
+
+\bibitem{GEn-proposal}
+JLab experiment E02-013,
+G.Cates, N.Liyanage and B.Wojtsekhowski (spokespersons).
+
+
+\bibitem{Seamus}
+S.Riordan, private communication.
+
+\bibitem{bb_simulation}
+See proposal of JLab Experiment E12-06-122
+"Measurement of neutron asymmetry $A_1^n$ in the valence quark
+region using BigBite spectrometer."
+G.Cates, N.Liyanage , Z.Meziani, G.Rosner, X.Zheng and B.Wojtsekhowski
+(spokespersons).
+
+
+\bibitem{Rob_F}
+Rob Feuerbach, private communication.
+
+\bibitem{BH_simulation}
+S.Abrahamyan, 
+GEANT-4 simulation with saturation effect in light output.
+
+\bibitem{matthews}
+J.L. Matthews and R.O. Owens, Nucl. Instr. and Meth. {\bf 111}, 157 (1973).
+
+\bibitem{Lomon}
+E.L. Lomon and H. Feshbach, Annals of Phys. {\bf 48} 94 (1968).
+
+\bibitem{E12-07-108}
+E12-07-108 proposal.
+
+\bibitem{PDG}
+Data from PDG, http://pdg.lbl.gov/xsect/contents.html and references therein.
+
+\bibitem{genev}
+M.Ripani and E.M.Golovach based on 
+P.Corvisiero, {\it et al.}, Nucl. Instr. and Meth. A, {\bf 3464} 33 (1994).
+
+
+\bibitem{SLAC_Stuart}
+L.M. Stuart, {\it et. al.}, Phys. Rev. D {\bf 58} 032003 (1998).
+
+\bibitem{E94-104}
+L.Y. Zhu, {\it et. al.}, Phys. Rev. C {\bf 71} 044603 (2005).
+
+
+\bibitem{Anderson} 
+R.L. Anderson, {\it et al}, Phys. Rev. D {\bf 14}  679 (1976).
+
+\bibitem{FPP}
+JLab E12-07-109, 
+ Ch.~Perdrisat {\it et al}, Large Acceptance Proton
+Form Factor Ratio Measurements at 12 and 15 (GeV/$c$)$^2$
+Using Recoil Polarization Method.
+
+\bibitem{Jerry}
+G. Gilfoyle, private communication.
+
+% \bibitem[label]{cite_key}
+% literature citation ...
+% ....
+\end{thebibliography}
+
+
+
+
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,74 @@
+\section{Technique}
+%
+The neutron form factors are challenging to be determind experimentally especially because there is no free neutron target. 
+However, since the deuterium is a loosely coupled system, it can be viewed as the sum of a proton target and a neutron target. 
+In fact, quasi-elastic scattering from deuterium has been used to extract the neutron magnetic form factor, \gmn, at modestly high \qsq~for decades
+~\cite{Hughes:1965zza, Arnold:1988us} in the single arm (e,e') experiments. 
+However, the proton cross section needs to be subtracted by applying a single-arm quasi-elastic electron-proton scattering. 
+This ``proton-subtraction" technique suffers from a number systematic uncertainties e.g. contributions from inelastic and secondary scattering processes. 
+
+Many year ago, L.~Durand~\cite{Durand:1959zz} proposed the so-called ``ratio-method" based on the measurement of both D(e,e'n) and D(e,e'p) reactions. 
+In this method, many of the systematic errors are cancel out. 
+Several experiments \cite{Bruins:1995ns, Kubon:2001rj, Lachniet:2008qf} have applied the ratio-method to determine the neutron magnetic form factor. 
+We propose to use this method to measure Rosenbluth slope and extract (in OPE approximation) the neutron electric form factor, \gen.
+
+Data will be collected for quasi-elastic electron scattering from deuteron in process $D(e,e'n)p$. 
+A complementary $D(e,e'p)n$ data will be taken to calibrate the experiment apparatus.
+The current knowledge of the $e-p$ elastic scattering cross section (obtained in the single arm H(e,e')p and H(e,p)e' experiments) will be also used
+for precision determination the experiment kinematics.
+
+Applying Rosenbluth technique to measure \gen~requires accurate measurement of the cross section  and suffers from large uncertainties. 
+To overcome this issue, we propose to extract the value of \gen~from the measured the ratio of quasi-elastic yields, $R_{n/p}$, in scattering from a deuteron target as follows: 
+
+\begin{equation}
+R_{n/p} \equiv R_{observed} = \frac{N_{e,e'n}}{N_{e,e'p}}
+\label{eq:1}
+\end{equation}
+$R_{observed}$ needs to be corrected to extract the ratio of e-n/e-p scattering from nucleons:
+
+\begin{equation}
+R_{corrected} = f_{corr} \times R_{observed} \;\; ,
+\label{eq:2}
+\end{equation}
+where the correction factor $f_{correction}$ takes into account the variation in the hadron efficiencies due to changes of $e-N$ Jacobian, the radiative corrections, and absorption in path
+from the target to the detector, and small re-scattering correction.
+
+In one-photon approximation, $R_{corrected}$ can be presented as: 
+
+\begin{equation}
+R_{corrected} = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}}}^p \cdot (1+\tau_n)} \times \frac{\epsilon \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon \sigma_{_L}^p + \sigma_{_T}^p}
+\end{equation}
+
+It is important that the ratio $R_M = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}}}^p \cdot (1+\tau_n)}$ could be determine with very high accuracy even
+with modest precision for the beam energy, electron scattering angle, and detector solid angle.
+
+
+Now, let us write the $R_{corrected}$ at two values of $\epsilon$ using $R_s^{n(p)} = \sigma_{_L}^{n(p)}/ \sigma_{_T}^{n(p)}$ as
+
+\begin{equation*}
+R_{{corrected},\epsilon_1} = R_{M,\epsilon_1} \times \frac{\epsilon_1 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p}
+\end{equation*}
+\begin{equation*}
+R_{{corrected},\epsilon_2} = R_{M,\epsilon_2} \times \frac{\epsilon_2 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p}
+\end{equation*}
+
+In this two equation there are two unknown variables: $\sigma_{_L}^n$ and $\sigma_{_T}^n$.
+
+The dominant contribution to the uncertainty of $R_s^{n} = \sigma_{_L}^{n}/ \sigma_{_T}^{n}$ is coming the uncertainty in $R_s^{p}$ which is at \qsq=4.5 \gevcsq~is of 0.05 
+according to the global analysis~\cite{Christy2020ab}.
+
+This resulting in the equation with just one unknown variable $R_s^n$:
+
+\begin{equation*}
+A = B \times \frac{\epsilon_1 R_s^n + 1}{\epsilon_2 R_s^n  + 1} \approx B \times (1 + \Delta \epsilon \cdot R_s^n)
+\end{equation*}
+
+Where the variable $A = R_{{corrected},\epsilon_1}/R_{{corrected},\epsilon_2}$ will be measured with precision of 0.1\% and the variable 
+\mbox{$ B = {R_{M,\epsilon_1}}/{R_{M,\epsilon_2}} \times (\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p)/(\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p) \approx (1 + \Delta \epsilon \cdot R_s^p) $}
+which will be determined to precision $0.25 \times 0.05$.
+The final uncertainty of $R_s^n$ is 0.05 which dominated by current knowledge of the same proton parameter 1.91*(sqrt(0.057*2) -sqrt(0.057*2+0.05)).
+ 
+At \qsq=4.5 \gevcsq~the combination $\mu_n$\gen/\gmn~has the value of 0.5 (see the review~\cite{Punjabi:2015bba}), 
+so the accuracy of our experiment (assuming the TPE portion of $R_s^n$ as large as for the proton) for will be $\delta (\mu_n \sqrt{ \tau \sigma_{_L}/\sigma{_{_T}}}$) = $\pm$0.08. 
+
+

@@ -42,10 +42,10 @@ Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ 
 \hline
 1 (0.599) & 52.4 & 46.7 & 47.2 \\
 \hline
-2 (0.838) & 32.7 & 23.4 & 23.0 \\
+2 (0.838) & 32.7 & 20.8 & 22.2 \\
 \hline
 \end{tabular} 
-\caption{Kinematics solid angles and efficiencies.}% ({\em preliminary}).}
+\caption{Kinematics electron solid angle, and convoluted electron/hadron solid angle}
 \label{tab:kinExpParams}
 \end{table}
 \end{center}
@@ -54,7 +54,6 @@ Then, we evaluate the detection efficiency. For the electron, we require the ene
 %
 \begin{center}
 \begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{e}$ & $\eta_{n}$ & $\eta_{p}$ \\
@@ -62,10 +61,10 @@ Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{e}$ & $\eta_{n}$ & $\eta_{p}$ 
 \hline
 1 (0.599) & 1.32 & 1.06 & 0.902 & 0.904 & 0.892 \\ 
 \hline
-2 (0.838) & 2.99 & 0.09 & 0.807 & 0.887 & 0.876 \\
+2 (0.838) & 2.99 & 0.09 & 0.808 & 0.889 & 0.882 \\
 \hline
 \end{tabular} 
-\caption{Kinematics solid angles and efficiencies.}% ({\em preliminary}).}
+\caption{Kinematics electron thresholds and particle detection efficiencies ($\eta$).}
 \label{tab:kinEffs}
 \end{table}
 \end{center}
@@ -77,7 +76,13 @@ The counting rates are evaluated using the events that have passed the selection
   N_{est} = {\cal L} \Delta t \times \sum_{i \in acc~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
 \end{equation}
 %
-The counting rates for both kinematics are available in Table.~\ref{tab:Rates}, assuming 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.
+The counting rates, as well as the reduced cross section
+%
+\begin{equation}
+  F^2 = \frac{N_{QE}}{}
+\end{equation}
+%
+are compiled for both kinematics in Table.~\ref{tab:Rates}, assuming 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.
 %
 \begin{center}
 \begin{table}[h]
@@ -87,9 +92,9 @@ The counting rates for both kinematics are available in Table.~\ref{tab:Rates}, 
 Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
  & counts & counts & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
 \hline
-1 (0.599) & 1.68$\times 10^{6}$ & 4.57$\times 10^{6}$ & 1.09 & 0.84 & 2.97 & 1.39 \\
+1 (0.599) & 1.54$\times 10^{6}$ & 4.21$\times 10^{6}$ & 0.99 & 0.80 & 2.73 & 1.33 \\
 \hline
-2 (0.838) & 4.52$\times 10^{6}$ & 1.21$\times 10^{7}$ & 0.92 & 0.43 & 2.53 & 0.79 \\
+2 (0.838) & 3.15$\times 10^{6}$ & 9.02$\times 10^{6}$ & 0.72 & 0.40 & 1.93 & 0.64 \\
 \hline
 \end{tabular} 
 \caption{Quasi-elastic counting rates, and ``reduced cross section'' as defined by Eq.~\ref{eq:F2}. These rates assume 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.}%({\em preliminary})
@@ -97,6 +102,7 @@ Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p
 \end{table}
 \end{center}
 %
+
 The calculation of the $F_2$ term requires the evaluation of the Mott cross section.
 The Mott cross section has been calculated with the weighted average of the electron variables (momentum and polar angle).
 %
@@ -163,8 +169,8 @@ Fig.~\ref{fig:BBRates} presents the distributions of rate of energy deposit for 
 %
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=6cm]{Plots/BBECalRates_gen-tpe_le.png}
-    \includegraphics[width=6cm]{Plots/BBECalRates_gen-tpe_he.png}
+    \includegraphics[width=6cm]{Plots/BBECalRates_gen-tpe_le.pdf}
+    \includegraphics[width=6cm]{Plots/BBECalRates_gen-tpe_he.pdf}
     \caption{Rates of the different process contributing to the BigBite electron arm trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, inelastic in magenta, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the resolution for the elastic peak in the BigBite shower is $\sim0.3$ GeV.}
     \label{fig:BBRates}
   \end{center}
@@ -177,8 +183,8 @@ Fig.~\ref{fig:HCalRates} presents the distributions of rate of energy deposit fo
 %
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=6cm]{Plots/HCalRates_gen-tpe_le.png}
-    \includegraphics[width=6cm]{Plots/HCalRates_gen-tpe_he.png}
+    \includegraphics[width=6cm]{Plots/HCalRates_gen-tpe_le.pdf}
+    \includegraphics[width=6cm]{Plots/HCalRates_gen-tpe_he.pdf}
     \caption{Rates of the different process contributing to the HCal trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, minimum bias in black, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the peak itself is around 0.2 GeV for 3.2 GeV nucleons.}
     \label{fig:HCalRates}
   \end{center}
@@ -198,18 +204,18 @@ Point ($\epsilon$) & \multicolumn{2}{|c|}{1 (0.599)} & \multicolumn{2}{c|}{2 (0.
 \hline
 threshold (GeV) & 1.32 & 0.106 & 2.99 & 0.090 \\
 \hline
-Quasi-elastic   & 1.62$\times 10^{2}$ & 1.44$\times 10^{2}$ & 4.38$\times 10^{2}$ & 3.48$\times 10^{2}$ \\
-Inelastic       & 1.62$\times 10^{3}$ & - & 5.80$\times 10^{3}$ & - \\
-$\pi^0$ (Wiser) & 3.16$\times 10^{2}$ & 1.40$\times 10^{6}$ & 3.17$\times 10^{2}$ & 2.26$\times 10^{6}$ \\
-$\pi^+$ (Wiser) & 1.16$\times 10^{4}$ & 7.90$\times 10^{6}$ & 1.64$\times 10^{3}$ & 7.83$\times 10^{6}$ \\
-$\pi^-$ (Wiser) & 1.84$\times 10^{2}$ & 2.87$\times 10^{6}$ & 3.18$\times 10^{2}$ & 3.92$\times 10^{6}$ \\
-Minimum bias    & - & 3.39$\times 10^{6}$ & - & 5.40$\times 10^{6}$($^*$) \\
+Quasi-elastic   & 1.62$\times 10^{2}$ & 1.44$\times 10^{2}$ & 4.39$\times 10^{2}$ & 3.48$\times 10^{2}$ \\
+Inelastic       & 1.62$\times 10^{3}$ & - & 5.98$\times 10^{3}$ & - \\
+$\pi^-$ (Wiser) & 3.08$\times 10^{2}$ & 1.40$\times 10^{6}$ & 2.95$\times 10^{2}$ & 1.96$\times 10^{6}$ \\
+$\pi^0$ (Wiser) & 1.15$\times 10^{4}$ & 7.90$\times 10^{6}$ & 1.69$\times 10^{3}$ & 5.77$\times 10^{6}$ \\
+$\pi^+$ (Wiser) & 1.82$\times 10^{2}$ & 2.87$\times 10^{6}$ & 3.07$\times 10^{2}$ & 3.34$\times 10^{6}$ \\
+Minimum bias    & - & 3.39$\times 10^{6}$ & - & 3.32$\times 10^{6}$($^*$) \\ 
 \hline
-{\em Total} & 1.39$\times 10^{4}$ & 1.22$\times 10^{7}$ & 8.51 $\times 10^{3}$ & 1.40$\times 10^{7}$ \\
-(min. bias - HCal only) &  & / 3.39$\times 10^{6}$ &  & / 5.40$\times 10^{6}$ \\
+{\em Total} & 1.37$\times 10^{4}$ & 1.22$\times 10^{7}$ & 8.17 $\times 10^{3}$ & 1.11$\times 10^{7}$ \\
+(min. bias - HCal only) &  & / 3.39$\times 10^{6}$ &  & / 3.32$\times 10^{6}$ \\
 \hline
-{\bf Coincidence rate} & \multicolumn{2}{|c|}{5.09$\times 10^{3}$} & \multicolumn{2}{c|}{3.57$\times 10^{3}$} \\
-(with min. bias HCal) & \multicolumn{2}{|c|}{1.41$\times 10^{3}$} & \multicolumn{2}{|c|}{1.38$\times 10^{3}$} \\
+{\bf Coincidence rate} & \multicolumn{2}{|c|}{5.01$\times 10^{3}$} & \multicolumn{2}{c|}{2.72$\times 10^{3}$} \\
+(with min. bias HCal) & \multicolumn{2}{|c|}{1.39$\times 10^{3}$} & \multicolumn{2}{|c|}{8.14$\times 10^{2}$} \\
 \hline
 \end{tabular} 
 \caption{Trigger rates for BigBite and HCal, with the different process contributions separated, and the sum. For HCal, the total rates is either the sum of the (Wiser) inclusive pions or the minimum bias. The coincidence rates assume a 30 ns coincidence window.}
@@ -221,6 +227,18 @@ Note that for HCal, the ``total rates'' is either the sum of inclusive charged a
 
 In the worst case scenario, the coincidence rates could be as high as 5kHz, which might be at the limit of manageability for the DAQ.
 However, a slight increase on the HCal threshold (which would drop the efficiency from $\sim$90\% to $\sim$85\%) would decrease the total HCal rates by $\sim$35\% to 40\% in this worst case scenario, which would make the situation more manageable (3.3 kHz).
+
+\subsection{Accidentals: contamination from inelastic}
+
+The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the missing transverse momentum of the nucleon
+%
+\begin{equation}
+  p_{x/y miss} = q_{x/y}-p'_{x/y}
+\end{equation}
+%
+For elastic scattering, the spread of this quantity is be due to the resolution effects, while for quasi elastic scattering, the initial Fermi momentum of the nucleon is convoluted with the resolution effects.
+Fig.~ shows the distributions of $p_{y miss}$ vs $p_{x miss}$ (including detector resolution effects), and the selection cut that is performed on this variable.
+
 
 
 

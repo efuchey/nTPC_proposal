@@ -18,137 +18,6 @@ The representation of the experiment apparatus in G4SBS is shown in the high $\e
 %
 %Most of the subsystems are mostly accurately reproduced in G4SBS, using the correct 
 
-\subsection{Quasi-elastic counting rates}
-
-The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
-We generated 1M events sample for each kinematics, on a solid angle that was larger than the detector acceptance.
-To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as the following;
-%
-\begin{itemize}
-\item{require a primary track, going through all 5 GEM layers (electron arm);}
-\item{require non-zero energy deposit in both the preshower and shower (electron arm);}
-\item{require non-zero energy deposit in HCal (hadron arm).}
-\end{itemize}
-%
-The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}
-%
-\begin{center}
-\begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ & $\Delta\Omega_e \otimes \Delta\Omega_p$ \\
- & (msr) & (msr) & (msr) \\
-\hline
-1 (0.599) & 52.4 & 46.7 & 47.2 \\
-\hline
-2 (0.838) & 32.7 & 20.8 & 22.2 \\
-\hline
-\end{tabular} 
-\caption{Kinematics electron solid angle, and convoluted electron/hadron solid angle}
-\label{tab:kinExpParams}
-\end{table}
-\end{center}
-%
-Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we require the threshold to be such as we obtain ~90\% efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
-%
-\begin{center}
-\begin{table}[h]
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{e}$ & $\eta_{n}$ & $\eta_{p}$ \\
- & (GeV) & (GeV) &  &  &  \\
-\hline
-1 (0.599) & 1.32 & 1.06 & 0.902 & 0.904 & 0.892 \\ 
-\hline
-2 (0.838) & 2.99 & 0.09 & 0.808 & 0.889 & 0.882 \\
-\hline
-\end{tabular} 
-\caption{Kinematics electron thresholds and particle detection efficiencies ($\eta$).}
-\label{tab:kinEffs}
-\end{table}
-\end{center}
-%
-
-The counting rates are evaluated using the events that have passed the selection described above, and weighting those events with the cross section calculated by G4SBS, multiplied by the generation solid angle, using the formula:
-%
-\begin{equation}
-  N_{est} = {\cal L} \Delta t \times \sum_{i \in acc~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
-\end{equation}
-%
-The counting rates, as well as the reduced cross section
-%
-\begin{equation}
-  F^2 = \frac{N_{QE}}{}
-\end{equation}
-%
-are compiled for both kinematics in Table.~\ref{tab:Rates}, assuming 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.
-%
-\begin{center}
-\begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
- & counts & counts & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
-\hline
-1 (0.599) & 1.54$\times 10^{6}$ & 4.21$\times 10^{6}$ & 0.99 & 0.80 & 2.73 & 1.33 \\
-\hline
-2 (0.838) & 3.15$\times 10^{6}$ & 9.02$\times 10^{6}$ & 0.72 & 0.40 & 1.93 & 0.64 \\
-\hline
-\end{tabular} 
-\caption{Quasi-elastic counting rates, and ``reduced cross section'' as defined by Eq.~\ref{eq:F2}. These rates assume 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.}%({\em preliminary})
-\label{tab:Rates}
-\end{table}
-\end{center}
-%
-
-The calculation of the $F_2$ term requires the evaluation of the Mott cross section.
-The Mott cross section has been calculated with the weighted average of the electron variables (momentum and polar angle).
-%
-\begin{center}
-\begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-Point ($\epsilon$) & $\langle \theta_e \rangle$ &  $\langle k^{\prime} \rangle$ & $\langle Q^2 \rangle$ & $\sigma_{Mott}$ \\
- & (deg) & (GeV) & (GeV$^2$) & (nb sr$^{-1}$) \\
-\hline
-1 (0.599) & 41.7 & 2.01 & 4.47 & 6.62 \\ 
-\hline
-2 (0.838) & 22.9 & 4.26 & 4.40 & 48.0 \\
-\hline
-\end{tabular} 
-\caption{Cross-section weighted average of kinematic variables over the BigBite acceptance. The Mott cross section has been evaluated at these values.}
-\label{tab:sigma_mott}
-\end{table}
-\end{center}
-%
-
-\iffalse
-The counting rates for the low $\epsilon$ kinematics should be directly comparable to the rates reported in the original $G_M^n$ proposal \cite{gmp}.
-In this proposal, the requested running time was 12 hours, with a beam intensity of 10 $\mu$A on a 10 cm long liquid deuterium target with density 0.169~g.cm$^{-3}$.
-This luminosity is 4.5 times lower than the currently proposed luminosity.
-%
-\begin{center}
-\begin{table}[h]
-\begin{tabular}{|l|c|c|}
-\hline
- & $d(e, e'n)p$ & $d(e, e'p)n$ \\
-\hline
-This estimation & 3.27$\times 10^{4}$ & 9.00$\times 10^{4}$ \\
-\hline
-Original proposal Table.~8 & 1.20$\times 10^{4}$ & 2.66$\times 10^{4}$ \\ 
-\hline
-Discrepancy factor & 2.73 & 3.38 \\ 
-\hline
-\end{tabular} 
-\caption{{\em Hourly} rates comparison between these predictions and the original $G_M^n$ proposal, {\em at the original proposal luminosity} (10.5 $\mu$A on a 10cm liquid deuterium target, with density 0.169 g.cm$^{-3}$). There's a factor 3 discrepancy between the numbers}
-\label{tab:RateComp}
-\end{table}
-\end{center}
-\fi
-
 \subsection{Background and trigger rates}
 
 The main processes expected to contribute the trigger rates for the BigBite spectrometer are:
@@ -230,15 +99,184 @@ However, a slight increase on the HCal threshold (which would drop the efficienc
 
 \subsection{Accidentals: contamination from inelastic}
 
-The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the missing transverse momentum of the nucleon
+The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the center of mass energy
 %
 \begin{equation}
-  p_{x/y miss} = q_{x/y}-p'_{x/y}
+  W^2 = M_{N}^2+2M_{N}^{2}(E-E')-Q^2, %= (q+p)^2 
 \end{equation}
 %
-For elastic scattering, the spread of this quantity is be due to the resolution effects, while for quasi elastic scattering, the initial Fermi momentum of the nucleon is convoluted with the resolution effects.
-Fig.~ shows the distributions of $p_{y miss}$ vs $p_{x miss}$ (including detector resolution effects), and the selection cut that is performed on this variable.
+and the missing transverse momentum of the nucleon
+%
+\begin{equation}
+  p_{\perp miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2},
+\end{equation}
+%
+where $M_N$ is the mass of the nucleon, $E$ and $E'$ the initial and final energy of the electron, and $q_{x,y}$, $p'_{x, y}$ are the projections on $x$, $y$ of the vectors of the virtual photon and final nucleon.
+The distributions of these quantities (weighted with cross section and including detector resolutions) are displayed for quasi-elastic and inelastic scattering, and for proton and nucleon, on Fig.~\ref{fig:inel_contam_le} for the low $\epsilon$ kinematic, and on Fig.~\ref{fig:inel_contam_he} for the high $\epsilon$ kinematic.
+%
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=12cm]{Plots/gen-tpe_le_pperp_acc.pdf}
+    \includegraphics[width=12cm]{Plots/gen-tpe_le_W2_acc.pdf}
+    \caption{Compared quasi-elastic and inelastic distributions (including detectors resolutions) for $p_{\perp miss}$ (top) and $W^2$ (bottom), for the low $\epsilon$ kinematic. Comparison for protons is on the left, and comparison for neutrons is on the right. On the bottom panel, black and red are before the $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection, while blue and magenta are after $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection and application of BigBite shower and HCal thresholds.}
+    \label{fig:inel_contam_le}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=12cm]{Plots/gen-tpe_he_pperp_acc.pdf}
+    \includegraphics[width=12cm]{Plots/gen-tpe_he_W2_acc.pdf}
+    \caption{Compared quasi-elastic and inelastic distributions (including detectors resolutions) for $p_{\perp miss}$ (top) and $W^2$ (bottom), for the high $\epsilon$ kinematic. Comparison for protons is on the left, and comparison for neutrons is on the right. On the bottom panel, black and red are before the $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection, while blue and magenta are after $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection and application of BigBite shower and HCal thresholds.}
+    \label{fig:inel_contam_he}
+  \end{center}
+\end{figure}
+%
+Provided that we are not limited by statistics and the sample purity is capital for our experiment, we set the selection criteria on $W^2$ and $p_{\perp miss}$ to maximize inelastic contamination (ideally below 1~\%). 
+Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while rataining $\geq$~60~\% of statistics listed in Table.~\ref{tab:Rates}
 
+\subsection{Quasi-elastic counting rates}
 
+The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
+We generated 1M events sample for each kinematics, on a solid angle that was larger than the detector acceptance.
+To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as the following;
+%
+\begin{itemize}
+\item{require a primary track, going through all 5 GEM layers (electron arm);}
+\item{require non-zero energy deposit in both the preshower and shower (electron arm);}
+\item{require non-zero energy deposit in HCal (hadron arm).}
+\end{itemize}
+%
+The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}
+%
+\begin{center}
+\begin{table}[h]
+  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ & $\Delta\Omega_e \otimes \Delta\Omega_p$ \\
+ & (msr) & (msr) & (msr) \\
+\hline
+1 (0.599) & 52.4 & 46.7 & 47.2 \\
+\hline
+2 (0.838) & 32.7 & 20.8 & 22.2 \\
+\hline
+\end{tabular} 
+\caption{Kinematics electron solid angle, and convoluted electron/hadron solid angle}
+\label{tab:kinExpParams}
+\end{table}
+\end{center}
+%
+Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we require the threshold to be such as we obtain ~90\% efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
+%
+\begin{center}
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det, e}$ & $\eta_{det, n}$ & $\eta_{det, p}$ & $\eta_{QE sel, n}$ & $\eta_{QE sel, p}$ \\
+ & (GeV) & (GeV) &  &  &  \\
+\hline
+1 (0.599) & 1.32 & 1.06 & 0.902 & 0.904 & 0.892 & 0.589 & 0.605 \\ 
+\hline
+2 (0.838) & 2.99 & 0.09 & 0.808 & 0.889 & 0.882 & 0.617 & 0.647 \\
+\hline
+\end{tabular} 
+\caption{Kinematics electron thresholds, particle detection efficiencies ($\eta_{det}$), and efficiency of quasi-elastic selection $\eta_{QE sel}$ separated for the proton and the neutron.}
+\label{tab:kinEffs}
+\end{table}
+\end{center}
+%
 
+The counting rates are evaluated using the events that have passed the selection described above, and weighting those events with the cross section calculated by G4SBS, multiplied by the generation solid angle, using the formula:
+%
+\begin{equation}
+  N_{est} = {\cal L} \Delta t \times \sum_{i \in acc~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
+\end{equation}
+%
+The counting rates, as well as the reduced cross section $F^2$
+and its error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics in Table.~\ref{tab:Rates}, assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$.
+%
+\begin{center}
+\begin{table}[h]
+  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
+ & counts & counts & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
+\hline
+1 (0.599) & 1.54$\times 10^{6}$ & 4.21$\times 10^{6}$ & 0.99 & 0.80 & 2.73 & 1.33 \\
+\hline
+2 (0.838) & 3.15$\times 10^{6}$ & 9.02$\times 10^{6}$ & 0.72 & 0.40 & 1.93 & 0.64 \\
+\hline
+\end{tabular} 
+\caption{Quasi-elastic counting rates, and ``reduced cross section'' as defined by Eq.~\ref{eq:F2}. These rates assume 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.}%({\em preliminary})
+\label{tab:Rates}
+\end{table}
+\end{center}
+%
+
+The expression of $F_2$ is: 
+%
+\begin{equation}
+  F^2 = \frac{N_{QE}}{\cal{L}_{exp}\Delta t d\sigma_{Mott}/d\Omega \Delta\Omega \eta}
+  \label{eq:F2}
+\end{equation}
+%
+with $\Delta t$ the running time, $\Delta\Omega$ the convoluted BigBite-HCal solid angle, $\eta$ the product of all efficiencies (electron detection $\times$ nucleon detection $\times$ inelastic rejection selection), $\cal{L}_{exp}$ the experimental luminosity:
+%
+\begin{equation}
+  \cal{L}_{exp} = \frac{I_{exp}}{q_e}*L_{tgt}*d_{tgt}\frac{\cal{N}_A}{m_{D}},
+\end{equation}
+%
+The calculation of the $F_2$ term requires the evaluation of the Mott cross section
+%
+\begin{equation}
+  \frac{d\sigma_{Mott}}{d\Omega} = \frac{a}{a}
+\end{equation}
+%
+
+The Mott cross section has been calculated with the weighted average of the electron variables (momentum and polar angle).
+%
+\begin{center}
+\begin{table}[h]
+  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Point ($\epsilon$) & $\langle \theta_e \rangle$ &  $\langle k^{\prime} \rangle$ & $\langle Q^2 \rangle$ & $\sigma_{Mott}$ \\
+ & (deg) & (GeV) & (GeV$^2$) & (nb sr$^{-1}$) \\
+\hline
+1 (0.599) & 41.7 & 2.01 & 4.47 & 6.62 \\ 
+\hline
+2 (0.838) & 22.9 & 4.26 & 4.40 & 48.0 \\
+\hline
+\end{tabular} 
+\caption{Cross-section weighted average of kinematic variables over the BigBite acceptance. The Mott cross section has been evaluated at these values.}
+\label{tab:sigma_mott}
+\end{table}
+\end{center}
+%
+
+\iffalse
+The counting rates for the low $\epsilon$ kinematics should be directly comparable to the rates reported in the original $G_M^n$ proposal \cite{gmp}.
+In this proposal, the requested running time was 12 hours, with a beam intensity of 10 $\mu$A on a 10 cm long liquid deuterium target with density 0.169~g.cm$^{-3}$.
+This luminosity is 4.5 times lower than the currently proposed luminosity.
+%
+\begin{center}
+\begin{table}[h]
+\begin{tabular}{|l|c|c|}
+\hline
+ & $d(e, e'n)p$ & $d(e, e'p)n$ \\
+\hline
+This estimation & 3.27$\times 10^{4}$ & 9.00$\times 10^{4}$ \\
+\hline
+Original proposal Table.~8 & 1.20$\times 10^{4}$ & 2.66$\times 10^{4}$ \\ 
+\hline
+Discrepancy factor & 2.73 & 3.38 \\ 
+\hline
+\end{tabular} 
+\caption{{\em Hourly} rates comparison between these predictions and the original $G_M^n$ proposal, {\em at the original proposal luminosity} (10.5 $\mu$A on a 10cm liquid deuterium target, with density 0.169 g.cm$^{-3}$). There's a factor 3 discrepancy between the numbers}
+\label{tab:RateComp}
+\end{table}
+\end{center}
+\fi
 

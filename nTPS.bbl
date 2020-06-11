@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{17}%
+\begin{thebibliography}{25}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -136,6 +136,41 @@
   {http://arxiv.org/abs/1103.1808} {arXiv:1103.1808 [nucl-ex]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1103.1808;%%
+\bibitem [{\citenamefont {Roberts}\ \emph {et~al.}(2007)\citenamefont
+  {Roberts}, \citenamefont {Bhagwat}, \citenamefont {Holl},\ and\ \citenamefont
+  {Wright}}]{Roberts:2007jh}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Roberts}}, \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+  {Bhagwat}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Holl}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.~V.}\ \bibnamefont {Wright}},\
+  }\href {\doibase 10.1140/epjst/e2007-00003-5} {\bibfield  {journal} {\bibinfo
+   {journal} {Eur. Phys. J. ST}\ }\textbf {\bibinfo {volume} {140}},\ \bibinfo
+  {pages} {53} (\bibinfo {year} {2007})},\ \Eprint
+  {http://arxiv.org/abs/0802.0217} {arXiv:0802.0217 [nucl-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:0802.0217;%%
+\bibitem [{\citenamefont {Segovia}\ \emph {et~al.}(2014)\citenamefont
+  {Segovia}, \citenamefont {Cloet}, \citenamefont {Roberts},\ and\
+  \citenamefont {Schmidt}}]{Segovia:2014aza}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Segovia}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont {Cloet}},
+  \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont {Roberts}}, \ and\
+  \bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont {Schmidt}},\ }\href
+  {\doibase 10.1007/s00601-014-0907-2} {\bibfield  {journal} {\bibinfo
+  {journal} {Few Body Syst.}\ }\textbf {\bibinfo {volume} {55}},\ \bibinfo
+  {pages} {1185} (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1408.2919} {arXiv:1408.2919 [nucl-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1408.2919;%%
+\bibitem [{\citenamefont {Wojtsekhowski}(2020)}]{Wojtsekhowski:2020tlo}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Wojtsekhowski}}\ }(\bibinfo {year} {2020})\ \Eprint
+  {http://arxiv.org/abs/2001.02190} {arXiv:2001.02190 [nucl-ex]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:2001.02190;%%
 \bibitem [{\citenamefont {Miller}(2007)}]{Miller:2007uy}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.}\ \bibnamefont
@@ -156,6 +191,54 @@
   {2008})},\ \Eprint {http://arxiv.org/abs/0710.0835} {arXiv:0710.0835
   [hep-ph]} \BibitemShut {NoStop}%
 %%CITATION = ARXIV:0710.0835;%%
+\bibitem [{\citenamefont {Muller}\ \emph {et~al.}(1994)\citenamefont {Muller},
+  \citenamefont {Robaschik}, \citenamefont {Geyer}, \citenamefont {Dittes},\
+  and\ \citenamefont {Horejsi}}]{Mueller:1998fv}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Muller}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Robaschik}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Geyer}}, \bibinfo
+  {author} {\bibfnamefont {F.~M.}\ \bibnamefont {Dittes}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Horejsi}},\ }\href {\doibase
+  10.1002/prop.2190420202} {\bibfield  {journal} {\bibinfo  {journal} {Fortsch.
+  Phys.}\ }\textbf {\bibinfo {volume} {42}},\ \bibinfo {pages} {101} (\bibinfo
+  {year} {1994})},\ \Eprint {http://arxiv.org/abs/hep-ph/9812448}
+  {arXiv:hep-ph/9812448 [hep-ph]} \BibitemShut {NoStop}%
+%%CITATION = HEP-PH/9812448;%%
+\bibitem [{\citenamefont {Ji}(1997)}]{Ji:1996ek}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.-D.}\ \bibnamefont
+  {Ji}},\ }\href {\doibase 10.1103/PhysRevLett.78.610} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {78}},\
+  \bibinfo {pages} {610} (\bibinfo {year} {1997})},\ \Eprint
+  {http://arxiv.org/abs/hep-ph/9603249} {arXiv:hep-ph/9603249 [hep-ph]}
+  \BibitemShut {NoStop}%
+%%CITATION = HEP-PH/9603249;%%
+\bibitem [{\citenamefont {Radyushkin}(1996)}]{Radyushkin:1996nd}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Radyushkin}},\ }\href {\doibase 10.1016/0370-2693(96)00528-X} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Lett.}\ }\textbf {\bibinfo {volume}
+  {B380}},\ \bibinfo {pages} {417} (\bibinfo {year} {1996})},\ \Eprint
+  {http://arxiv.org/abs/hep-ph/9604317} {arXiv:hep-ph/9604317 [hep-ph]}
+  \BibitemShut {NoStop}%
+%%CITATION = HEP-PH/9604317;%%
+\bibitem [{\citenamefont {Diehl}\ and\ \citenamefont
+  {Kroll}(2013)}]{Diehl:2013xca}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Diehl}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Kroll}},\
+  }\href {\doibase 10.1140/epjc/s10052-013-2397-7} {\bibfield  {journal}
+  {\bibinfo  {journal} {Eur. Phys. J.}\ }\textbf {\bibinfo {volume} {C73}},\
+  \bibinfo {pages} {2397} (\bibinfo {year} {2013})},\ \Eprint
+  {http://arxiv.org/abs/1302.4604} {arXiv:1302.4604 [hep-ph]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1302.4604;%%
+\bibitem [{\citenamefont {Kivel}(2020)}]{Kivel2020ab}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Kivel}},\ }\href@noop {} {\enquote {\bibinfo {title} {private
+  communications},}\ } (\bibinfo {year} {2020})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hughes}\ \emph {et~al.}(1965)\citenamefont {Hughes},
   \citenamefont {Griffy}, \citenamefont {Yearian},\ and\ \citenamefont
   {Hofstadter}}]{Hughes:1965zza}%

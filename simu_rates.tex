@@ -173,7 +173,7 @@ Then, we evaluate the detection efficiency. For the electron, we require the ene
 \begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det, e}$ & $\eta_{det~n}$ & $\eta_{det~p}$ & $\eta_{QE sel~n}$ & $\eta_{QE sel, p}$ \\
+Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det~e}$ & $\eta_{det~n}$ & $\eta_{det~p}$ & $\eta_{sel~n}$ & $\eta_{sel~p}$ \\
  & (GeV) & (GeV) &  &  &  &  &  \\
 \hline
 1 (0.599) & 1.32 & 0.11 & 0.902 & 0.904 & 0.892 & 0.589 & 0.605 \\ 
@@ -181,7 +181,7 @@ Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det, e}$ & $\eta_{det~n}$ & $\
 2 (0.838) & 2.99 & 0.09 & 0.808 & 0.889 & 0.882 & 0.617 & 0.647 \\
 \hline
 \end{tabular} 
-\caption{Kinematics electron thresholds, particle detection efficiencies ($\eta_{det}$), and efficiency of quasi-elastic selection $\eta_{QE sel}$ separated for the proton and the neutron.}
+\caption{Kinematics electron thresholds, particle detection efficiencies ($\eta_{det}$), and efficiency of quasi-elastic selection $\eta_{sel}$ separated for the proton and the neutron.}
 \label{tab:kinEffs}
 \end{table}
 \end{center}
@@ -232,9 +232,9 @@ The expression of $F_2$ is:
   \label{eq:F2}
 \end{equation}
 %
-where $\Delta t$ the running time, $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{QE sel}$)
+where $\Delta t$ the running time, $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{sel}$)
 %($\eta = \eta_{det~e} \times \eta_{det~n/p}  \times \eta_{QE sel~n/p}$)
-, and $\cal{L}_{exp}$ is the experimental luminosity:
+, and ${\cal{L}}_{exp}$ is the experimental luminosity:
 %
 \begin{equation}
   {\cal{L}}_{exp} = \frac{I_{exp}}{q_e}*L_{tgt}*d_{tgt}\frac{\cal{N}_A}{m_{D}}.
@@ -243,9 +243,10 @@ where $\Delta t$ the running time, $\Delta\Omega$ is the convoluted BigBite-HCal
 The calculation of the $F_2$ term requires the evaluation of the Mott cross section
 %
 \begin{equation}
-  \frac{d\sigma_{Mott}}{d\Omega} = (\hbar c\alpha_{EM})^2 \left( \frac{1}{2E} \right)^2 \left( \frac{cos{\theta_e/2}}{sin^2{\theta_e/2}} \right)^2 \frac{E'}{E}
+  \frac{d\sigma_{Mott}}{d\Omega} = (\hbar c\alpha_{EM})^2 \left( \frac{e}{2E} \right)^2 \left( \frac{cos{\theta_e/2}}{sin^2{\theta_e/2}} \right)^2 \frac{E'}{E}
 \end{equation}
 %
+\textcolor{red}{{\it private note}: $\hbar c$ is in $\mathrm{GeV}\cdot\mathrm{cm}^{-1}$, but I've assumed $e=1$.}\\
 The Mott cross section has been calculated with the weighted average of the electron variables (momentum and polar angle).
 %
 \begin{center}

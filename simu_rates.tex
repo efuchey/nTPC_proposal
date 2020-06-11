@@ -133,7 +133,7 @@ The distributions of these quantities (weighted with cross section and including
 \end{figure}
 %
 Provided that we are not limited by statistics and the sample purity is capital for our experiment, we set the selection criteria on $W^2$ and $p_{\perp miss}$ to maximize inelastic contamination (ideally below 1~\%). 
-Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while rataining $\geq$~60~\% of statistics listed in Table.~\ref{tab:Rates}
+Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while rataining $\geq$~60~\%. % of statistics listed in Table.~\ref{tab:Rates}
 
 \subsection{Quasi-elastic counting rates}
 
@@ -173,10 +173,10 @@ Then, we evaluate the detection efficiency. For the electron, we require the ene
 \begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det, e}$ & $\eta_{det, n}$ & $\eta_{det, p}$ & $\eta_{QE sel, n}$ & $\eta_{QE sel, p}$ \\
- & (GeV) & (GeV) &  &  &  \\
+Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det, e}$ & $\eta_{det~n}$ & $\eta_{det~p}$ & $\eta_{QE sel~n}$ & $\eta_{QE sel, p}$ \\
+ & (GeV) & (GeV) &  &  &  &  &  \\
 \hline
-1 (0.599) & 1.32 & 1.06 & 0.902 & 0.904 & 0.892 & 0.589 & 0.605 \\ 
+1 (0.599) & 1.32 & 0.11 & 0.902 & 0.904 & 0.892 & 0.589 & 0.605 \\ 
 \hline
 2 (0.838) & 2.99 & 0.09 & 0.808 & 0.889 & 0.882 & 0.617 & 0.647 \\
 \hline
@@ -190,9 +190,19 @@ Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det, e}$ & $\eta_{det, n}$ & $
 The counting rates are evaluated using the events that have passed the selection described above, and weighting those events with the cross section calculated by G4SBS, multiplied by the generation solid angle, using the formula:
 %
 \begin{equation}
-  N_{est} = {\cal L} \Delta t \times \sum_{i \in acc~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
+  N_{est} = {\cal L} \Delta t \times \sum_{i \in accepted~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
 \end{equation}
 %
+Events are ``accepted'' if they meet the following criteria:
+%
+\begin{itemize}
+\item{the electron is in the BigBite acceptance};
+\item{the electron passes the BigBite threshold defined in Table~\ref{tab:kinEffs} and gives signal in the GRINCH;}
+\item{the nucleon is in the HCal acceptance and passes the HCal threshold defined in Table~\ref{tab:kinEffs};}
+\item{the event passes the quasi-elastic selection defined in the previous section {\it i.e.} $W^2~\leq~1.1~\mathrm{GeV}^2$ and $p_{\perp miss}~\leq~0.10~\mathrm{GeV}$.} 
+\end{itemize}
+%
+
 The counting rates, as well as the reduced cross section $F^2$
 and its error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics in Table.~\ref{tab:Rates}, assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$.
 %
@@ -204,12 +214,12 @@ and its error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics 
 Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
  & counts & counts & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
 \hline
-1 (0.599) & 1.54$\times 10^{6}$ & 4.21$\times 10^{6}$ & 0.99 & 0.80 & 2.73 & 1.33 \\
+1 (0.599) & 9.07$\times 10^{5}$ & 2.55$\times 10^{6}$ & 0.99 & 1.04 & 2.73 & 1.70 \\
 \hline
-2 (0.838) & 3.15$\times 10^{6}$ & 9.02$\times 10^{6}$ & 0.72 & 0.40 & 1.93 & 0.64 \\
+2 (0.838) & 1.94$\times 10^{6}$ & 5.83$\times 10^{6}$ & 0.72 & 0.52 & 1.93 & 0.80 \\
 \hline
 \end{tabular} 
-\caption{Quasi-elastic counting rates, and ``reduced cross section'' as defined by Eq.~\ref{eq:F2}. These rates assume 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.}%({\em preliminary})
+\caption{Quasi-elastic counting rates, and ``reduced cross section'' as defined by Eq.~\ref{eq:F2}. These rates assume $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$}%({\em preliminary})
 \label{tab:Rates}
 \end{table}
 \end{center}
@@ -218,23 +228,24 @@ Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p
 The expression of $F_2$ is: 
 %
 \begin{equation}
-  F^2 = \frac{N_{QE}}{\cal{L}_{exp}\Delta t d\sigma_{Mott}/d\Omega \Delta\Omega \eta}
+  F^2 = \frac{N_{QE}}{{\cal{L}}_{exp} \cdot \Delta t \cdot  d\sigma_{Mott}/d\Omega  \cdot \Delta\Omega \cdot  \eta}
   \label{eq:F2}
 \end{equation}
 %
-with $\Delta t$ the running time, $\Delta\Omega$ the convoluted BigBite-HCal solid angle, $\eta$ the product of all efficiencies (electron detection $\times$ nucleon detection $\times$ inelastic rejection selection), $\cal{L}_{exp}$ the experimental luminosity:
+where $\Delta t$ the running time, $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{QE sel}$)
+%($\eta = \eta_{det~e} \times \eta_{det~n/p}  \times \eta_{QE sel~n/p}$)
+, and $\cal{L}_{exp}$ is the experimental luminosity:
 %
 \begin{equation}
-  \cal{L}_{exp} = \frac{I_{exp}}{q_e}*L_{tgt}*d_{tgt}\frac{\cal{N}_A}{m_{D}},
+  {\cal{L}}_{exp} = \frac{I_{exp}}{q_e}*L_{tgt}*d_{tgt}\frac{\cal{N}_A}{m_{D}}.
 \end{equation}
 %
 The calculation of the $F_2$ term requires the evaluation of the Mott cross section
 %
 \begin{equation}
-  \frac{d\sigma_{Mott}}{d\Omega} = \frac{a}{a}
+  \frac{d\sigma_{Mott}}{d\Omega} = (\hbar c\alpha_{EM})^2 \left( \frac{1}{2E} \right)^2 \left( \frac{cos{\theta_e/2}}{sin^2{\theta_e/2}} \right)^2 \frac{E'}{E}
 \end{equation}
 %
-
 The Mott cross section has been calculated with the weighted average of the electron variables (momentum and polar angle).
 %
 \begin{center}

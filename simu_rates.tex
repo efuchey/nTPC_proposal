@@ -203,16 +203,22 @@ Events are ``accepted'' if they meet the following criteria:
 \end{itemize}
 %
 
-The counting rates, as well as the reduced cross section $F^2$
-and its error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics in Table.~\ref{tab:Rates}, assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$.
+The total quasi-elastic statistics $N_{QE}$, as well as the total form factor: $F^2$
+%
+\begin{equation}
+  F^2 = \frac{N_{QE}}{{\cal{L}}_{exp} \cdot \Delta t \cdot  d\sigma_{Mott}/d\Omega  \cdot \Delta\Omega \cdot  \eta}
+  \label{eq:F2}
+\end{equation}
+%
+and its statistical error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics in Table.~\ref{tab:Rates}, assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$.
 %
 \begin{center}
 \begin{table}[h]
   %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
- & counts & counts & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
+Point ($\epsilon$) & $N_{QE}$ & $N_{QE}$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
+ &  ($e$-$n$) &  ($e$-$p$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
 \hline
 1 (0.599) & 9.07$\times 10^{5}$ & 2.55$\times 10^{6}$ & 0.99 & 1.04 & 2.73 & 1.70 \\
 \hline
@@ -225,13 +231,7 @@ Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p
 \end{center}
 %
 
-The expression of $F_2$ is: 
-%
-\begin{equation}
-  F^2 = \frac{N_{QE}}{{\cal{L}}_{exp} \cdot \Delta t \cdot  d\sigma_{Mott}/d\Omega  \cdot \Delta\Omega \cdot  \eta}
-  \label{eq:F2}
-\end{equation}
-%
+The expression of the total form factor $F^2$ is: 
 where $\Delta t$ the running time, $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{sel}$)
 %($\eta = \eta_{det~e} \times \eta_{det~n/p}  \times \eta_{QE sel~n/p}$)
 , and ${\cal{L}}_{exp}$ is the experimental luminosity:

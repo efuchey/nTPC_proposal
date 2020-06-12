@@ -97,8 +97,8 @@ Note that for HCal, the ``total rates'' is either the sum of inclusive charged a
 In the worst case scenario, the coincidence rates could be as high as 5kHz, which might be at the limit of manageability for the DAQ.
 However, a slight increase on the HCal threshold (which would drop the efficiency from $\sim$90\% to $\sim$85\%) would decrease the total HCal rates by $\sim$35\% to 40\% in this worst case scenario, which would make the situation more manageable (3.3 kHz).
 
-\subsection{Accidentals: contamination from inelastic}
-
+\subsection{Contamination from inelastic}
+\label{inel_contam}
 The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the center of mass energy
 %
 \begin{equation}
@@ -133,7 +133,27 @@ The distributions of these quantities (weighted with cross section and including
 \end{figure}
 %
 Provided that we are not limited by statistics and the sample purity is capital for our experiment, we set the selection criteria on $W^2$ and $p_{\perp miss}$ to maximize inelastic contamination (ideally below 1~\%). 
-Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while rataining $\geq$~60~\%. % of statistics listed in Table.~\ref{tab:Rates}
+Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while retaining $\geq$~60~\% of the quasi-elastic events properly recorded in the BigBite-SBS pair.
+Table.~\ref{tab:contam} summarizes the quasi-elastic selection cuts, ad inelastic contamination $\delta_{inel}$.
+%
+\begin{center}
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Point ($\epsilon$) & $N$ & $W^2$ cut & $p_{\perp miss}$ cut & $\delta_{inel}$ \\
+\hline
+1 (0.599) & $n$ & 1.10 & 0.10 & 2.94~$\times 10^{-3}$ \\
+ & $p$ & 1.11 & 0.10 & 8.54~$\times 10^{-3}$ \\
+\hline
+2 (0.838) & $n$ & 1.09 & 0.10 & 2.07~$\times 10^{-3}$ \\
+ & $p$ & 1.10 & 0.10 & 5.80~$\times 10^{-3}$ \\
+\hline
+\end{tabular} 
+\caption{Summary of cuts for quasi-elastic selection and resulting inelastic contamination $\delta_{inel}$.}
+\label{tab:contam}
+\end{table}
+\end{center}
+%
 
 \subsection{Quasi-elastic counting rates}
 
@@ -147,27 +167,33 @@ To evaluate the detector solid angle, we define simple criteria that each event 
 \item{require non-zero energy deposit in HCal (hadron arm).}
 \end{itemize}
 %
-The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}
+The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}.
+We also define there the $p$-$n$ acceptance asymmetry $A_{\Delta\Omega}$ such as
 %
+\begin{equation}
+  A_{\Delta\Omega} = \frac{(\Delta\Omega_e \otimes \Delta\Omega_n)-(\Delta\Omega_e \otimes \Delta\Omega_p)}{(\Delta\Omega_e \otimes \Delta\Omega_n)+(\Delta\Omega_e \otimes \Delta\Omega_p)}
+\end{equation}
+%%
 \begin{center}
 \begin{table}[h]
   %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ & $\Delta\Omega_e \otimes \Delta\Omega_p$ \\
- & (msr) & (msr) & (msr) \\
+Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ & $\Delta\Omega_e \otimes \Delta\Omega_p$ & $A_{\Delta\Omega}$ \\
+ & (msr) & (msr) & (msr) & (\%) \\
 \hline
-1 (0.599) & 52.4 & 46.7 & 47.2 \\
+1 (0.599) & 52.4 & 46.7 & 47.2 & 0.5 \\
 \hline
-2 (0.838) & 32.7 & 20.8 & 22.2 \\
+2 (0.838) & 32.7 & 20.8 & 22.2 & 3.0 \\
 \hline
 \end{tabular} 
-\caption{Kinematics electron solid angle, and convoluted electron/hadron solid angle}
+\caption{Kinematics electron solid angle, and convoluted electron/hadron solid angle, and acceptance asymmetry.}
 \label{tab:kinExpParams}
 \end{table}
 \end{center}
 %
 Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we require the threshold to be such as we obtain ~90\% efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
+Quasi-elastic selection efficiency $\eta_{sel}$ are also reminded.
 %
 \begin{center}
 \begin{table}[h]

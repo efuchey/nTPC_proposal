@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019)
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: nTPS.aux
 A level-1 auxiliary file: collaboration.aux
@@ -7,9 +7,10 @@ A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: nTPE_physics.aux
 A level-1 auxiliary file: exp_method.aux
 A level-1 auxiliary file: exp_setup.aux
-A level-1 auxiliary file: exp_bigbite.aux
-A level-1 auxiliary file: exp_neutron.aux
+A level-1 auxiliary file: expsetup_bigbite.aux
+A level-1 auxiliary file: expsetup_hcal.aux
 A level-1 auxiliary file: simu_rates.aux
+A level-1 auxiliary file: systematics.aux
 A level-1 auxiliary file: prop_measurement.aux
 A level-1 auxiliary file: beam_time.aux
 The style file: apsrev4-1.bst
@@ -22,8 +23,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: nTPSNotes.bib
 Database file #2: nTPS.bib
-Warning--I didn't find a database entry for "g4sbs"
-Warning--I didn't find a database entry for "wiser"
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -37,45 +36,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--empty note in Kivel2020ab
-You've used 27 entries,
+You've used 30 entries,
             5847 wiz_defined-function locations,
-            1849 strings with 19991 characters,
-and the built_in function-call counts, 23932 in all, are:
-= -- 1595
-> -- 525
-< -- 172
-+ -- 175
-- -- 137
-* -- 3719
-:= -- 2397
-add.period$ -- 27
-call.type$ -- 27
-change.case$ -- 103
-chr.to.int$ -- 35
-cite$ -- 28
-duplicate$ -- 2303
-empty$ -- 1750
-format.name$ -- 302
-if$ -- 4645
+            1861 strings with 20482 characters,
+and the built_in function-call counts, 26105 in all, are:
+= -- 1751
+> -- 581
+< -- 183
++ -- 195
+- -- 151
+* -- 4045
+:= -- 2641
+add.period$ -- 31
+call.type$ -- 30
+change.case$ -- 116
+chr.to.int$ -- 38
+cite$ -- 31
+duplicate$ -- 2507
+empty$ -- 1905
+format.name$ -- 335
+if$ -- 5064
 int.to.chr$ -- 1
-int.to.str$ -- 34
-missing$ -- 299
-newline$ -- 149
-num.names$ -- 75
-pop$ -- 927
+int.to.str$ -- 37
+missing$ -- 318
+newline$ -- 158
+num.names$ -- 84
+pop$ -- 1008
 preamble$ -- 1
-purify$ -- 125
+purify$ -- 140
 quote$ -- 0
-skip$ -- 859
+skip$ -- 937
 stack$ -- 0
-substring$ -- 594
-swap$ -- 2151
-text.length$ -- 54
+substring$ -- 634
+swap$ -- 2332
+text.length$ -- 60
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 346
+type$ -- 386
 warning$ -- 2
-while$ -- 80
+while$ -- 86
 width$ -- 0
-write$ -- 285
-(There were 4 warnings)
+write$ -- 307
+(There were 2 warnings)

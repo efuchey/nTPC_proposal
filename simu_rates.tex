@@ -158,7 +158,7 @@ Point ($\epsilon$) & $N$ & $W^2$ cut & $p_{\perp miss}$ cut & $\delta_{inel}$ \\
 \subsection{Quasi-elastic counting rates}
 
 The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
-We generated 1M events sample for each kinematics, on a solid angle that was larger than the detector acceptance.
+We generated a reasonably large sample of quasi-elastic events $N_{Gen}$ for each kinematics, on a solid angle $\Delta\Omega_{Gen}$ that was larger than the detector acceptance.
 To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as the following;
 %
 \begin{itemize}
@@ -213,12 +213,13 @@ Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det~e}$ & $\eta_{det~n}$ & $\e
 \end{center}
 %
 
-The counting rates are evaluated using the events that have passed the selection described above, and weighting those events with the cross section calculated by G4SBS, multiplied by the generation solid angle, using the formula:
+The counting rates are evaluated using among the $N_{Gen}$ events generated the events that have passed the selection described below, and weighting those events with the cross section ${d\sigma}/{d\Omega}|_i$ calculated by G4SBS, multiplied by the generation solid angle $\Delta\Omega_{Gen}$, using the formula:
 %
 \begin{equation}
-  N_{est} = {\cal L} \Delta t \times \sum_{i \in accepted~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
+  N_{est} = \frac{{\cal L}_{exp} \Delta t}{N_{Gen}} \times \sum_{i \in accepted~evts}\left( \left. \frac{d\sigma}{d\Omega}\right|_i \times \Delta\Omega_{Gen} \right)
 \end{equation}
 %
+with ${\cal L}_{exp}$ the experimental luminosity and $\Delta t$ the rumming time
 Events are ``accepted'' if they meet the following criteria:
 %
 \begin{itemize}

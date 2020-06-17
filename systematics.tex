@@ -2,27 +2,20 @@
 
 In this section we will estimate (or set upper limits on) the contributions to the systematic uncertainty for this experiment.
 The sources of systematic uncertainties from the experimental setup (target, acceptance, inelastic contamination) were already estimated for the SBS \gmn experiment proposal~\cite{E12-09-019}.
-Note that some potential sources of systematic uncertainties (nuclear corrections, accidentals, radiative corrections) cancel in the ratio $R = f_{corr} \times N_{e,e'n}/N_{e,e'p}$, which is one of the strengths of this experimental method.
+Note that a majority of the potential sources of systematic uncertainties (nuclear corrections, accidentals, radiative corrections, target density, etc) cancel in the ratio $R = f_{corr} \times N_{e,e'n}/N_{e,e'p}$, which is one of the strengths of this experimental method.
+The sources of uncertainties as well as their estimation for each kinematic is provided in Table.~\ref{r_systematic_summary}.
 Since the experimental setup has evolved since then, some of these uncertainties have been reevaluated, namely the acceptance loss and inelastic contamination.
-
 %
 \begin{table}[!h]
 \begin{center}
 \caption{
-  Estimated contributions (in percent) to systematic errors on Rosenbluth slope.
-  The top part of the table lists the sources systematics contributing to the Rosenbluth slope (bottom line).
-  The other lines list the sources of systematics contributing to the ratio of $R = f_{corr} \times N_{e,e'n}/N_{e,e'p}$.  
+  Estimated contributions (in percent) to the systematic error on $R = f_{corr} \times N_{e,e'n}/N_{e,e'p}$.  
   Quantities marked with $^*$ are taken from the SBS \gmn experiment proposal~\cite{E12-09-019}.
-  %Total systematic errors on $R$ is the quadratic sum  
+  The total systematic errors on $R$ is the quadratic sum of all other errors.
 }
-\label{systematic_summary}
+\label{r_systematic_summary}
 \vspace{.2in}
 {\begin{tabular}{|l|c|c|}
-\hline
-\hline
-Syst. error on $p$ cross section ($S_c^p = \sigma_{L}^p/ \sigma_{T}^p$) & \multicolumn{2}{|c|}{$\pm 0.01$ (9.3 \%)}\\
-\hline
-Syst. error on $n$ form factor ($\mu_n$\gen/\gmn) & \multicolumn{2}{|c|}{$0.05$ (9.1 \%)}\\
 \hline
 \hline
  Kinematic ($\epsilon$) & (1) 0.599 & (2) 0.838\\
@@ -33,8 +26,8 @@ Syst. error on $n$ form factor ($\mu_n$\gen/\gmn) & \multicolumn{2}{|c|}{$0.05$ 
 %\hline
 %Accidentals$^*$ & \multicolumn{2}{|c|}{-} \\
 %\hline
-Target windows$^*$ & \multicolumn{2}{|c|}{0.2 \%} \\
-\hline
+%Target windows$^*$ & \multicolumn{2}{|c|}{0.2 \%} \\
+%\hline
 Acceptance losses & 0.5 \% & 3.0 \% \\
 \hline
 Inelastic contamination & 0.9 \% & 0.6 \% \\
@@ -49,15 +42,35 @@ Syst. error on $R = f_{corr} \times N_{e,e'n}/N_{e,e'p}$ & 1.3 \%  & 3.1 \%  \\
 (Quadratic sum of the errors above) & & \\
 \hline
 \hline
-Syst. error on Rosenbluth slope (TPE) & \multicolumn{2}{|c|}{$\pm 0.012$ (17.4 \%)} \\
-%&1.47&1.23&1.32&1.92&2&1.91&2.11&2.61&2.9\\
-%%%1.47&1.24&1.47&2.04&2.39&2.26&2.81&3.12&4.14\\
+\end{tabular}}
+\end{center}
+\end{table}
+%
+%
+\begin{table}[!h]
+\begin{center}
+\caption{
+  Estimated contributions to systematic error on the Rosenbluth slope.
+}
+\label{ntpe_systematic_summary}
+\vspace{.2in}
+{\begin{tabular}{|l|c|}
+\hline
+\hline
+Syst. error on $p$ cross section ($S_c^p = \sigma_{L}^p/ \sigma_{T}^p$) & {$0.01$}\\
+\hline
+Syst. error on $n$ form factor ($\mu_n$\gen/\gmn) & {$0.05$}\\
+\hline
+\hline
+Syst. error on Rosenbluth slope (TPE) & {$0.012$} \\
+\hline
 \hline
 \end{tabular}}
 \end{center}
 \end{table}
 %
-Table.~\ref{systematic_summary} lists the estimated contributions to systematic errors on the two-photon-exchange contribution (TPE).
+Table.~IX %\ref{ntpe_systematic_summary}
+lists the estimated contributions to systematic errors on the two-photon-exchange contribution (TPE).
 The systematics for $S_c^n$ and $\mu_n$\gen/\gmn have already been explicited in Sec.~\ref{sec:exp_method}, and are the leading contributions to the total uncertainty.
 
 Inelastic contamination has been reevaluated in Sec.~\ref{sec:inel_contam}. To evaluate the upper limit on our uncertainty, we added quadratically the inelastic contamination evaluated for the proton and the neutron for each kinematics, which is the error we make if we ignore the systematics completely. Even in this case, we expect less than 1\% systematic errors.

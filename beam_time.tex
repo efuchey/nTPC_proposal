@@ -1,10 +1,9 @@
 %v1.9
 \section{Beam time request}
 
-%{\bf We request 64 hours total time (32 hours of beam-on target)}
 {\bf We request 48 hours total time (32 hours of beam-on target)} to measure the two-photon effect (and \gen~in one-photon approximation) 
 at \qsq~= 4.5 \gevcsq~through a measurement of the cross sections of the reaction D(e,e'N) at a large value of the virtual photon polarization $\epsilon$=0.84.
-{\em The measurement at \qsq~= 4.5 \gevcsq,~$\epsilon$=0.60 is already scheduled as part of the SBS $G_M^n$ experiment E12-09-019}~ \cite{E12-09-019}.
+{\em The measurement at \qsq~= 4.5 \gevcsq,~$\epsilon$=0.60 is already scheduled as part of the SBS $G_M^n$ experiment E12-09-019}~\cite{E12-09-019}.
 
 We plan to take 12 hours of data at a full luminosity of $2.86~\times~10^{38}~\mathrm{cm}^{-2}\mathrm{s}^{-1}$, which corresponds to a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$. 
 To have a better handle on our backgrounds, we also plan to take 12 hours of data at half luminosity (basically by lowering the beam intensity by a factor 2).
@@ -14,13 +13,56 @@ In addition to this beam time, we also require 16 hours (two shifts) to change t
 This configuration change means:
 %
 \begin{itemize}
-\item{SBS magnet and the hadronic calorimeter (HCal) angle change;}
+%\item{SBS magnet and the hadronic calorimeter (HCal) angle change;}
 \item{BigBite spectrometer angle and distance change;}
 \item{Beam pass change (from 4.4 GeV/2~pass to 6.6 GeV/3~pass;}
 \end{itemize}
 %
-These tasks may be done in parallel, but the SBS configuration is the most-time consuming task, and determines the time required to perform this configuration change. The projected use of this time is summarized in Table.~IX.%\ref{tab:beamtime}.
-
+If this experiment is approved, we plan to insert this experiment in the GMn E12-09-019 run plan in such a way that we can avoid a change in configuration for the SBS magnet and the HCal, which is very time consuming. Table.~\ref{tab:gmnplan} displays an excerpt of the GMn run plan, and points out where the nTPE measurement inserts. 
+%
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+Step \# & task & \qsq & $\theta_{BB}$~/~$\theta_{SBS}$ & Beam & Time & Tech work \\
+&  & \gevcsq & degrees & GeV & hours & time (h) \\
+\hline
+%1 & beam line &  & 41.9 / 24.7 & 4.4 & 24 &  \\
+%2 & BigBite &  & 41.9 / 24.7 & 4.4 & 48 &  \\
+%2 & HCal at 14 m &  & 41.9 / 24.7 & 4.4 & 48 &  \\
+%\hline
+\hline
+%4a (move 14 m to 8.5 m) & HCal &  & 41.9 / 24.7 & - & 4 & 4 \\
+4b (install GEn-RP) & GEn-RP &  & 41.9 / 24.7 & - & 4 & 4 \\
+4c (GEn-RP) & Production & 4.5 & 41.9 / 24.7 & 4.4 & 104 & \\
+4d (remove GEn-RP) & GEn-RP &  & 41.9 / 24.7 & - & 56 & 24 \\
+\hline
+\textcolor{blue}{4e (GMn/nTPE low $\epsilon$)} & \textcolor{blue}{Production} & \textcolor{blue}{4.5} & \textcolor{blue}{41.9 / 24.7} & \textcolor{blue}{4.4} & \textcolor{blue}{64} & \\
+\hline
+\hline
+5a (conf. change) & BB/SBS/HCal &  & 32.5 / 31.2 & - & 32 & 16 \\
+5b (beam tune)  & beam &  & 32.5 / 31.2 & 4.4 & 4 &  \\
+5c (GMn) & Production & 3.5 & 32.5 / 31.2 & 4.4 & 64 &  \\
+\hline
+\hline
+6a (pass change) & beam/BB &  & 23.2 / 31.2 & 6.6 & 8 & 4 \\
+6b (beam tune) & beam &  & 23.2 / 31.2 & 6.6 & 8 &  \\
+6c see Table.~X & \textcolor{red}{Production} & \textcolor{red}{4.5} & \textcolor{red}{23.2 / 31.2} & \textcolor{red}{6.6} & \textcolor{red}{64} & \\
+\hline
+\hline
+7a (conf. change) & BB/SBS/HCal &  & 30.5 / 24.7 & 6.7 & 32 & 16 \\
+7b (beam tune) & beam & - & 30.5 / 24.7 & 6.6 & 4 &  \\
+7c  & Production & 6.1 & 30.5 / 24.7 & 6.6 & 50 &  \\
+%\hline
+\hline
+\end{tabular} 
+\caption{Excerpt of GMn E12-09-019 run plan table, showing where the $\epsilon = 0.84$ measurement would be inserted in our run plan. The $\epsilon = 0.60$ measurement is also emphasized in blue.}
+\label{tab:gmnplan}
+\end{table}
+%
+The beam pass change and the BigBite move may be done in parallel, and should take one shift (8 hrs). We require an additional shift (8 hrs) for beam tuning after beam pass change. 
+The projected use of this time is summarized in Table.~X.%\ref{tab:beamtime}.
+%
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|c|c|c|}
@@ -35,15 +77,15 @@ Data taking (Prod.) & 15~cm LD$_2$ & $15~\mu$A & 12 hours \\
 \hline
 Data taking (Syst.) & 15~cm ``Dummy'' & $15~\mu$A & 4 hours \\ 
 \hline
-\multicolumn{3}{|l|}{Setting changes (SBS, BigBite angles, beam pass)} & 16 hours \\
+\multicolumn{3}{|l|}{Setting changes (BigBite move, beam pass change)} & 8 hours \\
+\multicolumn{3}{|l|}{Beam tune after beam pass change} & 8 hours \\
 %\multicolumn{3}{|l|}{SBS/HCal/BigBite movement} & 32 hours \\
-%\multicolumn{3}{|l|}{Beam tune after beam pass change} & 4 hours \\
 \hline
 \hline
-\multicolumn{3}{|l|}{\bf Total} & {\bf 48 hours} \\ %{\bf 64 hours} \\
+\multicolumn{3}{|l|}{\bf Total} & {\bf 48 hours} \\ 
 \hline
 \end{tabular} 
-\caption{Summary table for the beam time request. Setting changes include SBS and BigBite angles change, as well as a beam pass change from 4.4~GeV (2~pass) to 6.6~GeV (3~pass). This beam pass change can mostly be done in parallel to the SBS}%, decomposed for the different tasks that need to be accomplished for this experiment
+\caption{Summary table for the beam time request. Setting changes include SBS and BigBite angles change, as well as a beam pass change from 4.4~GeV (2~pass) to 6.6~GeV (3~pass). This beam pass change can mostly be done in parallel to the SBS}
 \label{tab:beamtime}
 \end{table}
 

@@ -1,10 +1,10 @@
 
 \section{Simulations, estimations of counting rates and accidentals}\label{sec:simu}
 
-The estimations of counting rates accidentals have been performed using G4SBS, the GEANT4-based simulation package developed for the SBS experiment \cite{g4sbs}.
-This package includes a wide range of event generators, which allows to evaluate the rates for both events of interest (signal) and background.
+The estimates of counting rates accidentals have been performed using G4SBS, the GEANT4-based simulation package developed for the SBS experiment \cite{g4sbs}.
+This package includes a wide range of event generators, which allows us to evaluate the rates for both events of interest (signal) and background.
 %, such as elastic/quasi-elastic.
-The representation of the experiment apparatus in G4SBS is shown in the high $\epsilon$ configuration on Fig.~\ref{fig:g4sbssetup}. 
+The representation of the experiment apparatus in G4SBS is shown in the high $\epsilon$ configuration in Fig.~\ref{fig:g4sbssetup}. 
 
 \begin{figure}[!h]
   \centering
@@ -14,7 +14,7 @@ The representation of the experiment apparatus in G4SBS is shown in the high $\e
 \end{figure}
 
 \subsection{Background and trigger rates}
-The main processes expected to contribute the trigger rates for the BigBite spectrometer are:
+The main processes expected to contribute to the trigger rates for the BigBite spectrometer are:
 %
 \begin{itemize}
 \item{the inelastic electron nucleon scattering process;}
@@ -22,7 +22,7 @@ The main processes expected to contribute the trigger rates for the BigBite spec
 \item{and to a lesser extent, charged pions.}
 \end{itemize}
 %
-Concerning HCal, all sorts of hadronic backgrounds are expected to contribute to the rates in HCal, the dominant ones being pions.
+Concerning HCal, various hadronic backgrounds are expected to contribute to the rates in HCal, the dominant ones being pions.
 Both the inelastic scattering and the inclusive neutral and charged pion production are implemented in G4SBS, the latter relying on the Wiser parametrization \cite{wiser}.
 The minimum-bias ``beam-on-target'' generator (including all electromagnetic and hadronic processes) has also been considered for the HCal background.
 
@@ -38,7 +38,7 @@ Fig.~\ref{fig:BBRates} presents the distributions of rate of energy deposit for 
     \label{fig:BBRates}
 \end{figure}
 
-Since HCal is a sampling calorimeter (meaning that only a fraction of the shower energy is measured), it's resolution is significantly wider ($\sim0.7$ GeV).
+Since HCal is a sampling calorimeter (meaning that only a fraction of the shower energy is measured), its resolution is relatively wide ($\sim0.7$ GeV).
 Due to this, the threshold is at 90\% efficiency (which corresponds to $\sim$0.1 GeV for both kinematics.
 Fig.~\ref{fig:HCalRates} presents the distributions of rate of energy deposit for the different processes involved in the HCal trigger rates.
 \begin{figure}[h]
@@ -115,9 +115,9 @@ The distributions of these quantities (weighted with cross section and including
     \label{fig:inel_contam_he}
 \end{figure}
 
-Provided that we are not limited by statistics and the sample purity is capital for our experiment, we set the selection criteria on $W^2$ and $p_{\perp miss}$ to maximize inelastic contamination (ideally below 1~\%). 
-Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while retaining $\geq$~60~\% of the quasi-elastic events properly recorded in the BigBite-SBS pair.
-Table.~\ref{tab:contam} summarizes the quasi-elastic selection cuts, ad inelastic contamination $\delta_{inel}$.
+Provided that we are not limited by statistics and we prioritize sample purity is capital for our experiment, we set the selection criteria on $W^2$ and $p_{\perp miss}$ to minimize inelastic contamination (ideally below 1~\%). 
+Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inelastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while retaining $\geq$~60~\% of the quasi-elastic events properly recorded in the BigBite-SBS pair.
+Table.~\ref{tab:contam} summarizes the quasi-elastic selection cuts, and inelastic contamination $\delta_{inel}$.
 
 \begin{table}[h]
 \centering
@@ -139,8 +139,8 @@ Point ($\epsilon$) & $N$ & $W^2$ cut & $p_{\perp miss}$ cut & $\delta_{inel}$ \\
 \subsection{Quasi-elastic counting rates}
 
 The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
-We generated a reasonably large sample of quasi-elastic events $N_{Gen}$ for each kinematics, on a solid angle $\Delta\Omega_{Gen}$ that was larger than the detector acceptance.
-To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as the following;
+We generated a reasonably large sample of quasi-elastic events $N_{Gen}$ for each kinematics, within a solid angle $\Delta\Omega_{Gen}$ that was larger than the detector acceptance.
+To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as follows:
 %
 \begin{itemize}
 \item{require a primary track, going through all 5 GEM layers (electron arm);}
@@ -170,8 +170,8 @@ Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ 
 \label{tab:kinExpParams}
 \end{table}
 
-Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we require the threshold to be such as we obtain ~90\% efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
-Quasi-elastic selection efficiency $\eta_{sel}$ are also reminded.
+Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we select a threshold that yields~90\%~efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
+Quasi-elastic selection efficiency $\eta_{sel}$ are also provided.
 
 \begin{table}[h]
 \centering

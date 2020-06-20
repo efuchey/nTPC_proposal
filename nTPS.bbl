@@ -237,8 +237,8 @@
 \bibitem [{\citenamefont {Kivel}(2020)}]{Kivel2020ab}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Kivel}},\ }\href@noop {} {\enquote {\bibinfo {title} {private
-  communications},}\ } (\bibinfo {year} {2020})\BibitemShut {NoStop}%
+  {Kivel}},\ }\href@noop {} {} (\bibinfo {year} {2020}),\ \bibinfo {note}
+  {private communications}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Annand}\ \emph {et~al.}(2008)\citenamefont {Annand},
   \citenamefont {Gilman}, \citenamefont {Quinn}, \citenamefont {Wojtsekhowski}
   \emph {et~al.}}]{E12-09-019}%

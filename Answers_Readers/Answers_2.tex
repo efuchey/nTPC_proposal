@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}  % Include figure files
+
+\begin{document}
+
+{\em So to make sure I understand it correctly: in order to exact the $G_E^n/G_M^n$, you use eD scattering at different kinematic point (epsilon), and use the ratio method to extract the e-neutron scattering information.} \\
+
+Yes, we measure eD scattering at different epsilon values. We use it to determine the neutron Rosenbluth slope $S^n$.
+The two-photon exchange exchange contribution from the slope can be determined using 
+%to determine the neutron Rosenbluth slope $S^n$,  which we can deduce the two-photon exchange from the
+existing knowledge on $G_E^n/G_M^n$ (see answer to your second question below).
+The ratio $e-n/e-p$ method minimizes the systematic uncertainty on the measurement, and allows to deduce $S^n$ from the knoweldge of the proton Rosenbluth slope $S^p$.
+From the text of the first paragraph of page 13 of our proposal (section ``Technique''), we define $A$ as our experimental observable:
+\begin{equation}
+  A = R_{corrected, \epsilon_1}/R_{corrected, \epsilon_2}
+\end{equation}
+with $R_{corrected}$ defined in Eq.(7).
+$A$ can also be written as:
+\begin{equation}
+  %A = B \frac{1 + \epsilon_1 S^n}{1 + \epsilon_2 S^n} \simeq B \times (1 + \Delta \epsilon S^n )
+  A = B (1 + \epsilon_1 S^n)(1 + \epsilon_2 S^n) \simeq B \times (1 + \Delta \epsilon S^n )
+\end{equation}
+with $\Delta \epsilon = \epsilon_1-\epsilon_2$ and:
+\begin{equation}
+  B = R_{Mott, \epsilon_1}/R_{Mott, \epsilon_2} (1 + \epsilon_2 S^p )/(1 + \epsilon_1 S^p )
+\end{equation}
+(defined in our proposal text but not labeled) with
+\begin{equation}
+  R_{Mott} = \sigma_{Mott, n}/\sigma_{Mott, p} \times (1+\tau_p)(1+\tau_n)
+  %\frac{\sigma_{Mott, n}}{\sigma_{Mott, p}} \frac{1+\tau_p}{1+\tau_n}
+\end{equation}
+(also defined in our proposal text but not labeled).
+
+With this information we can deduce the neutron Rosenbluth slope $S^n$
+\begin{equation}
+  S^n = (A-B)/(B \Delta \epsilon).%\frac{A-B}{B \Delta \epsilon};
+\end{equation}
+
+{\em My fist question is really about the jargon and notation (I apologize for my ignorance as a particle theorist): what does D(e, e'n)p and D(e, e'p)n mean?}\\
+
+In these notations, the particle after the bracket is the undetected particle
+D(e, e'n)p means that we measure quasi-elastic scattering off deuterium on the neutron, (the proton being the spectator of the reaction);
+D(e, e'p)n  means that we measure quasi-elastic scattering off deuterium on the proton, (the neutron being the spectator of the reaction).\\
+
+{\em My second question is about physics interpretation:  Once you obtain slope, how to tract the two-photon-exchange contribution?}\\
+
+After obtaining the neutron Rosenbluth slope, the two-photon-exchange contribution is the difference between the slope and the contribution from the form factors to this slope. Without two-photon exchange contribution, the Rosenbluth slope is:
+\begin{equation}
+  S^n = (G_E^n/G_M^n)^2/\tau.
+\end{equation}
+The two-photon exchange contribution is assumed to be the contribution to $S^n$ which can't be explained by $(G_E^n/G_M^n)^2/\tau$.
+With the existing knowledge on $G_E^n/G_M^n$ from the 2015 review from Perdrisat {\it et al.}\footnote{Eur.~Phys.~J.~A51, (2015), http://arxiv.org/abs/1503.01452}, we can deduce the two-photon exchange contribution ${\rm nTPE}$ from our measured slope $S^n$:
+\begin{equation}
+  {\rm nTPE} = S^n - (G_E^n/G_M^n)^2/\tau.
+\end{equation}
+
+\end{document}

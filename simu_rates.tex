@@ -86,6 +86,111 @@ In the more reasonable case where the HCal rates are more accurately described b
   
   
 \subsection{Contamination from inelastic}\label{sec:inel_contam}
+
+The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering.
+Our quasi-elastic $e-N$ MC generator uses the Kelly form factor fits~\cite{}. %\footnote{Phys. Rev. C 70, 068202 (2004)}.% to weigh our quasi-elastic events.\\
+Our inelastic resonant $e-N$ MC generator uses the model by P.~Bosted and E.~Christy~\cite{}. %\footnote{Phys.~Rev.~C81.055213, https://arxiv.org/abs/0712.3731}. %See also the GMn E12-09-019 proposal page (attached).
+This model is a fit of $e-N$ data in the resonance region from Jefferson Lab Hall C~\cite{}
+%\footnote{http://arxiv.org/abs/nucl-ex/0410027}
+which covers $0<=Q^2<8 {\rm (GeV/c)}^2$, with beam energies up to 5.5 GeV.
+According to~\cite{}, %\footnote{Phys.~Rev.~C81.055213, https://arxiv.org/abs/0712.3731},
+the fit residue to the data between 4 and 6 GeV fluctuates by $\pm$ 10\%. We assume a 20\% systematic uncertainty on our inelastic cross section. %background estimation.
+
+The relevant variables to select the quasi-elastic $e-N$ scattering from the resonant $e-N$ scattering are the missing mass $W^2 = M_{N}^2+2M_{N}^{2}(E-E')-Q^2$, evaluated with the BigBite resolution, of the system N$(e, e')X$, and the transverse missing momentum.
+Figure~\ref{fig:W2} displays the event distributions in $W^2$ for both our simulated quasi-elastic and inelastic samples within the following set of fiducial acceptance cuts:
+%
+\begin{itemize}
+\item{the electron track is reconstructed in BigBite;}
+\item{the total energy deposited in the BigBite calorimeter is above the 3 GeV threshold for an average 4.2 GeV elastic peak (for $\epsilon = 0.84$ kinematic);}
+\item{the electron track must fire at least 3 PMTs in the GRINCH detectors;}
+\item{the total energy deposited in HCal is above the 0.10 GeV threshold. This corresponds to 90\% efficiency of the 3.2 GeV/c nucleons which deposit 0.20 GeV in the HCal (scintillator material).}
+\end{itemize}
+%
+%According to $^3$, %\footnote{Phys.~Rev.~C81.055213, https://arxiv.org/abs/0712.3731},
+%the fit residue to the data between 4 and 6 GeV fluctuates by $\pm$ 10\%. We assume a 20\% systematic error attached on our inelastic background estimation.% or 0.4\% relative quasi-elastic.\\
+%
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=5cm]{Answers_Readers/W2_sig.pdf}
+    \includegraphics[width=5cm]{Answers_Readers/W2_inel.pdf}
+    \caption{Event distributions in $W^2 = M_{N}^2+2M_{N}^{2}(E-E')-Q^2$  for quasi elastic $e-N$ (left) and inelastic resonant $e-N$ (right) within the fiducial analysis cuts.}
+    \label{fig:W2}
+\end{figure}
+%
+
+Before reconstructing the nucleon momentum, it is necessary to apply a selection cut on $W^2$ to reject a fraction of the inelastic events. To this end, only events for which $W^2<1.10~{\rm GeV}^2$ are selected for further discussion. Within this selection, our total number of events counts 97\% of quasi-elastic and 3\% of inelastic.
+% this cut is 76\% for quasi-elastic and 1\% for inelastic.
+
+Now we will discuss the missing perpendicular momentum.
+The nucleon momentum and direction is reconstructed using the position of the HCal cluster, on the first step {\em under the assumption that it is a neutron}.
+We use the direction of the virtual photon vector $\vec{q}$ (corrected with the vertex position) to project the expected neutron position.
+The difference between the reconstructed and the projected nucleon position is shown, projected on $x$ (the non-dispersive direction) and $y$ (the dispersive direction), for both quasi-elastic and inelastic events on figure~\ref{hcal_id_2D}.
+%
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_QE.pdf}
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_Inel.pdf}
+    \caption{Difference of projected position and reconstructed position for the nucleons in $x$ (non-dispersive direction) and $y$ (dispersive direction), for quasi-elastic events (left) and inelastic events (right). On each plot We clearly notice two structures. The structure on the left, centered at 0, is due to the neutrons. The structure on the right, shifted by about 1~m is due to the protons, which are deflected upwards by the magnetic field. 
+    }
+    \label{hcal_id_2D}
+\end{figure}
+%
+We clearly distinguish in each case two structures, one which can be identified a the neutrons, centered on zero in both $x$ and $y$, and one which can be identified as the protons, which are deflected upwards and are shifted by about 1~m in $y$.
+Figure~\ref{hcal_id_y} also shows the difference between the reconstructed and the projected nucleon position, except projected on $y$ (the dispersive direction), for both the quasi-elastic and inelastic events. Comparing both the expected inelastic and elastic yields in this variable side-by-side evidences further the important role of the $W^2<1.10~{\rm GeV}^2$ selection to filter out inelastic events. 
+%
+\iffalse
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=10cm]{HCal_PID_Inel.pdf}
+    \caption{Difference of projected position and reconstructed position for the nucleons in $x$ (non-dispersive direction) and $y$ (dispersive direction), for inelastic events. The selection for these distributions are the fiducial cuts $W^2<1.10~{\rm GeV}^2$. We clearly notice two structures. The structure on the left, centered at 0, is due to the neutrons. The structure on the right, shifted by about 1~m is due to the protons, which are deflected upwards by the magnetic field. 
+    }
+    \label{hcal_id_inel}
+\end{figure}
+\fi
+%
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_QE_y.pdf}
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_Inel_y.pdf}
+    \caption{Difference of projected position and reconstructed position for the nucleons projected in $y$ (dispersive direction), compared between quasi-elastic (left) and inelastic (right) events. The selection for these distributions are the fiducial cuts $W^2<1.10~{\rm GeV}^2$. We may notice that the selection on $W^2<1.10~{\rm GeV}^2$ already reduces drastically the proportion of inelastic with respect to quasi elastic. We may also see that the distribution for the proton is slightly wider. %, which will induce a slight decrease in $e-p$ events, which is fully calculable.
+    }
+    \label{hcal_id_y}
+\end{figure}
+%
+
+As a second step, for the nucleons identified as protons (based on the location of the HCal cluster position with respect to its projected position), we need to correct the HCal reconstructed position $y_{rec}$ by the average shift $\Delta y_{p, avg}$ observed in figure~\ref{hcal_id_2D} for the nucleons identified as protons.
+
+%Then, the HCal cluster position can be combined with the vertex position to retrieve the nucleon scattering angle $\theta_N$.
+The nucleon momentum norm $p' = |\vec{p'}|$ is assumed to be equal to the virtual photon norm $|\vec{q}|$.
+With this information we can calculate the proton shift $\Delta y_{p}$ for each proton.
+%evaluated assuming the elastic scattering on a free nucleon, using the relation between the nucleon scattering angle and momentum in elastic scattering: $\vec{q}$
+%$p' = 2M_N E (M_n+E cos(\theta_N)/(M_N^2+2M_N E+(E \sin{\theta_N}^2)$, with $E$ the beam energy and $M_N$ the nucleon mass.
+
+With this information we may build the transverse components of the nucleon momentum (in the SBS coordinates system) $p'_{x, SBS}$ and $p'_{y, SBS}$.
+For both the protons and neutrons, $p'_{x, SBS}$ can be written as $p'_{x, SBS} = p' \times (x_{rec}-v\sin{\theta_{SBS}})/(D_{HCal}-v\cos{\theta_{SBS}})$ (with $v$ the reconstructed vertex position, $D_{HCal}$ the HCal distance to the target and $\theta_{SBS}$ the spectrometer angle.
+For the neutrons, $p'_{y, SBS}$ is $p'_{y, SBS} = p' \times y_{rec}/(D_{HCal}-v\cos{\theta_{SBS}})$.
+For the protons, $p'_{y, SBS}$ must be written as $p'_{y, SBS} = p' \times (y_{rec} - \Delta y_{p})/(D_{HCal}-v\cos{\theta_{SBS}})$.
+
+The nucleon momentum components in the SBS coordinates system $p'_{x, SBS}$ and $p'_{y, SBS}$ can then be transformed (using the corrected HCal distance to the target $D_{HCal}-v\cos{\theta_{SBS}}$) into the nucleon momentum components in the Hall~A coordinate system $p'_{x}$, $p'_y$ and $p'_z$, with the best resolution achievable. 
+
+In Hall~A coordinate system, using the nucleon meomentum combined with the virtual photon vector $\vec{q}$, we may reconstruct the transverse missing momentum $p_{_{\perp} miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2}$, which is another very powerful variable to reject more inelastic background.
+Figure~\ref{fig:pperp} displays the event distributions in $p_{_{\perp} miss}$ for our simulated quasi-elastic sample within our fiducial acceptance cuts%, but before requiring $W^2<1.10~{\rm GeV}^2$.
+, and requiring $W^2<1.10~{\rm GeV}^2$.
+%
+\begin{figure}[h]
+  \centering
+    %\includegraphics[width=5cm]{pperp_sig.pdf}
+    %\includegraphics[width=5cm]{pperp_inel.pdf}
+    \includegraphics[width=12cm]{Answers_Readers/gen-tpe_he_pperp_acc_real_new.pdf}
+    %\caption{Event distributions in $p_{_{\perp} miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2}$ for quasi elastic $e-N$ (left) and inelastic resonant $e-N$ (right) within the fiducial analysis cuts, but before requiring $W^2<1.10~{\rm GeV}^2$.}
+    \caption{Compared quasi-elastic (blue) and inelastic (magenta) distributions for $p_{_{\perp} miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2}$, within fiducial analysis cuts, after requiring $W^2<1.10~{\rm GeV}^2$, for the high $\epsilon$ kinematic, separated between protons on the left and neutrons on the right). The inelastic contamination of quasi-elastic events and their error bars are quoted in the legends.}
+    \label{fig:pperp}
+\end{figure}
+%
+%After applying $W^2<1.10~{\rm GeV}^2$ 
+After selection on $W^2 <1.10 {\rm GeV}^2$ and $p_{_{\perp} miss} <0.1$~GeV, the inelastic contamination of our quasi-elastic sample is better than 1\%, with 0.2\% systematic uncertainties.
+
+\iffalse
 The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the center of mass energy
 %
 \begin{equation}
@@ -135,6 +240,8 @@ Point ($\epsilon$) & $N$ & $W^2$ cut & $p_{\perp miss}$ cut & $\delta_{inel}$ \\
 \caption{Summary of cuts for quasi-elastic selection and resulting inelastic contamination $\delta_{inel}$.}
 \label{tab:contam}
 \end{table}
+
+\fi
 
 \subsection{Quasi-elastic counting rates}
 

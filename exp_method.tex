@@ -1,23 +1,32 @@
-\section{Technique}
+\section{Technique}\label{sec:exp_method}
 %
+This proposal is based on instrumentation, simulation, and analysis development made by the GMn/SBS collaboration for the GMn, E12-09-019, experiment~\cite{E12-09-019}.
+The GMn experiment is one of several form factor experiments approved by JLab PAC. 
+The SBS spectrometer was funded by DOE with large contributions provided by the collaborating institutions from USA, Italy, UK, and Canada. 
+The apparatus and DAQ installation will start in 2020 and the data taking run is expected to be in summer-fall 2021.
+
 The neutron form factors are challenging to be determine experimentally especially because there is no free neutron target. 
-However, since the deuterium is a loosely coupled system, it can be viewed as the sum of a proton target and a neutron target. 
+However, since deuterium is a loosely coupled system, it can be viewed as the sum of a proton target and a neutron target. 
 In fact, quasi-elastic scattering from deuterium has been used to extract the neutron magnetic form factor, \gmn, at modestly high \qsq~for decades~\cite{Hughes:1965zza, Arnold:1988us} in the single arm (e,e') experiments. 
 However, the proton cross section needs to be subtracted by applying a single-arm quasi-elastic electron-proton scattering. 
-This ``proton-subtraction" technique suffers from a number systematic uncertainties e.g. contributions from inelastic and secondary scattering processes. 
+This ``proton-subtraction" technique suffers from a number of systematic uncertainties e.g. contributions from inelastic and secondary scattering processes. 
 
-Many year ago, L.~Durand~\cite{Durand:1959zz} proposed the so-called ``ratio-method" based on the measurement of both D(e,e'n) and D(e,e'p) reactions. 
-In this method, many of the systematic errors are cancel out. 
-Several experiments \cite{Bruins:1995ns, Kubon:2001rj, Lachniet:2008qf} have applied the ratio-method to determine the neutron magnetic form factor. 
-We propose to use this method to measure Rosenbluth slope and extract (in OPE approximation) the neutron electric form factor, \gen.
+Many years ago, L.~Durand~\cite{Durand:1959zz} proposed the so-called ``ratio-method" based on the measurement of both D(e,e'n) and D(e,e'p) reactions. 
+In this method, many of the systematic errors are canceled out. 
+Several experiments \cite{Bruins:1995ns, Kubon:2001rj, Lachniet:2008qf} have applied the ratio-method to determine the neutron magnetic form factor.
 
-Data will be collected for quasi-elastic electron scattering from deuteron in process $D(e,e'n)p$. 
-A complementary $D(e,e'p)n$ data will be taken to calibrate the experiment apparatus.
+The GMn/SBS experiment~\cite{E12-09-019} will take data for elastic $e-n$ scattering for several kinematics with \qsq~from 3.5 up to 13.5~\gevcsq.
+We propose to use this method to measure the Rosenbluth slope and extract (in OPE approximation) the neutron electric form factor, \gen,~at one value of momentum transfer.
+In fact, one of the required data points will be taken by the GMn experiment, so an additional measurement is needed only for one
+kinematics.
+
+Data will be collected for quasi-elastic electron scattering from deuterium in the process $D(e,e'n)p$. 
+Complementary $D(e,e'p)n$ data will be taken to calibrate the experiment apparatus.
 The current knowledge of the $e-p$ elastic scattering cross section (obtained in the single arm H(e,e')p and H(e,p)e' experiments) will be also used
 for precision determination the experiment kinematics.
 
-Applying Rosenbluth technique to measure \gen~requires accurate measurement of the cross section  and suffers from large uncertainties. 
-To overcome this issue, we propose to extract the value of \gen~from the measured the ratio of quasi-elastic yields, $R_{n/p}$, in scattering from a deuteron target as follows: 
+Applying the Rosenbluth technique to measure \gen~requires accurate measurement of the cross section  and suffers from large uncertainties. 
+To overcome this issue, we propose to extract the value of \gen~from the ratio of quasi-elastic yields, $R_{n/p}$, in scattering from a deuteron target as follows: 
 
 \begin{equation}
 R_{n/p} \equiv R_{observed} = \frac{N_{e,e'n}}{N_{e,e'p}}
@@ -29,7 +38,7 @@ $R_{observed}$ needs to be corrected to extract the ratio of e-n/e-p scattering 
 R_{corrected} = f_{corr} \times R_{observed} \;\; ,
 \label{eq:2}
 \end{equation}
-where the correction factor $f_{correction}$ takes into account the variation in the hadron efficiencies due to changes of $e-N$ Jacobian, the radiative corrections, and absorption in path
+where the correction factor $f_{corr}$ takes into account the variation in the hadron efficiencies due to changes of the $e-N$ Jacobian, the radiative corrections, and absorption in path
 from the target to the detector, and small re-scattering correction.
 
 In one-photon approximation, $R_{corrected}$ can be presented as: 
@@ -39,36 +48,50 @@ R_{corrected} = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}
 \end{equation}
 
 It is important that the ratio $R_{Mott} = \frac {\sigma_{_{_{Mott}}}^n \cdot (1+\tau_p)}{\sigma_{_{_{Mott}}}^p \cdot (1+\tau_n)}$ could be determine with very high relative accuracy even with modest precision for the beam energy, electron scattering angle, and detector solid angle. 
-Now, let us write the $R_{corrected}$ at two values of $\epsilon$ using $R_c^{n(p)} = \sigma_{_L}^{n(p)}/ \sigma_{_T}^{n(p)}$ as:
+Now, let us write the $R_{corrected}$ at two values of $\epsilon$ using $S^{n(p)} = \sigma_{_L}^{n(p)}/ \sigma_{_T}^{n(p)}$ as:
 \begin{equation*}
-R_{{corrected},\epsilon_1} = R_{Mott,\epsilon_1} \times \frac{\epsilon_1 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p}
+  %R_{{corrected},\epsilon_1} = R_{Mott,\epsilon_1} \times \frac{\epsilon_1 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p}
+R_{{corrected},\epsilon_1} = \frac{\epsilon_1 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_1 \sigma_{_L}^p + \sigma_{_T}^p}
 \hskip .5 in
-R_{{corrected},\epsilon_2} = R_{Mott,\epsilon_2} \times \frac{\epsilon_2 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p}
+%R_{{corrected},\epsilon_2} = R_{Mott,\epsilon_2} \times \frac{\epsilon_2 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p}
+R_{{corrected},\epsilon_2} = \frac{\epsilon_2 \sigma_{_L}^n + \sigma_{_T}^n}{\epsilon_2 \sigma_{_L}^p + \sigma_{_T}^p}
 \end{equation*}
 
 In these two equations there are two unknown variables: $\sigma_{_L}^n$ and $\sigma_{_T}^n$.
-The dominant contribution to the uncertainty of the slope of the cross section vs. $\epsilon$,  
-$S_c^n = \sigma_{_L}^n/ \sigma_{_T}^n$, will come from the uncertainty of $S_c^p$.
-At \qsq=4.5 \gevcsq, according to the global analysis of $e-p$ cross section~\cite{Christy2020ab}, the value of $S_c^p$ is close to $\tau^{-1}(1/\mu_p)^2 = 0.107$ with uncertainty of 0.01.
-The resulting equation for $S_c^n$ is:
+We remind here that proton and neutron measurements are made simultaneously with the same apparatus. 
+Thanks to this, the dominant contribution to the uncertainty of the Rosenbluth slope of the reduced cross section vs. $\epsilon$,  
+$S^n = \sigma_{_L}^n/ \sigma_{_T}^n$, will come from the uncertainty of $S^p$.
+At \qsq=4.5 \gevcsq, according to the global analysis of $e-p$ cross section~\cite{Christy2020ab}, the value of $S^p$ is close to $1/(\tau \, \mu_p^2) = 0.087$ with an uncertainty of 0.01.
+The resulting equation for $S^n$ is:
 \begin{equation*}
-A = B \times \frac{1 + \epsilon_1 S_c^n}{1 + \epsilon_2 S_c^n} \approx B \times (1 +  \Delta \epsilon \cdot S_c^n),
+A = B \times \frac{1 + \epsilon_1 S^n}{1 + \epsilon_2 S^n} \approx B \times (1 +  \Delta \epsilon \cdot S^n),
 \end{equation*}
+with $\Delta \epsilon = \epsilon_1 -\epsilon_2$, and 
+where the variable $A = R_{{corrected},\epsilon_1}/R_{{corrected},\epsilon_2}$ will be measured with statistical precision of 0.1\%.  
+Assuming, for this estimate, equal values of \qsq~for two kinematics, the  $\tau$ and $\sigma_{_T}$ for two kinematics are canceled out, and the variable
+%\mbox{$ B = {R_{M,\epsilon_1}}/{R_{M,\epsilon_2}} \times (1+ \epsilon_2 \, S^p)/( 1 + \epsilon_1 \, S^p)$}.
+\begin{equation}
+  B = %R_{Mott, \epsilon_1}/R_{Mott, \epsilon_2}
+  (1 + \epsilon_2 S^p )/(1 + \epsilon_1 S^p )
+\end{equation}
 
-here the variable $A = R_{{corrected},\epsilon_1}/R_{{corrected},\epsilon_2}$ will be measured with precision of 0.1\%.  Assuming equal values of \qsq~for two kinematics (so, $\tau$ and $\sigma_{_T}$ for two kinematics are canceled out), the variable
-\mbox{$ B = {R_{M,\epsilon_1}}/{R_{M,\epsilon_2}} \times (1+ \epsilon_2 \, S_c^p)/( 1 + \epsilon_1 \, S_c^p) \approx (1 - \Delta \epsilon \cdot S_c^p)$}.
-The value of B could be determined to a precision of $0.25 \times 0.01$.
+For actual small range of $\epsilon$ and small value of the slope, $B \approx (1 - \Delta \epsilon \cdot S^p)$.
+The value of B will be determined from global proton $e-p$ data to a precision of $0.25 \times 0.01$.
  
-At \qsq=4.5 \gevcsq~the ratio $\mu_n$\gen/\gmn~is of $0.55 \pm 0.05$, see the review~\cite{Punjabi:2015bba}.
+At \qsq=4.5 \gevcsq~the ratio $\mu_n$\gen/\gmn~is $0.55 \pm 0.05$ based on polarization transfer data which is mostly insensitive to the two-photon exchange, see the 2015 review from Perdrisat {\it et al.}~\cite{Punjabi:2015bba}.
 %
-In a simplest model, the slope $S_c^n$ is a sum of the slope due to \gen/\gmn~and the TPE contribution.
-If we use for TPE the prediction~\cite{Blunden:2005ew}, shown in Fig.~2, the TPE leads to increase of $S_c^n$ by a factor of 2,
-so the result of this experiment for TPE will be $0.069 \pm 0.012 \pm 0.01$, where the first uncertainty due to accuracy 
-of \gen/\gmn~and the second one due to projected precision of this experiment.
+In the simplest model, the slope $S^n$ is a sum of the slope due to \gen/\gmn~and the neutron two-photon exchange nTPE contribution:
+\begin{equation}
+  S^n = (G_E^n/G_M^n)^2/\tau + {\rm nTPE}
+\end{equation}
+Without the nTPE contribution, our projected measured slope would be $S^n = (G_E^n/G_M^n)^2/\tau = 0.063$. %= (0.55/1.91)^2/(4.5*4*0.939^2) 
 
+If we use the prediction available in~\cite{Blunden:2005ew} which is reproduced on our Fig.~2, nTPE leads to increase of the neutron Rosenbluth slope $S^n$ by a factor 2;
+Under this assumption, the projected measured Rosenbluth slope would now become $S^n = 0.126$, and nTPE would then be:
 
+\begin{equation}
+  {\rm nTPE} = S^n - (G_E^n/G_M^n)^2/\tau = 0.063.
+\end{equation}
 
-
-
-
-
+The projected measurement of the neutron two-photon exchange for this experiment is $nTPE = 0.063 \pm 0.012 \pm 0.01$, where the first uncertainty is due to accuracy 
+of \gen/\gmn~and the second one due to projected precision of this experiment. It would be a 4-4.5 sigma observation of the two-photon exchange contribution for the neutron.

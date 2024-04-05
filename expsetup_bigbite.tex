@@ -8,19 +8,27 @@ The spectrometer consists of a single dipole magnet (with magnetic field approxi
 
 \begin{figure}[htbp]
 \begin{center}
-\epsfig{file=pic2/BB_Side-view.pdf,height=3.0in}
+\epsfig{file=Plots/BB_Side-view.pdf,height=3.0in}
 \end{center}
 \caption{The BigBite spectrometer with the upgraded detector stack.}
 \label{fig:BB}
 \end{figure} 
 
 \subsubsection{GEM Chambers}
-To cope with the high rates for this experiment, the drift chambers were replaced with gas electron multiplier (GEM) detectors.  
+To perform the tracking of charged particles under the high rates anticipated for this experiment, the drift chambers were replaced with gas electron multiplier (GEM) detectors.  
 These detectors have proven to be capable of operating under luminosities of $25~\mathrm{kHz/mm}^2$ for the COMPASS experiment at CERN and the spatial resolution of each of these chambers is anticipated to be about $70~\mathrm{\mu m}$.
-
 There will be two sets of GEMs placed on each side of the GRINCH Cherenkov detector.
-The set of GEMs in front of the GRINCH is composed of four layers of three modules each, measuring $40~\times~50~\mathrm{cm}^2$, such that each layer covers $40~\times~150~\mathrm{cm}^2$ (the long dimension being along the dispersive direction).
-The set of GEMs behind the GRINCH is composed of a single layer composed of four modules measuring $50~\times~60~\mathrm{cm}^2$, such that the layer covers $60~\times~200~\mathrm{cm}^2$ (the long dimension again being along the dispersive direction).
+
+The set of GEMs in front of the GRINCH is composed of four layers of GEMs.
+Two of these layers have been built by the SBS collaborators from INFN.
+They are composed three modules each, measuring $40~\times~50~\mathrm{cm}^2$, such that each layer covers $40~\times~150~\mathrm{cm}^2$ (the long dimension being vertical, along the dispersive direction). The readout of these modules are oriented in the $x/y$ direction {\it i.e.} parallel and perpendicular to the dispersive direction (horizontal and vertical).
+The two other layers are being built by the SBS collaborators from UVA. They are composed of a single module measuring $40~\times~150~\mathrm{cm}^2$, the long dimension again being vertical and along the dispersive direction.
+The readout of these modules are oriented in the $u/v$ direction {\it i.e.} $\pm~30$~degrees with respect to the horizontal direction.
+
+The set of GEMs behind the GRINCH has been been built by the SBS collaborators from UVA. It is composed of a single layer composed of four modules measuring $50~\times~60~\mathrm{cm}^2$ , such that the layer covers $60~\times~200~\mathrm{cm}^2$ (the long dimension again being along the dispersive direction).
+The readout of these modules are all oriented in the $x/y$ direction.
+
+\iffalse
 On Fig.~\ref{fig:uva_gem} is displayed the single back GEM layer.
 %
 \begin{figure}[!h]
@@ -53,9 +61,11 @@ before magnetic deflection and a beamline scattering vertex position.
 Data from elastic coincidence $ep$ scattering from a $\mathrm{H_2}$ target will provide data to calibrate the electron momentum and will be performed for each beam energy setting.  
 As the kinematics for quasielastic and elastic scattering are similar, this provides the most efficient and reliable method for calibration.  
 With the sieve plate in place, it also eliminates the need for $B=0$ field data, which was proven difficult to extract due to prohibitively high rates of otherwise deflected low energy particles.
+\fi
 
-The level background in the GEMs have been evaluated, thanks to G4SBS (see Sec.~\ref{sec:simu}) for the $G_M^n$ experimental readiness review \cite{gmn_err}. For the $G_M^n$ highest $Q^2$ point (which is the most constraining, since it combines mandatory maximum luminosity and smaller BigBite angles, the background level in the front GEMs are of the order of $120~\mathrm{kHz/cm}^2$ for the front GEM layers, and below $50~\mathrm{kHz/cm}^2$ for the back GEM.
-To perform the GEM tracking within such a background environment, we use the cluster reconstructed in the BigBite shower as a track seed to clean the large combinatorics that would otherwise be created by the large number of hits. After this, the main challenge is the separation by the clustering algorithm of the signal and background hits to minimize track smearing.
+The background levels in the GEMs have been evaluated, with the help of the G4SBS simulation package(\cite{g4sbs} and Sec.~\ref{sec:simu}) for the $G_M^n$ experimental readiness review. % \cite{gmn_err}.
+For the $G_M^n$ highest $Q^2$ point (which is the most constraining, since it combines mandatory maximum luminosity and smaller BigBite angles), the rates in the front GEMs are of the order of $120~\mathrm{kHz/cm}^2$ for the front GEM layers, and below $50~\mathrm{kHz/cm}^2$ for the back GEM.
+To perform the GEM tracking within such a high-rate environment, we use the cluster reconstructed in the BigBite shower as a track seed to clean the large combinatorics that would otherwise be created by the large number of hits. After this, the main challenge is the separation by the clustering algorithm of the signal and background hits to minimize track smearing.
 At this level of background, a TreeSearch tracking algorithm combined with a fairly simple cluster separation algorithm has already proven to achieve 70\% efficiency at nominal luminosity.
 A better cluster separation algorithm is currently being developed and should allow to significantly improve this figure. 
 
@@ -124,7 +134,7 @@ The $x$ and $y$ components of  these tracks can be separated using the fixed $z$
 
 \subsubsection{Shower/Preshower}
 
-The electromagnetic calorimeter configuration consists of two planes of lead glass blocks which  which we call the preshower and shower.  
+The electromagnetic calorimeter configuration consists of two planes of lead glass blocks which we call the preshower and shower.  
 The preshower, located about $80~\mathrm{cm}$ behind the first GEM chamber, consists of a $2\times26$ plane of $37~\mathrm{cm}\times 9~\mathrm{cm}$ blocks.  
 The shower, about $1~\mathrm{m}$ behind the first GEM chamber, consists of an $7\times27$ array of $8.5~\mathrm{cm}\times8.5~\mathrm{cm}$ blocks.  Sums over these blocks form the physics event trigger for the experiment.
 
@@ -135,7 +145,11 @@ By measuring the pedestal widths and resolution for E06-010 and scaling to this 
 
 \subsubsection{Timing hodoscope}
 
-The BigBite scintillator plane is being upgraded from the former electron detector package to a configuration of 90 paddles in a plane, each with dimensions $1~\mathrm{in.}\times1~\mathrm{in.}\times60~\mathrm{cm}$, and readout by one PMT on each side.
+The BigBite timing hodoscope has been built by the SBS collaborators from Glasgow to replace the BigBite scintillator plane.
+It will be composed of 90 bars stacked in a plane, each with dimensions $1~\mathrm{in.}\times1~\mathrm{in.}\times60~\mathrm{cm}$. The paddle stack will be oriented such that the long dimension of the bars is horizontal {\it i.e.} perpendicular to the dispersive direction.
+Each of these elements are read out by a PMT on each side, mostly to provide measurement redundancy.
+
+\iffalse
 The arrangement of these elements can be visulaized on Fig.~\ref{fig:hodo}
 %
 \begin{figure}[!h]
@@ -146,16 +160,19 @@ The arrangement of these elements can be visulaized on Fig.~\ref{fig:hodo}
   \end{center}
 \end{figure}
 %
+\fi
 This plane will primarily be used to provide a signal for nucleon time of flight reconstruction. A time resolution of $200~\mathrm{ps}$ is anticipated.
 %For the transversity experiment, where BigBite is at $30^\circ$ using a shorter $40~\mathrm{cm}$ \he~target, and $12~\mathrm{\mu A}$ beam, the rate
-This fine segmentation is meant to lower the rates in the detector. Background studies made for the $G_M^n$ experimental readiness review \cite{gmn_err} demonstrated that the rates experienced by each element was $\leq~500~\mathrm{kHz}$ at a luminosity of $2.8~\times10^{38}~\mathrm{cm}^{-2}~\mathrm{s}^{-2}$. %for for the scintillator plane was approximately $3.6~\mathrm{MHz}$.
+This fine segmentation is meant to lower the rates in the detector. Background studies made for the $G_M^n$ experimental readiness review %\cite{gmn_err}
+demonstrated that the rates experienced by each element was $\leq~500~\mathrm{kHz}$ at a luminosity of $2.8~\times10^{38}~\mathrm{cm}^{-2}~\mathrm{s}^{-2}$. %for for the scintillator plane was approximately $3.6~\mathrm{MHz}$.
 %Using this data to provide upper limits on the rates seen for our experiment, scaling to current, a longer target, and bar active area, we anticipate a rate of $270~\mathrm{kHz}$ per bar.  
-The PMTs pulses are processed by NINO front-end cards which, when the PMT pulse crosses the NINO threshold, will produce a digital signal to be readout by CAEN 1190 TDCs which record a leading time and a trailing time.
+Signals from the PMTs are processed by NINO front-end cards which, when the PMT pulse crosses the NINO threshold, will produce a digital signal to be read out by CAEN 1190 TDCs which record a leading time and a trailing time.
 
 \subsubsection{GRINCH cherenkov detector}
 
-The main purpose of the Ring Imaging Cherenkov is to provide additional particle identification for offline pion rejection.
-The GRINCH consists of a tank with a maximum depth of $88.9~\mathrm{cm}$, with 4 cylindrical mirrors focussing the cherenkov light directly onto a 510~PMT array (60 lines of PMTs, with lines of 9~PMTs alternating with lines of 8~PMTs) placed away from the beam.
+The main purpose of the GRINCH is to provide additional particle identification for offline pion rejection.
+The GRINCH consists of a tank with a maximum depth of $88.9~\mathrm{cm}$, with 4 cylindrical mirrors focusing the cherenkov light directly onto a 510~PMT array (60 lines of PMTs, with lines of 9~PMTs alternating with lines of 8~PMTs) placed away from the beam.
+\iffalse
 The GRINCH tank and PMT matrix are represented on Fig.~\ref{fig:grinch}
 %
 \begin{figure}[!h]
@@ -166,11 +183,12 @@ The GRINCH tank and PMT matrix are represented on Fig.~\ref{fig:grinch}
   \end{center}
 \end{figure}
 %
+\fi
 The radiation gas will be $C_4F_8$, which is by far the best compromise between light yield for electrons and operating cost.
-With $n-1=1.35\times10^{-3}$, the $\pi$ threshold is only about $2.7~\mathrm{GeV}$,
+With $n-1=1.35\times10^{-3}$, the $\pi$ threshold is only about $2.7~\mathrm{GeV}$, so the additional pion rejection will be most effective below this threshold. 
 
-As for the timing hodoscope The PMTs pulses are processed by NINO front-end cards which, when the PMT pulse crosses the NINO threshold, will produce a digital signal to be readout by VETROC TDCs, which for each PMT hit will record a leading time and a trailing time.
-The analog signal will not be recorded however, which means that for each PMT hit, the information of the number of not directly available (although it can in theory be deduced from the time over threshold).
+Similar to the timing hodoscope, the signals from the GRINCH PMTs pulses are processed by NINO front-end cards which, when the PMT pulse crosses the NINO threshold, will produce a digital signal to be readout by VETROC TDCs, which for each PMT hit will record a leading time and a trailing time.
+The analog signal will not be recorded however, which means that for each PMT hit, the information of the number of photoelectrons is not directly available (although it can in theory be deduced from the time over threshold).
 
 All of this implies that the electron selection relies on the number of GRINCH PMT firing, instead of relying on the signal amplitude.
 %Fig.~\ref{fig:GRINCH_rej} shows the rejection 

@@ -1,0 +1,85 @@
+Sheren,Alsalmi,King Saud University,Spokesperson,sheren@jlab.org
+Eric,Fuchey,University of Connecticut,Spokesperson,efuchey@jlab.org
+Bogdan,Wojtsekhowski,JLab,Spokesperson,bogdanw@jlab.org
+Konrad,Aniol,California State University,Author,aniol@jlab.org
+Dave,Armstrong,College of William and Mary,Author, armd@jlab.org
+John,Arrington,Argonne National Laboratory,Author, johna@jlab.org
+Todd,Averett,College of William and Mary,Author,averett@jlab.org
+Carlos,Gayoso,Mississippi State University,Author,gayoso@jlab.org
+Scott,Barcus,JLab,Author,skbarcus@jlab.org
+Vincenzo,Bellini,Istituto Nazionale di Fisica Nucleare,Author,bellini@jlab.org
+Jan,Bernauer,Stony Brook University,Author,jan.bernauer@stonybrook.edu
+Hem,Bhatt,Mississippi State University, Author, hdbhatt@jlab.org
+Deepak,Bhetuwal,Mississippi State University, Author, bhetuwal@jlab.org
+Debaditya,Biswas,Hampton University,Author,biswas@jlab.org
+Warner,Boeglin,Florida International University,Author,boeglinw@jlab.org
+Alex,Camsonne,JLab,Author,camsonne@jlab.org
+Gordon,Cates,University of Virginia,Author,cates@jlab.org
+Jian-Ping,Chen,JLab, Author,jpchen@jlab.org
+Eric,Christy,Hampton University,Author, christy@jlab.org
+Ethan,Cline,Stony Brook University,Author,ethan.cline@stonybrook.edu
+Evaristo, Cisbani, stituto Nazionale di Fisica Nucleare, Author, cisbani@jlab.org
+B, Devkota, Mississippi State University, Author, brd170@msstate.edu
+Bishoy, Dongwi, Hampton University, Author,dongwi@jlab.org
+Jim, Dunne, Mississippi State University, Author, dunne@jlab.org
+Dipangkar, Dutta, Mississippi State University, Author, ddutta@jlab.org
+Lamiaa, El-Fassi, Mississippi State University, Author, elfassi@jlab.org
+Ishara, Fernando, Hampton University, Author, ishara@jlab.org
+David, Gaskell, JLab, Author, gaskelld@jlab.org
+Thir, Gautam, Hampton University, Author, gautam@jlab.org
+Kondo,Gnanvo, University of Virginia, Author, kagnanvo@jlab.org
+David, Hamilton, SUPA School of Physics and Astronomy, Author, dhamilto@jlab.org
+Ole, Hansen, JLab, Author, ole@jlab.org
+Florian, Hauenstein, Old Dominion University, Author, hauenst@jlab.org
+Douglas, Higinbotham, JLab, Author, doug@jlab.org
+Timothy, Hobbs, Southern Methodist University, Author, tjhobbs@mail.smu.edu
+Mark, Jones, JLab, Author, jones@jlab.org
+Abishek, Karki, Mississippi State University, Author, abishek@jlab.org
+Mina, Katramatou, Kent State University, Author, akatrama@kent.edu
+Cynthia, Keppel, JLab, Author, keppel@jlab.org
+Michael, Kohl, Hampton University, Author, kohlm@jlab.org
+Tyler, Kutz, George Washington University, Author, tkutz@jlab.org
+Nilanga, Liyanage, University of Virginia, Author, nilanga@jlab.org
+David, Mack, JLab, Author, mack@jlab.org
+Pete, Markowitz, Florida International University, Author, markowit@jlab.org
+Franco, Meddi, Istituto Nazionale di Fisica Nucleare, Author, meddi@jlab.org
+David, Meekins, JLab, Author, meekins@jlab.org
+Robert, Michaels, JLab, Author, rom@jlab.org
+Rachel, Montgomery, SUPA School of Physics and Astronomy, Author, rmontgom@jlab.org
+Aruni, Nadeeshani, Hampton University, Author, 	arunin@jlab.org
+Jasmin, Nazeer, Hampton University, Author, sahara@jlab.org
+Vladimi, Nelyubin, University of Virginia, Author, nelyubin@jlab.org
+Dien, Nguyen, Massachusetts Institute of Technology, Author, dien@jlab.org
+Tanvi, Patel, Hampton University, Author, tpatel@jlab.org
+Catia, Petta, Istituto Nazionale di Fisica Nucleare, Author, cpetta@jlab.org
+Makis, Petratos, Kent Sata University, Author, gpetrato@kent.edu
+Andrew, Puckett,University of Connecticut, Author, puckett@jlab.org
+Brian, Quinn, Carnegie Mellon University, Author, bquinn@jlab.org
+Mudiyanselage, Rathnayake, Hampton University, Author, adr@jlab.org
+Paul, Reimer, Argonne National Laboratory, Author, reimer@jlab.org
+Adam, Sarty, Saint Mary’s University, Author, sarty@jlab.org
+Brad, Sawatzky, JLab, Author, brads@jlab.org
+Axel, Schmidt, George Washington University, Author, schmidta@jlab.org
+Karl, Slifer, University of New Hampshire, Author, slifer@jlab.org
+Albert, Shahinyan, AANL 2 Alikhanian Brothers Street, Author, shahinya@jlab.org
+Greg, Smith, JLab, Author, smithg@jlab.org
+Maria, Satnik, The College of William and Mary, Author, msatnik@jlab.org
+Concetta, Sutera, Istituto Nazionale di Fisica Nucleare, Author, concetta.sutera@ct.infn.it
+Arun, Tadepalli, JLab, Author, arunts@jlab.org
+William, Tireman, North Michigan University, Author, wtireman@nmu.edu
+Guido, Urciuoli, Istituto Nazionale di Fisica Nucleare, Author, urciuoli@jlab.org
+Ezekiel, Wertz, The College of William and Mary, Author, ewertz@jlab.org
+Steven, Wood, JLab, Author, saw@jlab.org
+Bradley, Yale, he College of William and Mary, Author, 	byale@jlab.org
+
+
+
+
+
+
+
+
+
+
+
+

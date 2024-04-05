@@ -1,28 +1,253 @@
 
-\section{Simulations, estimations of counting rates and accidentals}
-\label{sec:simu}
+\section{Simulations, estimations of counting rates and accidentals}\label{sec:simu}
 
-The estimations of counting rates accidentals have been performed using G4SBS, the GEANT4-based simulation package developed for the SBS experiment \cite{g4sbs}.
-This package includes a wide range of event generators, which allows to evaluate the rates for both events of interest (signal) and background.
+The estimates of counting rates accidentals have been performed using G4SBS, the GEANT4-based simulation package developed for the SBS experiment \cite{g4sbs}.
+This package includes a wide range of event generators, which allows us to evaluate the rates for both events of interest (signal) and background.
 %, such as elastic/quasi-elastic.
-The representation of the experiment apparatus in G4SBS is shown in the high $\epsilon$ configuration on Fig.~\ref{fig:g4sbssetup}. 
-%This model includes many details about the beamline, scattering chamber, and all other elements 
-%
+The representation of the experiment apparatus in G4SBS is shown in the high $\epsilon$ configuration in Fig.~\ref{fig:g4sbssetup}. 
+
 \begin{figure}[!h]
-  \begin{center}
+  \centering
     \includegraphics[width=9.6cm,height=8cm]{Plots/SetupHiEPoint.png}
     \caption{Top view of the experimental apparatus model in G4SBS, shown in the high $\epsilon$ configuration. The beam direction is indicated, as well as the main elements (HCal, SBS magnet, BigBite spectrometer)}
     \label{fig:g4sbssetup}
-  \end{center}
+\end{figure}
+
+\subsection{Background and trigger rates}
+The main processes expected to contribute to the trigger rates for the BigBite spectrometer are:
+%
+\begin{itemize}
+\item{the inelastic electron nucleon scattering process;}
+\item{photons from inclusive $\pi^0$ production;}
+\item{and to a lesser extent, charged pions.}
+\end{itemize}
+%
+Concerning HCal, various hadronic backgrounds are expected to contribute to the rates in HCal, the dominant ones being pions.
+Both the inelastic scattering and the inclusive neutral and charged pion production are implemented in G4SBS, the latter relying on the Wiser parametrization \cite{wiser}.
+The minimum-bias ``beam-on-target'' generator (including all electromagnetic and hadronic processes) has also been considered for the HCal background.
+
+The thresholds to apply to each arm are determined as a function of the elastic peak.
+For the electron arm, the threshold has been set at $\mu_E - 2.5 \sigma_E$,  $\mu_E$ and $\sigma_E$ being respectively the position and width of the fitted elastic peak. 
+Fig.~\ref{fig:BBRates} presents the distributions of rate of energy deposit for the different processes involved in the BigBite trigger rates. 
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=8cm]{Plots/BBECalRates_gen-tpe_le.pdf}
+    \includegraphics[width=8cm]{Plots/BBECalRates_gen-tpe_he.pdf}
+    \caption{Rates of the different process contributing to the BigBite electron arm trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, inelastic in magenta, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the resolution for the elastic peak in the BigBite shower is $\sim0.3$ GeV.}
+    \label{fig:BBRates}
+\end{figure}
+
+Since HCal is a sampling calorimeter (meaning that only a fraction of the shower energy is measured), its resolution is relatively wide ($\sim0.7$ GeV).
+Due to this, the threshold is at 90\% efficiency (which corresponds to $\sim$0.1 GeV for both kinematics.
+Fig.~\ref{fig:HCalRates} presents the distributions of rate of energy deposit for the different processes involved in the HCal trigger rates.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=8cm]{Plots/HCalRates_gen-tpe_le.pdf}
+    \includegraphics[width=8cm]{Plots/HCalRates_gen-tpe_he.pdf}
+    \caption{Rates of the different process contributing to the HCal trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, minimum bias in black, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the peak itself is around 0.2 GeV for 3.2 GeV nucleons.}
+    \label{fig:HCalRates}
+\end{figure}
+
+The thresholds and trigger rates for each arm, as well as the coincidence rate (assuming 30ns coincidence window), are summarized in Table.~\ref{tab:TrigRates}.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Point ($\epsilon$) & \multicolumn{2}{|c|}{1 (0.599)} & \multicolumn{2}{c|}{2 (0.838)} \\
+\hline
+& BigBite & HCal & BigBite & HCal \\ 
+& rates (Hz) & rates (Hz) & rates (Hz) & rates (Hz) \\
+\hline
+threshold (GeV) & 1.32 & 0.106 & 2.99 & 0.090 \\
+\hline
+Quasi-elastic   & 1.62$\times 10^{2}$ & 1.44$\times 10^{2}$ & 4.39$\times 10^{2}$ & 3.48$\times 10^{2}$ \\
+Inelastic       & 1.62$\times 10^{3}$ & - & 5.98$\times 10^{3}$ & - \\
+$\pi^-$ (Wiser) & 3.08$\times 10^{2}$ & 1.40$\times 10^{6}$ & 2.95$\times 10^{2}$ & 1.96$\times 10^{6}$ \\
+$\pi^0$ (Wiser) & 1.15$\times 10^{4}$ & 7.90$\times 10^{6}$ & 1.69$\times 10^{3}$ & 5.77$\times 10^{6}$ \\
+$\pi^+$ (Wiser) & 1.82$\times 10^{2}$ & 2.87$\times 10^{6}$ & 3.07$\times 10^{2}$ & 3.34$\times 10^{6}$ \\
+Minimum bias    & - & 3.39$\times 10^{6}$ & - & 3.32$\times 10^{6}$($^*$) \\ 
+\hline
+{\em Total} & 1.37$\times 10^{4}$ & 3.39$\times 10^{6}$ & 8.17 $\times 10^{3}$ & 3.32$\times 10^{6}$ \\
+($\sum_{\pi (Wiser)}$ for HCal) &  & / (1.22$\times 10^{7}$)  &  & / (1.11$\times 10^{7}$) \\
+\hline
+{\bf Coincidence rate} & \multicolumn{2}{|c|}{1.39$\times 10^{3}$} & \multicolumn{2}{|c|}{8.14$\times 10^{2}$} \\
+($\sum_{\pi (Wiser)}$ for HCal) & \multicolumn{2}{|c|}{(5.01$\times 10^{3}$)} & \multicolumn{2}{c|}{(2.72$\times 10^{3}$)} \\
+\hline
+\end{tabular} 
+\caption{Trigger rates for BigBite and HCal, with the different process contributions separated, and the sum. For HCal, the total rates is either estimated with the minimum bias generator or the sum of inclusive pions estimated with the Wiser cross section. The coincidence rates assume a 30 ns coincidence window.}
+\label{tab:TrigRates}
+\end{table}
+Note that for HCal, the ``total rates'' is either the ``minimum bias'' beam on target, {\em or} the sum of inclusive charged and neutral pions evaluated with the Wiser cross sections. Comparisons between Wiser and minimum bias at very low energy shows that the Wiser code results dramatically overestimate the HCal rates, henceforth the HCal rates estimations using minimum bias are deemed more reliable (and emphasized in Table.~\ref{tab:TrigRates}). For the sake of thoroughness, we have checked the coincidence rates assuming the sum of the inclusive pions (evaluated with the Wiser cross sections) as the HCal rates.
+
+{\em Assuming this worst case scenario}, the coincidence rates could be as high as 5kHz, which might be at the limit of manageability for the DAQ.
+However, even if those rates were proven to be accurate, a slight increase on the HCal threshold (which would drop the efficiency from $\sim$90\% to $\sim$85\%) would decrease the total HCal rates by $\sim$35\% to 40\% in this worst case scenario, which would make the situation more manageable (3.3 kHz).
+In the more reasonable case where the HCal rates are more accurately described by the minimum bias prediction, the coincidence will be lower than 2kHz, rate at which the SBS DAQ should operate safely.
+  
+  
+\subsection{Contamination from inelastic}\label{sec:inel_contam}
+
+The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering.
+Our quasi-elastic $e-N$ MC generator uses the Kelly form factor fits~\cite{}. %\footnote{Phys. Rev. C 70, 068202 (2004)}.% to weigh our quasi-elastic events.\\
+Our inelastic resonant $e-N$ MC generator uses the model by P.~Bosted and E.~Christy~\cite{}. %\footnote{Phys.~Rev.~C81.055213, https://arxiv.org/abs/0712.3731}. %See also the GMn E12-09-019 proposal page (attached).
+This model is a fit of $e-N$ data in the resonance region from Jefferson Lab Hall C~\cite{}
+%\footnote{http://arxiv.org/abs/nucl-ex/0410027}
+which covers $0<=Q^2<8 {\rm (GeV/c)}^2$, with beam energies up to 5.5 GeV.
+According to~\cite{}, %\footnote{Phys.~Rev.~C81.055213, https://arxiv.org/abs/0712.3731},
+the fit residue to the data between 4 and 6 GeV fluctuates by $\pm$ 10\%. We assume a 20\% systematic uncertainty on our inelastic cross section. %background estimation.
+
+The relevant variables to select the quasi-elastic $e-N$ scattering from the resonant $e-N$ scattering are the missing mass $W^2 = M_{N}^2+2M_{N}^{2}(E-E')-Q^2$, evaluated with the BigBite resolution, of the system N$(e, e')X$, and the transverse missing momentum.
+Figure~\ref{fig:W2} displays the event distributions in $W^2$ for both our simulated quasi-elastic and inelastic samples within the following set of fiducial acceptance cuts:
+%
+\begin{itemize}
+\item{the electron track is reconstructed in BigBite;}
+\item{the total energy deposited in the BigBite calorimeter is above the 3 GeV threshold for an average 4.2 GeV elastic peak (for $\epsilon = 0.84$ kinematic);}
+\item{the electron track must fire at least 3 PMTs in the GRINCH detectors;}
+\item{the total energy deposited in HCal is above the 0.10 GeV threshold. This corresponds to 90\% efficiency of the 3.2 GeV/c nucleons which deposit 0.20 GeV in the HCal (scintillator material).}
+\end{itemize}
+%
+%According to $^3$, %\footnote{Phys.~Rev.~C81.055213, https://arxiv.org/abs/0712.3731},
+%the fit residue to the data between 4 and 6 GeV fluctuates by $\pm$ 10\%. We assume a 20\% systematic error attached on our inelastic background estimation.% or 0.4\% relative quasi-elastic.\\
+%
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=5cm]{Answers_Readers/W2_sig.pdf}
+    \includegraphics[width=5cm]{Answers_Readers/W2_inel.pdf}
+    \caption{Event distributions in $W^2 = M_{N}^2+2M_{N}^{2}(E-E')-Q^2$  for quasi elastic $e-N$ (left) and inelastic resonant $e-N$ (right) within the fiducial analysis cuts.}
+    \label{fig:W2}
 \end{figure}
 %
-%Most of the subsystems are mostly accurately reproduced in G4SBS, using the correct 
+
+Before reconstructing the nucleon momentum, it is necessary to apply a selection cut on $W^2$ to reject a fraction of the inelastic events. To this end, only events for which $W^2<1.10~{\rm GeV}^2$ are selected for further discussion. Within this selection, our total number of events counts 97\% of quasi-elastic and 3\% of inelastic.
+% this cut is 76\% for quasi-elastic and 1\% for inelastic.
+
+Now we will discuss the missing perpendicular momentum.
+The nucleon momentum and direction is reconstructed using the position of the HCal cluster, on the first step {\em under the assumption that it is a neutron}.
+We use the direction of the virtual photon vector $\vec{q}$ (corrected with the vertex position) to project the expected neutron position.
+The difference between the reconstructed and the projected nucleon position is shown, projected on $x$ (the non-dispersive direction) and $y$ (the dispersive direction), for both quasi-elastic and inelastic events on figure~\ref{hcal_id_2D}.
+%
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_QE.pdf}
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_Inel.pdf}
+    \caption{Difference of projected position and reconstructed position for the nucleons in $x$ (non-dispersive direction) and $y$ (dispersive direction), for quasi-elastic events (left) and inelastic events (right). On each plot We clearly notice two structures. The structure on the left, centered at 0, is due to the neutrons. The structure on the right, shifted by about 1~m is due to the protons, which are deflected upwards by the magnetic field. 
+    }
+    \label{hcal_id_2D}
+\end{figure}
+%
+We clearly distinguish in each case two structures, one which can be identified a the neutrons, centered on zero in both $x$ and $y$, and one which can be identified as the protons, which are deflected upwards and are shifted by about 1~m in $y$.
+Figure~\ref{hcal_id_y} also shows the difference between the reconstructed and the projected nucleon position, except projected on $y$ (the dispersive direction), for both the quasi-elastic and inelastic events. Comparing both the expected inelastic and elastic yields in this variable side-by-side evidences further the important role of the $W^2<1.10~{\rm GeV}^2$ selection to filter out inelastic events. 
+%
+\iffalse
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=10cm]{HCal_PID_Inel.pdf}
+    \caption{Difference of projected position and reconstructed position for the nucleons in $x$ (non-dispersive direction) and $y$ (dispersive direction), for inelastic events. The selection for these distributions are the fiducial cuts $W^2<1.10~{\rm GeV}^2$. We clearly notice two structures. The structure on the left, centered at 0, is due to the neutrons. The structure on the right, shifted by about 1~m is due to the protons, which are deflected upwards by the magnetic field. 
+    }
+    \label{hcal_id_inel}
+\end{figure}
+\fi
+%
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_QE_y.pdf}
+    \includegraphics[width=6cm]{Answers_Readers/HCal_PID_Inel_y.pdf}
+    \caption{Difference of projected position and reconstructed position for the nucleons projected in $y$ (dispersive direction), compared between quasi-elastic (left) and inelastic (right) events. The selection for these distributions are the fiducial cuts $W^2<1.10~{\rm GeV}^2$. We may notice that the selection on $W^2<1.10~{\rm GeV}^2$ already reduces drastically the proportion of inelastic with respect to quasi elastic. We may also see that the distribution for the proton is slightly wider. %, which will induce a slight decrease in $e-p$ events, which is fully calculable.
+    }
+    \label{hcal_id_y}
+\end{figure}
+%
+
+As a second step, for the nucleons identified as protons (based on the location of the HCal cluster position with respect to its projected position), we need to correct the HCal reconstructed position $y_{rec}$ by the average shift $\Delta y_{p, avg}$ observed in figure~\ref{hcal_id_2D} for the nucleons identified as protons.
+
+%Then, the HCal cluster position can be combined with the vertex position to retrieve the nucleon scattering angle $\theta_N$.
+The nucleon momentum norm $p' = |\vec{p'}|$ is assumed to be equal to the virtual photon norm $|\vec{q}|$.
+With this information we can calculate the proton shift $\Delta y_{p}$ for each proton.
+%evaluated assuming the elastic scattering on a free nucleon, using the relation between the nucleon scattering angle and momentum in elastic scattering: $\vec{q}$
+%$p' = 2M_N E (M_n+E cos(\theta_N)/(M_N^2+2M_N E+(E \sin{\theta_N}^2)$, with $E$ the beam energy and $M_N$ the nucleon mass.
+
+With this information we may build the transverse components of the nucleon momentum (in the SBS coordinates system) $p'_{x, SBS}$ and $p'_{y, SBS}$.
+For both the protons and neutrons, $p'_{x, SBS}$ can be written as $p'_{x, SBS} = p' \times (x_{rec}-v\sin{\theta_{SBS}})/(D_{HCal}-v\cos{\theta_{SBS}})$ (with $v$ the reconstructed vertex position, $D_{HCal}$ the HCal distance to the target and $\theta_{SBS}$ the spectrometer angle.
+For the neutrons, $p'_{y, SBS}$ is $p'_{y, SBS} = p' \times y_{rec}/(D_{HCal}-v\cos{\theta_{SBS}})$.
+For the protons, $p'_{y, SBS}$ must be written as $p'_{y, SBS} = p' \times (y_{rec} - \Delta y_{p})/(D_{HCal}-v\cos{\theta_{SBS}})$.
+
+The nucleon momentum components in the SBS coordinates system $p'_{x, SBS}$ and $p'_{y, SBS}$ can then be transformed (using the corrected HCal distance to the target $D_{HCal}-v\cos{\theta_{SBS}}$) into the nucleon momentum components in the Hall~A coordinate system $p'_{x}$, $p'_y$ and $p'_z$, with the best resolution achievable. 
+
+In Hall~A coordinate system, using the nucleon meomentum combined with the virtual photon vector $\vec{q}$, we may reconstruct the transverse missing momentum $p_{_{\perp} miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2}$, which is another very powerful variable to reject more inelastic background.
+Figure~\ref{fig:pperp} displays the event distributions in $p_{_{\perp} miss}$ for our simulated quasi-elastic sample within our fiducial acceptance cuts%, but before requiring $W^2<1.10~{\rm GeV}^2$.
+, and requiring $W^2<1.10~{\rm GeV}^2$.
+%
+\begin{figure}[h]
+  \centering
+    %\includegraphics[width=5cm]{pperp_sig.pdf}
+    %\includegraphics[width=5cm]{pperp_inel.pdf}
+    \includegraphics[width=12cm]{Answers_Readers/gen-tpe_he_pperp_acc_real_new.pdf}
+    %\caption{Event distributions in $p_{_{\perp} miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2}$ for quasi elastic $e-N$ (left) and inelastic resonant $e-N$ (right) within the fiducial analysis cuts, but before requiring $W^2<1.10~{\rm GeV}^2$.}
+    \caption{Compared quasi-elastic (blue) and inelastic (magenta) distributions for $p_{_{\perp} miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2}$, within fiducial analysis cuts, after requiring $W^2<1.10~{\rm GeV}^2$, for the high $\epsilon$ kinematic, separated between protons on the left and neutrons on the right). The inelastic contamination of quasi-elastic events and their error bars are quoted in the legends.}
+    \label{fig:pperp}
+\end{figure}
+%
+%After applying $W^2<1.10~{\rm GeV}^2$ 
+After selection on $W^2 <1.10 {\rm GeV}^2$ and $p_{_{\perp} miss} <0.1$~GeV, the inelastic contamination of our quasi-elastic sample is better than 1\%, with 0.2\% systematic uncertainties.
+
+\iffalse
+The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the center of mass energy
+%
+\begin{equation}
+  W^2 = M_{N}^2+2M_{N}^{2}(E-E')-Q^2, %= (q+p)^2 
+\end{equation}
+%
+and the missing transverse momentum of the nucleon
+%
+\begin{equation}
+  p_{\perp miss} = \sqrt{(q_{x}-p'_{x})^2+(q_{y}-p'_{y})^2},
+\end{equation}
+%
+where $M_N$ is the mass of the nucleon, $E$ and $E'$ the initial and final energy of the electron, and $q_{x,y}$, $p'_{x, y}$ are the projections on $x$, $y$ of the vectors of the virtual photon and final nucleon.
+The distributions of these quantities (weighted with cross section and including detector resolutions) are displayed for quasi-elastic and inelastic scattering, and for proton and nucleon, on Fig.~\ref{fig:inel_contam_le} for the low $\epsilon$ kinematic, and on Fig.~\ref{fig:inel_contam_he} for the high $\epsilon$ kinematic.\par
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=12cm]{Plots/gen-tpe_le_pperp_acc.pdf}
+    \includegraphics[width=12cm]{Plots/gen-tpe_le_W2_acc.pdf}
+    \caption{Compared quasi-elastic and inelastic distributions (including detectors resolutions) for $p_{\perp miss}$ (top) and $W^2$ (bottom), for the low $\epsilon$ kinematic. Comparison for protons is on the left, and comparison for neutrons is on the right. On the bottom panel, black and red are before the $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection, while blue and magenta are after $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection and application of BigBite shower and HCal thresholds.}
+    \label{fig:inel_contam_le}
+\end{figure}
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=12cm]{Plots/gen-tpe_he_pperp_acc.pdf}
+    \includegraphics[width=12cm]{Plots/gen-tpe_he_W2_acc.pdf}
+    \caption{Compared quasi-elastic and inelastic distributions (including detectors resolutions) for $p_{\perp miss}$ (top) and $W^2$ (bottom), for the high $\epsilon$ kinematic. Comparison for protons is on the left, and comparison for neutrons is on the right. On the bottom panel, black and red are before the $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection, while blue and magenta are after $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ selection and application of BigBite shower and HCal thresholds.}
+    \label{fig:inel_contam_he}
+\end{figure}
+
+Provided that we are not limited by statistics and we prioritize sample purity is capital for our experiment, we set the selection criteria on $W^2$ and $p_{\perp miss}$ to minimize inelastic contamination (ideally below 1~\%). 
+Setting $p_{\perp miss}~\leq~0.1~\mathrm{GeV}$ and $W^2~\leq~1.1~\mathrm{GeV}^2$, the inelastic contamination of the elastic sample ranges from 0.2~\% to 0.9~\%, while retaining $\geq$~60~\% of the quasi-elastic events properly recorded in the BigBite-SBS pair.
+Table.~\ref{tab:contam} summarizes the quasi-elastic selection cuts, and inelastic contamination $\delta_{inel}$.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Point ($\epsilon$) & $N$ & $W^2$ cut & $p_{\perp miss}$ cut & $\delta_{inel}$ \\
+\hline
+1 (0.599) & $n$ & 1.10 & 0.10 & 2.94~$\times 10^{-3}$ \\
+ & $p$ & 1.11 & 0.10 & 8.54~$\times 10^{-3}$ \\
+\hline
+2 (0.838) & $n$ & 1.09 & 0.10 & 2.07~$\times 10^{-3}$ \\
+ & $p$ & 1.10 & 0.10 & 5.80~$\times 10^{-3}$ \\
+\hline
+\end{tabular} 
+\caption{Summary of cuts for quasi-elastic selection and resulting inelastic contamination $\delta_{inel}$.}
+\label{tab:contam}
+\end{table}
+
+\fi
 
 \subsection{Quasi-elastic counting rates}
 
 The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
-We generated 1M events sample for each kinematics, on a solid angle that was larger than the detector acceptance.
-To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as the following;
+We generated a reasonably large sample of quasi-elastic events $N_{Gen}$ for each kinematics, within a solid angle $\Delta\Omega_{Gen}$ that was larger than the detector acceptance.
+To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as follows:
 %
 \begin{itemize}
 \item{require a primary track, going through all 5 GEM layers (electron arm);}
@@ -30,93 +255,115 @@ To evaluate the detector solid angle, we define simple criteria that each event 
 \item{require non-zero energy deposit in HCal (hadron arm).}
 \end{itemize}
 %
-The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}
-%
-\begin{center}
+The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}.
+We also define there the $p$-$n$ acceptance asymmetry $A_{\Delta\Omega}$ such as:
+\begin{equation}
+  A_{\Delta\Omega} = \frac{(\Delta\Omega_e \otimes \Delta\Omega_n)-(\Delta\Omega_e \otimes \Delta\Omega_p)}{(\Delta\Omega_e \otimes \Delta\Omega_n)+(\Delta\Omega_e \otimes \Delta\Omega_p)}
+\end{equation}
+
 \begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
-\begin{tabular}{|c|c|c|c|}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ & $\Delta\Omega_e \otimes \Delta\Omega_p$ \\
- & (msr) & (msr) & (msr) \\
+Point ($\epsilon$) & $\Delta\Omega_e$ & $\Delta\Omega_e \otimes \Delta\Omega_n$ & $\Delta\Omega_e \otimes \Delta\Omega_p$ & $A_{\Delta\Omega}$ \\
+ & (msr) & (msr) & (msr) & (\%) \\
 \hline
-1 (0.599) & 52.4 & 46.7 & 47.2 \\
+1 (0.599) & 52.4 & 46.7 & 47.2 & 0.5 \\
 \hline
-2 (0.838) & 32.7 & 23.4 & 23.0 \\
+2 (0.838) & 32.7 & 20.8 & 22.2 & 3.0 \\
 \hline
 \end{tabular} 
-\caption{Kinematics solid angles and efficiencies.}% ({\em preliminary}).}
+\caption{Kinematics electron solid angle, and convoluted electron/hadron solid angle, and acceptance asymmetry.}
 \label{tab:kinExpParams}
 \end{table}
-\end{center}
-%
-Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we require the threshold to be such as we obtain ~90\% efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
-%
-\begin{center}
+
+Then, we evaluate the detection efficiency. For the electron, we require the energy reconstructed in the BigBite calorimeter to be above a threshold defined as $thr = \mu_E- 2.5* \sigma_E$, as well as a minimum number of GRINCH PMTs fired due to the primary electron; For HCal, we select a threshold that yields~90\%~efficiency. These values are summarized in Table.~\ref{tab:kinEffs}.
+Quasi-elastic selection efficiency $\eta_{sel}$ are also provided.
+
 \begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
-\begin{tabular}{|c|c|c|c|c|c|}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{e}$ & $\eta_{n}$ & $\eta_{p}$ \\
- & (GeV) & (GeV) &  &  &  \\
+Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det~e}$ & $\eta_{det~n}$ & $\eta_{det~p}$ & $\eta_{sel~n}$ & $\eta_{sel~p}$ \\
+ & (GeV) & (GeV) &  &  &  &  &  \\
 \hline
-1 (0.599) & 1.32 & 1.06 & 0.902 & 0.904 & 0.892 \\ 
+1 (0.599) & 1.32 & 0.11 & 0.902 & 0.904 & 0.892 & 0.589 & 0.605 \\ 
 \hline
-2 (0.838) & 2.99 & 0.09 & 0.807 & 0.887 & 0.876 \\
+2 (0.838) & 2.99 & 0.09 & 0.808 & 0.889 & 0.882 & 0.617 & 0.647 \\
 \hline
 \end{tabular} 
-\caption{Kinematics solid angles and efficiencies.}% ({\em preliminary}).}
+\caption{Kinematics electron thresholds, particle detection efficiencies ($\eta_{det}$), and efficiency of quasi-elastic selection $\eta_{sel}$ separated for the proton and the neutron.}
 \label{tab:kinEffs}
 \end{table}
-\end{center}
+The counting rates are evaluated using among the $N_{Gen}$ events generated the events that have passed the selection described below, and weighting those events with the cross section ${d\sigma}/{d\Omega}|_i$ calculated by G4SBS, multiplied by the generation solid angle $\Delta\Omega_{Gen}$, using the formula:
+\begin{equation}
+  N_{est} = \frac{{\cal L}_{exp} \Delta t}{N_{Gen}} \times \sum_{i \in accepted~evts}\left( \left. \frac{d\sigma}{d\Omega}\right|_i \times \Delta\Omega_{Gen} \right) \;,
+\end{equation}
+where $\Delta t$ the running time and ${\cal L}_{exp}$ the experimental luminosity. ${\cal L}_{exp}$ can be calculated as follows:
+\begin{equation}
+  {\cal{L}}_{exp} = \frac{I_{exp}}{q_e}\cdot L_{tgt}\cdot d_{tgt}\;\frac{\cal{N}_A}{m_{D}}\;,
+\end{equation}
+where $I_{exp}$ is the beam current, $q_e$ is the electron charge, $L_{tgt}$ and $d_{tgt}$ are the target length and density respectively, $N_A$ is Avogadro's number, and $m_D$ is the deuterium mass number.
+Events are ``accepted'' if they meet the following criteria:
+%
+\begin{itemize}
+\item{the electron is in the BigBite acceptance};
+\item{the electron passes the BigBite threshold defined in Table~\ref{tab:kinEffs} and gives signal in the GRINCH;}
+\item{the nucleon is in the HCal acceptance and passes the HCal threshold defined in Table~\ref{tab:kinEffs};}
+\item{the event passes the quasi-elastic selection defined in the previous section {\it i.e.} $W^2~\leq~1.1~\mathrm{GeV}^2$ and $p_{\perp miss}~\leq~0.10~\mathrm{GeV}$.} 
+\end{itemize}
 %
 
-The counting rates are evaluated using the events that have passed the selection described above, and weighting those events with the cross section calculated by G4SBS, multiplied by the generation solid angle, using the formula:
-%
+The total quasi-elastic statistics $N_{QE}$, as well as the total form factor, $F^2$:
 \begin{equation}
-  N_{est} = {\cal L} \Delta t \times \sum_{i \in acc~evts} \frac{d\sigma}{d\Omega} *\Delta\Omega_{Gen} /N_{Gen}
+  F^2 = \frac{N_{QE}}{{\cal{L}}_{exp} \cdot \Delta t \cdot  d\sigma_{Mott}/d\Omega  \cdot \Delta\Omega \cdot  \eta}
+  \label{eq:F2}
 \end{equation}
-%
-The counting rates for both kinematics are available in Table.~\ref{tab:Rates}, assuming 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.
-%
-\begin{center}
+and its statistical error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics in Table.~VI%\ref{tab:Rates}
+, assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$. In Eq.~13%\ref{eq:F2}
+, $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, and $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{sel}$). 
+
 \begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
+\centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-Point ($\epsilon$) & QE $e$-$n$ & QE $e$-$p$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
- & counts & counts & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
+Point ($\epsilon$) & $N_{QE}$ & $N_{QE}$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
+ &  ($e$-$n$) &  ($e$-$p$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
 \hline
-1 (0.599) & 1.68$\times 10^{6}$ & 4.57$\times 10^{6}$ & 1.09 & 0.84 & 2.97 & 1.39 \\
+1 (0.599) & 9.07$\times 10^{5}$ & 2.55$\times 10^{6}$ & 0.99 & 1.04 & 2.73 & 1.70 \\
 \hline
-2 (0.838) & 4.52$\times 10^{6}$ & 1.21$\times 10^{7}$ & 0.92 & 0.43 & 2.53 & 0.79 \\
+2 (0.838) & 1.94$\times 10^{6}$ & 5.83$\times 10^{6}$ & 0.72 & 0.52 & 1.93 & 0.80 \\
 \hline
 \end{tabular} 
-\caption{Quasi-elastic counting rates, and ``reduced cross section'' as defined by Eq.~\ref{eq:F2}. These rates assume 12 hours of running at an intensity of 30 $\mu$A on a 15cm liquid deuterium target, with density 0.169 g.cm$^{-3}$.}%({\em preliminary})
+\caption{Quasi-elastic counting rates, and total form factor (defined in Eq.~11).}%({\em preliminary})
 \label{tab:Rates}
 \end{table}
-\end{center}
+
+The calculation of the $F_2$ term requires the evaluation of the Mott cross section:
 %
-The calculation of the $F_2$ term requires the evaluation of the Mott cross section.
+\begin{equation}
+  \sigma_{Mott} \equiv  \frac{d\sigma_{Mott}}{d\Omega} = (\hbar c\alpha_{EM})^2
+  \frac{1}{4E^2} \left( \frac{\cos{\theta_e/2}}{\sin^2{\theta_e/2}} \right)^2 \frac{E'}{E}
+\end{equation}
+%
+%\textcolor{red}{{\it private note}: $\hbar c$ is in $\mathrm{GeV}\cdot\mathrm{cm}^{-1}$, but I've assumed $e=1$.}\\
 The Mott cross section has been calculated with the weighted average of the electron variables (momentum and polar angle).
-%
-\begin{center}
+
 \begin{table}[h]
-  %\begin{tabular}{|>{\centering}m{0.3in} |>{\centering}m{0.55in}|>{\centering}m{0.4in}| >{\centering}m{0.4in}| >{\centering}m{0.45in}|>{\centering}m{0.45in}|>{\centering}m{0.4in}|>{\centering}m{0.4in}|>{\centering\arraybackslash}m{0.4in}|}
+\centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 Point ($\epsilon$) & $\langle \theta_e \rangle$ &  $\langle k^{\prime} \rangle$ & $\langle Q^2 \rangle$ & $\sigma_{Mott}$ \\
  & (deg) & (GeV) & (GeV$^2$) & (nb sr$^{-1}$) \\
 \hline
-1 (0.599) & 41.7 & 2.01 & 4.47 & 6.62 \\ 
+1 (0.599) & 41.88 & 2.0 & 4.5 & 6.62 \\ 
 \hline
-2 (0.838) & 22.9 & 4.26 & 4.40 & 48.0 \\
+2 (0.838) & 23.23 & 4.2 & 4.5 & 44.2 \\
 \hline
 \end{tabular} 
-\caption{Cross-section weighted average of kinematic variables over the BigBite acceptance. The Mott cross section has been evaluated at these values.}
+\caption{The Mott cross section weighted average of kinematic variables over the BigBite acceptance.}
 \label{tab:sigma_mott}
 \end{table}
-\end{center}
 %
 
 \iffalse
@@ -142,85 +389,4 @@ Discrepancy factor & 2.73 & 3.38 \\
 \end{table}
 \end{center}
 \fi
-
-\subsection{Background and trigger rates}
-
-The main processes expected to contribute the trigger rates for the BigBite spectrometer are:
-%
-\begin{itemize}
-\item{the inelastic electron nucleon scattering process;}
-\item{photons from inclusive $\pi^0$ production;}
-\item{and to a lesser extent, charged pions.}
-\end{itemize}
-%
-One the other hand, we expect all sorts of hadronic backgrounds to contribute to the rates in HCal, the dominant ones being pions.
-Both the inelastic scattering and the inclusive neutral and charged pion production are implemented in G4SBS, the latter relying on the Wiser parametrization \cite{wiser}.
-We may also considered the minimum-bias ``beam-on-target'' generator for the HCal background, especially at lower angle (all electromagnetic and hadronic processes being built-in in G4SBS).
-
-The thresholds to apply to each arm are determined as a function of the elastic peak.
-For the electron arm, the threshold has been set at $\mu_E - 2.5 \sigma_E$,  $\mu_E$ and $\sigma_E$ being respectively the position and width of the fitted elastic peak. 
-Fig.~\ref{fig:BBRates} presents the distributions of rate of energy deposit for the different processes involved in the BigBite trigger rates. 
-%
-\begin{figure}[!h]
-  \begin{center}
-    \includegraphics[width=6cm]{Plots/BBECalRates_gen-tpe_le.png}
-    \includegraphics[width=6cm]{Plots/BBECalRates_gen-tpe_he.png}
-    \caption{Rates of the different process contributing to the BigBite electron arm trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, inelastic in magenta, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the resolution for the elastic peak in the BigBite shower is $\sim0.3$ GeV.}
-    \label{fig:BBRates}
-  \end{center}
-\end{figure}
-%
-
-Since HCal is a sampling calorimeter (meaning that only a fraction of the shower energy is measured), it's resolution is significantly wider ($\sim0.7$ GeV).
-Due to this, the threshold is at 90\% efficiency (which corresponds to $\sim$0.1 GeV for both kinematics.
-Fig.~\ref{fig:HCalRates} presents the distributions of rate of energy deposit for the different processes involved in the BigBite trigger rates.
-%
-\begin{figure}[!h]
-  \begin{center}
-    \includegraphics[width=6cm]{Plots/HCalRates_gen-tpe_le.png}
-    \includegraphics[width=6cm]{Plots/HCalRates_gen-tpe_he.png}
-    \caption{Rates of the different process contributing to the HCal trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, minimum bias in black, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the peak itself is around 0.2 GeV for 3.2 GeV nucleons.}
-    \label{fig:HCalRates}
-  \end{center}
-\end{figure}
-%
-
-The thresholds and trigger rates for each arm, as well as the coincidence rate (assuming 30ns coincidence window), are summarized in Table.~\ref{tab:TrigRates}.
-%
-\begin{center}
-\begin{table}[h]
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Point ($\epsilon$) & \multicolumn{2}{|c|}{1 (0.599)} & \multicolumn{2}{c|}{2 (0.838)} \\
-\hline
-& BigBite & HCal & BigBite & HCal \\ 
-& rates (Hz) & rates (Hz) & rates (Hz) & rates (Hz) \\
-\hline
-threshold (GeV) & 1.32 & 0.106 & 2.99 & 0.090 \\
-\hline
-Quasi-elastic   & 1.62$\times 10^{2}$ & 1.44$\times 10^{2}$ & 4.38$\times 10^{2}$ & 3.48$\times 10^{2}$ \\
-Inelastic       & 1.62$\times 10^{3}$ & - & 5.80$\times 10^{3}$ & - \\
-$\pi^0$ (Wiser) & 3.16$\times 10^{2}$ & 1.40$\times 10^{6}$ & 3.17$\times 10^{2}$ & 2.26$\times 10^{6}$ \\
-$\pi^+$ (Wiser) & 1.16$\times 10^{4}$ & 7.90$\times 10^{6}$ & 1.64$\times 10^{3}$ & 7.83$\times 10^{6}$ \\
-$\pi^-$ (Wiser) & 1.84$\times 10^{2}$ & 2.87$\times 10^{6}$ & 3.18$\times 10^{2}$ & 3.92$\times 10^{6}$ \\
-Minimum bias    & - & 3.39$\times 10^{6}$ & - & 5.40$\times 10^{6}$($^*$) \\
-\hline
-{\em Total} & 1.39$\times 10^{4}$ & 1.22$\times 10^{7}$ & 8.51 $\times 10^{3}$ & 1.40$\times 10^{7}$ \\
-(min. bias - HCal only) &  & / 3.39$\times 10^{6}$ &  & / 5.40$\times 10^{6}$ \\
-\hline
-{\bf Coincidence rate} & \multicolumn{2}{|c|}{5.09$\times 10^{3}$} & \multicolumn{2}{c|}{3.57$\times 10^{3}$} \\
-(with min. bias HCal) & \multicolumn{2}{|c|}{1.41$\times 10^{3}$} & \multicolumn{2}{|c|}{1.38$\times 10^{3}$} \\
-\hline
-\end{tabular} 
-\caption{Trigger rates for BigBite and HCal, with the different process contributions separated, and the sum. For HCal, the total rates is either the sum of the (Wiser) inclusive pions or the minimum bias. The coincidence rates assume a 30 ns coincidence window.}
-\label{tab:TrigRates}
-\end{table}
-\end{center}
-%
-Note that for HCal, the ``total rates'' is either the sum of inclusive charged and neutral pions evaluated with the Wiser cross sections {\em or} the ``minimum bias'' beam on target. We have good reasons to think that the Wiser code results actually overestimate the HCal rates, but for the sake of thoroughness, we have checked the coincidence rates assuming the sum of the inclusive pions (evaluated with the Wiser cross sections) as the HCal rates.
-
-In the worst case scenario, the coincidence rates could be as high as 5kHz, which might be at the limit of manageability for the DAQ.
-However, a slight increase on the HCal threshold (which would drop the efficiency from $\sim$90\% to $\sim$85\%) would decrease the total HCal rates by $\sim$35\% to 40\% in this worst case scenario, which would make the situation more manageable (3.3 kHz).
-
-
 

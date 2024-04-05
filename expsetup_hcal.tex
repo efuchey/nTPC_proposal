@@ -14,7 +14,7 @@ Nucleon identification is illustrated on Fig.~\ref{fig:hcal_nuclimprint}. This f
     \label{fig:hcal_nuclimprint}
 \end{figure}
 
-The HCal (a CAD model of which is shown in Fig.~6)%\ref{fig:hcal_cad})
+The HCal (a CAD model of which is shown in Fig.~\ref{fig:hcal_cad})
 is composed of 288 modules arranged in an array of $12\, \times \, 24$.
 %
 \begin{figure}[!h]
@@ -78,10 +78,10 @@ Fig.~\ref{fig:Nproj}~{\bf(b)} shows the projected proton position from H$(\gamma
 \end{figure}
 %
 In each case, the trigger will not use the nucleon detector information.
-Analysis will use the amplitude distribution in the same way as done on  Fig.~\ref{fig:Neff} with the red distributions.
+%Analysis will use the amplitude distribution in the same way as done on Fig.~\ref{fig:Neff} with the red distributions.
 Blue distributions on Fig.~\ref{fig:Nproj} show the expected Y distribution applying a 0.10 GeV threshold on HCal;
 Magenta distributions on Fig.~\ref{fig:Nproj} show the expected Y distribution applying a 0.15 GeV threshold on HCal.
-As reported in the E12-09-019 GMn proposal\footnote{https://www.jlab.org/exp\_prog/proposals/09/PR12-09-019.pdf} on Table~8, the expected recorded statistics for H$(\gamma,\pi^+)n$ are of the order of 4000 events, which will represent a relative 1.5\% uncertainty on the neutron efficiency. The recorded statistics for H$(e,e’)p$ are of the order of 82000 events, which will represent a relative 0.3\% uncertainty on the proton efficiency.\\
+As reported in the E12-09-019 GMn proposal~\cite{E12-09-019} on Table~8, the expected recorded statistics for H$(\gamma,\pi^+)n$ are of the order of 4000 events, which will represent a relative 1.5\% uncertainty on the neutron efficiency. The recorded statistics for H$(e,e’)p$ are of the order of 82000 events, which will represent a relative 0.3\% uncertainty on the proton efficiency.\\
 
 \paragraph{Impact of efficiency ratio on the neutron / proton yields ratio}
 
@@ -106,9 +106,10 @@ Hence, the uncertainty, $\Delta R_{n/p}$ of $R_{n/p}$ could be expressed as:
 To evaluate the uncertainty of $R_{\eta_{n/p}} = \eta_p/\eta_n$,
 we need to account for the strong correlation between $\eta_p$ and $\eta_n$, $\rho_{\eta_{n/p}}$. 
 We can define the covariance between the uncertainties $\Delta \eta_p$ and $\Delta \eta_n$,
-$\sigma_{\eta_{n/p}} = \rho_{\eta_{n/p}} \Delta \eta_{n} \Delta \eta_{p}$ \footnote{https://en.wikipedia.org/wiki/Covariance\_and\_correlation}.
+$\sigma_{\eta_{n/p}} = \rho_{\eta_{n/p}} \Delta \eta_{n} \Delta \eta_{p}$.
 
-According to\footnote{https://www.sagepub.com/upm-data/6427\_Chapter\_4\_\_Lee\_(Analyzing)\_I\_PDF\_6.pdf}, we can write the uncertainty on the ratio efficiencies:
+%According to\footnote{https://www.sagepub.com/upm-data/6427\_Chapter\_4\_\_Lee\_(Analyzing)\_I\_PDF\_6.pdf}, we can write the uncertainty on the ratio efficiencies:
+We can write the uncertainty on the ratio efficiencies:
 %\footnote{line~5 of table in https://en.wikipedia.org/wiki/Propagation\_of\_uncertainty\#Example\_formulae}
 
 %
@@ -193,13 +194,13 @@ Additional analysis of the efficiency ratio is presented on Fig~\ref{fig:Reta_np
 This analysis focused on absolute value of efficiency ratio, for which we expect 1\% statistical level.
 To monitor the stability, we will have hundreds of times more statistics.
 %
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=7cm]{Answers_Readers/Reta_np_fthr_errs.pdf}
-  \caption{Neutron/proton efficiency ratio $R_{\eta_{n/p}}$ as a function of the calorimeter threshold, for our quasi-elastic sample. The error bars represent the uncertainty from the calibration measurements discussed earlier. The green represents $R_{\eta_{n/p}}$ on the full acceptance, the red represents $R_{\eta_{n/p}}$ on a reduced acceptance. %The discrepancy between the two (blue) is about 0.1\% below a threshold of 0.15 GeV.%, but becomes about 0.5\% between 0.15 and 0.3 GeV, up to 1\% beyond 0.3 GeV}
-            }
-  \label{fig:Reta_np}
-\end{figure}
+%\begin{figure}[!h]
+%  \centering
+%  \includegraphics[width=7cm]{Answers_Readers/Reta_np_fthr_errs.pdf}
+%  \caption{Neutron/proton efficiency ratio $R_{\eta_{n/p}}$ as a function of the calorimeter threshold, for our quasi-elastic sample. The error bars represent the uncertainty from the calibration measurements discussed earlier. The green represents $R_{\eta_{n/p}}$ on the full acceptance, the red represents $R_{\eta_{n/p}}$ on a reduced acceptance. %The discrepancy between the two (blue) is about 0.1\% below a threshold of 0.15 GeV.%, but becomes about 0.5\% between 0.15 and 0.3 GeV, up to 1\% beyond 0.3 GeV}
+%            }
+%  \label{fig:Reta_np}
+%\end{figure}
 %
 
 \paragraph{Efficiency stability due to the detector parameters drift}
@@ -210,7 +211,7 @@ Such an amplitude drift is typically of 1-2\% over a few days.
 It will be better for our detector thanks to the LED calibration system.
 
 We expect to use a threshold $A_{thr}$ = 100 MeV (see plots of amplitude spectrum in the Monday write-up).
-Using the graph of the nucleon detection efficiency as a function of the threshold $A_{thr}$ on Fig.~\ref{fig:eta_N},
+Using the graph of the nucleon detection efficiency as a function of the threshold $A_{thr}$ on Fig.~9,%\ref{fig:eta_N},
 we find that, in the region $A_{thr} = 90 - 110$~MeV, the efficiency is:
 %
 \begin{equation}
@@ -227,7 +228,7 @@ A one percent variation of $A_{thr}$ leads to 0.2\% variation of efficiency.
 \end{figure}
 %
 
-Turning now to the ratio of efficiencies, we plot it as a function of the threshold on Fig.~\ref{fig:Reta_np}.
+Turning now to the ratio of efficiencies, we plot it as a function of the threshold on Fig.~9.%\ref{fig:Reta_np}.
 We find that, in the region $A_{thr} = 90 - 110$~MeV, the ratio of efficiencies is:
 %
 \begin{equation}

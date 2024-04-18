@@ -1,7 +1,9 @@
 % June 10 9 am        do not change or remove this line
 %
 \section{Physics Motivation}
-
+\label{sec:sec2}
+%\iffalse
+\subsection{Form factor measurements at high \qsq}
 \indent
 The nucleon plays the same central role in hadronic physics that the hydrogen atom does in atomic physics and the deuteron in the physics of nuclei.
 The structure of the nucleon and its specific properties, such as charge, magnetic moment, size, mass; the elastic electron scattering form factors, resonances; and structure functions in DIS, are of fundamental scientific interest.
@@ -56,4 +58,26 @@ As we presented above, nucleon elastic form factors provide important input for 
 At the same time, the measured cross section of elastic $e-p$ scattering at high \qsq
  is significantly larger than predicted by Born-approximation calculations~\cite{Kivel2020ab}, indicating that TPE effects play
 a critical role in the high-\qsq region and therefore must be well understood
-before conclusions about GPDs can be drawn.
+before conclusions about GPDs can be drawn.\\
+%\fi
+
+\subsection{The role of two-photon exchange in form factors}
+
+As we presented above the form factors are important components for the study of the nucleon structure.
+However, the puzzle of the form factor ratio at higher \qsq~$G_E/G_M$ partly blurs our understanding of the measurements.
+%which at high \qsq~is much larger than theory calculations expected~\cite{Kivel2020ab}.
+Such an observation underlines the importance of the understanding of the two-photon exchange for hadron physics.
+
+There are two different contributions of the two photon-exchange. The first one is the ``soft'' two-photon exchange, where one of the photons energy is very small compared to the other, which is usually included in radiative correction calculations such as Mo and Tsai~\cite{RevModPhys.41.205}.
+The second one, which is the one we've referred to so far in this document, is the ``hard'' two-photon exchange, where both photons have a significant energy.
+The leading order contribution of the two-photon exchange to the elastic lepton-nucleon scattering is the interference term between the one-photon amplitude term ${\cal{M}}_{1\gamma}$ and the two-photon amplitude term ${\cal{M}}_{2\gamma}$:
+%
+\begin{equation}
+\sigma_{eN} \propto |{\cal{M}}_{1\gamma}|^2 \pm 2 \Re e [{\cal{M}}_{1\gamma} {\cal{M}}_{2\gamma}].
+\label{eq:eN_1g_2g}
+\end{equation}
+%
+This interference term depends on the cube of the charge of the lepton involved, {\it i.e.} at first order the sign of the two-photon exchange contribution is naively expected to flip from $e^--N$ to $e^+-N$.
+This means that the respective discrepancies between the Rosenbluth slopes of $e^+-N$ and $e^+-N$ and $G_E/G_M$ from polarization transfer should be of same magnitude, but going into different directions. 
+Any significant divergence between the two discrepancies would point towards an additional phenomenon contributing to the elastic electron-nucleon scattering cross section beyond two-photon exchange.
+The presented measurements purport to measure the Rosenbluth slope in positron-neutron scattering compared to electron-neutron scattering.

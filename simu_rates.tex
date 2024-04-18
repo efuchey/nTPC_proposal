@@ -12,8 +12,13 @@ The representation of the experiment apparatus in G4SBS is shown in the high $\e
     \caption{Top view of the experimental apparatus model in G4SBS, shown in the high $\epsilon$ configuration. The beam direction is indicated, as well as the main elements (HCal, SBS magnet, BigBite spectrometer)}
     \label{fig:g4sbssetup}
 \end{figure}
+%
+During the development of the NTPE/E12-20-010 proposal, we had run extensive simulations to show that the trigger rates were manageable, and that the backgrounds were tolerable for the experiment, which was originally planned to run at 30~$\mu$A, which is thirty (three) times the luminosity of the positron (electron) kinematics for this experiment.
+During the NTPE data taking, we effectively run at a lower current of 5-15 $\mu$A, as the GEMs were experiencing hardware issues that were limiting their range of operations (please note that these issues have since then been debugged and fixed, and will not be an issue whatsoever). Such beam intensities remain well above the beam intensities that are available with positrons anyway.
 
-\subsection{Background and trigger rates}
+\subsection{Background and trigger rates for NTPE/E12-20-010}
+
+We present here the trigger rates estimated for NTPE/E12-20-010, which was planned to run at 30~$\mu$A.
 The main processes expected to contribute to the trigger rates for the BigBite spectrometer are:
 %
 \begin{itemize}
@@ -34,7 +39,7 @@ Fig.~\ref{fig:BBRates} presents the distributions of rate of energy deposit for 
   \centering
     \includegraphics[width=8cm]{Plots/BBECalRates_gen-tpe_le.pdf}
     \includegraphics[width=8cm]{Plots/BBECalRates_gen-tpe_he.pdf}
-    \caption{Rates of the different process contributing to the BigBite electron arm trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, inelastic in magenta, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the resolution for the elastic peak in the BigBite shower is $\sim0.3$ GeV.}
+    \caption{Rates of the different process contributing to the BigBite electron arm trigger for the original NTPE experiment (E12-20-010), for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, inelastic in magenta, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the resolution for the elastic peak in the BigBite shower is $\sim0.3$ GeV. Those rates would be divided by 30 for the positron measurements.}
     \label{fig:BBRates}
 \end{figure}
 
@@ -45,9 +50,65 @@ Fig.~\ref{fig:HCalRates} presents the distributions of rate of energy deposit fo
   \centering
     \includegraphics[width=8cm]{Plots/HCalRates_gen-tpe_le.pdf}
     \includegraphics[width=8cm]{Plots/HCalRates_gen-tpe_he.pdf}
-    \caption{Rates of the different process contributing to the HCal trigger, for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, minimum bias in black, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the peak itself is around 0.2 GeV for 3.2 GeV nucleons.}
+    \caption{Rates of the different process contributing to the HCal trigger for the original NTPE experiment (E12-20-010), for the low $\epsilon$ (left) and the high $\epsilon$ (right). Quasi-elastic is in green, minimum bias in black, $\pi0$ in red, $\pi^-$ in blue, and $\pi^+$ in dark blue. Note the peak itself is around 0.2 GeV for 3.2 GeV nucleons. Those rates would be divided by 30 for the positron measurements.}
     \label{fig:HCalRates}
 \end{figure}
+%
+%\paragraph{}
+
+While during the data taking of NTPE(E12-20-010), it was more challenging to set the BBCal and HCal thresholds exactly as defined above and precisely compare the simulation with the rates, the observed trigger rates were in the same ballpark as anticipated from the simulations, and were not at all a show-stopper at 5-15 $\mu$A.
+
+
+
+\subsection{Quasi-elastic counting rates}
+
+The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
+We generated a reasonably large sample of quasi-elastic events $N_{Gen}$ for each kinematics, within a solid angle $\Delta\Omega_{Gen}$ that was larger than the detector acceptance.
+To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as follows:
+%
+\begin{itemize}
+\item{require a primary track, going through all 5 GEM layers (electron arm);}
+\item{require non-zero energy deposit in both the preshower and shower (electron arm);}
+\item{require non-zero energy deposit in HCal (hadron arm).}
+\end{itemize}
+%
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Point & Beam/ & \qsq~ & $E_{beam}$ & $I_{beam}$ & $e-n$ rates & $e-p$ rates & beam time & $e-n$ counts & $e-p$ counts \\
+ & Target & \gevcsq~ & (GeV) & ($\mu$A) & ($Hz$) & ($Hz$) & (h) & ($\times$1000) & ($\times$1000) \\
+\hline
+{\bf1+} & $e^{+}$/LD2 & 4.5 & 4.4 & 1.0 & 0.49 & 1.54 & 96 & 169 & 532 \\
+\hline
+{\bf2+} & $e^{+}$/LD2 & 4.5 & 6.6 & 1.0 & 0.94 & 3.11 & 48 & 162 & 537 \\
+\hline
+{\bf3+} & $e^{+}$/LD2 & 3.0 & 3.3 & 1.0 & 2.55 & 7.44 & 24 & 220 & 643 \\
+\hline
+{\bf3-} & $e^{-}$/LD2 & 3.0 & 3.3 & 10.0 & 25.45 & 74.45 & 12 & 1099 & 3216 \\
+\hline
+{\bf3-} & $e^{-}$/LH2 & 3.0 & 3.3 & 10.0 & - & 74.45 & 12 & - & 3216 \\
+\hline
+{\bf4+} & $e^{+}$/LD2 & 3.0 & 4.4 & 1.0 & 4.00 & 11.67 & 16 & 230 & 672 \\
+\hline
+{\bf4-} & $e^{-}$/LD2 & 3.0 & 4.4 & 10.0 & 40.00 & 116.65 & 8 & 1152 & 3360 \\
+\hline
+{\bf4-} & $e^{-}$/LH2 & 3.0 & 4.4 & 10.0 & - & 116.65 & 8 & - & 3360 \\
+\hline
+\end{tabular} 
+\caption{Quasi-elastic $e-n$ and $e-p$ counting rates, for each kinematic, proposed beam-on-target time and total statistics.}%({\em preliminary})
+\label{tab:Rates}
+\end{table}
+%
+The quasi-elastic data rates and statistics are compiled for both kinematics in Table.~II%\ref{tab:Rates}
+, along with the respective beam currents, beam/targets, and running times.
+This table includes the measurements on LH2 meant for systematic studies.
+%assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$. In Eq.~13%\ref{eq:F2}
+%, $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, and $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{sel}$). 
+
+
+\iffalse
 
 The thresholds and trigger rates for each arm, as well as the coincidence rate (assuming 30ns coincidence window), are summarized in Table.~\ref{tab:TrigRates}.
 \begin{table}[h]
@@ -84,7 +145,25 @@ Note that for HCal, the ``total rates'' is either the ``minimum bias'' beam on t
 However, even if those rates were proven to be accurate, a slight increase on the HCal threshold (which would drop the efficiency from $\sim$90\% to $\sim$85\%) would decrease the total HCal rates by $\sim$35\% to 40\% in this worst case scenario, which would make the situation more manageable (3.3 kHz).
 In the more reasonable case where the HCal rates are more accurately described by the minimum bias prediction, the coincidence will be lower than 2kHz, rate at which the SBS DAQ should operate safely.
   
-  
+The counting rates are evaluated using among the $N_{Gen}$ events generated the events that have passed the selection described below, and weighting those events with the cross section ${d\sigma}/{d\Omega}|_i$ calculated by G4SBS, multiplied by the generation solid angle $\Delta\Omega_{Gen}$, using the formula:
+\begin{equation}
+  N_{est} = \frac{{\cal L}_{exp} \Delta t}{N_{Gen}} \times \sum_{i \in accepted~evts}\left( \left. \frac{d\sigma}{d\Omega}\right|_i \times \Delta\Omega_{Gen} \right) \;,
+\end{equation}
+where $\Delta t$ the running time and ${\cal L}_{exp}$ the experimental luminosity. ${\cal L}_{exp}$ can be calculated as follows:
+\begin{equation}
+  {\cal{L}}_{exp} = \frac{I_{exp}}{q_e}\cdot L_{tgt}\cdot d_{tgt}\;\frac{\cal{N}_A}{m_{D}}\;,
+\end{equation}
+where $I_{exp}$ is the beam current, $q_e$ is the electron charge, $L_{tgt}$ and $d_{tgt}$ are the target length and density respectively, $N_A$ is Avogadro's number, and $m_D$ is the deuterium mass number.
+Events are ``accepted'' if they meet the following criteria:
+%
+\begin{itemize}
+\item{the electron is in the BigBite acceptance};
+\item{the electron passes the BigBite threshold defined in Table~\ref{tab:kinEffs} and gives signal in the GRINCH;}
+\item{the nucleon is in the HCal acceptance and passes the HCal threshold defined in Table~\ref{tab:kinEffs};}
+\item{the event passes the quasi-elastic selection defined in the previous section {\it i.e.} $W^2~\leq~1.1~\mathrm{GeV}^2$ and $p_{\perp miss}~\leq~0.10~\mathrm{GeV}$.} 
+\end{itemize}
+%
+
 \subsection{Contamination from inelastic}\label{sec:inel_contam}
 
 The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering.
@@ -138,7 +217,7 @@ The difference between the reconstructed and the projected nucleon position is s
 We clearly distinguish in each case two structures, one which can be identified a the neutrons, centered on zero in both $x$ and $y$, and one which can be identified as the protons, which are deflected upwards and are shifted by about 1~m in $y$.
 Figure~\ref{hcal_id_y} also shows the difference between the reconstructed and the projected nucleon position, except projected on $y$ (the dispersive direction), for both the quasi-elastic and inelastic events. Comparing both the expected inelastic and elastic yields in this variable side-by-side evidences further the important role of the $W^2<1.10~{\rm GeV}^2$ selection to filter out inelastic events. 
 %
-\iffalse
+%\iffalse
 \begin{figure}[!h]
   \centering
     \includegraphics[width=10cm]{HCal_PID_Inel.pdf}
@@ -146,7 +225,7 @@ Figure~\ref{hcal_id_y} also shows the difference between the reconstructed and t
     }
     \label{hcal_id_inel}
 \end{figure}
-\fi
+%\fi
 %
 \begin{figure}[!h]
   \centering
@@ -190,7 +269,7 @@ Figure~\ref{fig:pperp} displays the event distributions in $p_{_{\perp} miss}$ f
 %After applying $W^2<1.10~{\rm GeV}^2$ 
 After selection on $W^2 <1.10 {\rm GeV}^2$ and $p_{_{\perp} miss} <0.1$~GeV, the inelastic contamination of our quasi-elastic sample is better than 1\%, with 0.2\% systematic uncertainties.
 
-\iffalse
+%\iffalse
 The main source of contamination for the quasi-elastic comes from the inelastic electron-nucleon scattering. Most of this contamination can be cleaned out thanks to a selection on the center of mass energy
 %
 \begin{equation}
@@ -241,20 +320,7 @@ Point ($\epsilon$) & $N$ & $W^2$ cut & $p_{\perp miss}$ cut & $\delta_{inel}$ \\
 \label{tab:contam}
 \end{table}
 
-\fi
-
-\subsection{Quasi-elastic counting rates}
-
-The signals for this experiment have been generated using the G4SBS elastic/quasi-elastic generator. 
-We generated a reasonably large sample of quasi-elastic events $N_{Gen}$ for each kinematics, within a solid angle $\Delta\Omega_{Gen}$ that was larger than the detector acceptance.
-To evaluate the detector solid angle, we define simple criteria that each event has to pass, defined as follows:
-%
-\begin{itemize}
-\item{require a primary track, going through all 5 GEM layers (electron arm);}
-\item{require non-zero energy deposit in both the preshower and shower (electron arm);}
-\item{require non-zero energy deposit in HCal (hadron arm).}
-\end{itemize}
-%
+%\fi
 The detector solid angle, for both proton and neutron, are defined in Table.~\ref{tab:kinExpParams}.
 We also define there the $p$-$n$ acceptance asymmetry $A_{\Delta\Omega}$ such as:
 \begin{equation}
@@ -295,24 +361,6 @@ Point ($\epsilon$) & BB thr. & HCal thr. & $\eta_{det~e}$ & $\eta_{det~n}$ & $\e
 \caption{Kinematics electron thresholds, particle detection efficiencies ($\eta_{det}$), and efficiency of quasi-elastic selection $\eta_{sel}$ separated for the proton and the neutron.}
 \label{tab:kinEffs}
 \end{table}
-The counting rates are evaluated using among the $N_{Gen}$ events generated the events that have passed the selection described below, and weighting those events with the cross section ${d\sigma}/{d\Omega}|_i$ calculated by G4SBS, multiplied by the generation solid angle $\Delta\Omega_{Gen}$, using the formula:
-\begin{equation}
-  N_{est} = \frac{{\cal L}_{exp} \Delta t}{N_{Gen}} \times \sum_{i \in accepted~evts}\left( \left. \frac{d\sigma}{d\Omega}\right|_i \times \Delta\Omega_{Gen} \right) \;,
-\end{equation}
-where $\Delta t$ the running time and ${\cal L}_{exp}$ the experimental luminosity. ${\cal L}_{exp}$ can be calculated as follows:
-\begin{equation}
-  {\cal{L}}_{exp} = \frac{I_{exp}}{q_e}\cdot L_{tgt}\cdot d_{tgt}\;\frac{\cal{N}_A}{m_{D}}\;,
-\end{equation}
-where $I_{exp}$ is the beam current, $q_e$ is the electron charge, $L_{tgt}$ and $d_{tgt}$ are the target length and density respectively, $N_A$ is Avogadro's number, and $m_D$ is the deuterium mass number.
-Events are ``accepted'' if they meet the following criteria:
-%
-\begin{itemize}
-\item{the electron is in the BigBite acceptance};
-\item{the electron passes the BigBite threshold defined in Table~\ref{tab:kinEffs} and gives signal in the GRINCH;}
-\item{the nucleon is in the HCal acceptance and passes the HCal threshold defined in Table~\ref{tab:kinEffs};}
-\item{the event passes the quasi-elastic selection defined in the previous section {\it i.e.} $W^2~\leq~1.1~\mathrm{GeV}^2$ and $p_{\perp miss}~\leq~0.10~\mathrm{GeV}$.} 
-\end{itemize}
-%
 
 The total quasi-elastic statistics $N_{QE}$, as well as the total form factor, $F^2$:
 \begin{equation}
@@ -322,22 +370,6 @@ The total quasi-elastic statistics $N_{QE}$, as well as the total form factor, $
 and its statistical error $\Delta F^2 = F^2/\sqrt{N_{QE}}$ are compiled for both kinematics in Table.~VI%\ref{tab:Rates}
 , assuming a running time $\Delta t = 12$~hours of running at a beam intensity of $I_{exp} =~30~\mu$A on a liquid deuterium target with length $l_{tgt}~=~15$~cm and density $d_{tgt}~=~0.169~\mathrm{g.cm}^{-3}$. In Eq.~13%\ref{eq:F2}
 , $\Delta\Omega$ is the convoluted BigBite-HCal solid angle, and $\eta$ is the product of all efficiencies (detection efficiencies $\eta_{det}$ $\times$ selection efficiency $\eta_{sel}$). 
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-Point ($\epsilon$) & $N_{QE}$ & $N_{QE}$ & $F^2_n$ & $\Delta F^2_n$ & $F^2_p$ & $\Delta F^2_p$ \\
- &  ($e$-$n$) &  ($e$-$p$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) & ($\times 10^{-3}$) & ($\times 10^{-6}$) \\
-\hline
-1 (0.599) & 9.07$\times 10^{5}$ & 2.55$\times 10^{6}$ & 0.99 & 1.04 & 2.73 & 1.70 \\
-\hline
-2 (0.838) & 1.94$\times 10^{6}$ & 5.83$\times 10^{6}$ & 0.72 & 0.52 & 1.93 & 0.80 \\
-\hline
-\end{tabular} 
-\caption{Quasi-elastic counting rates, and total form factor (defined in Eq.~11).}%({\em preliminary})
-\label{tab:Rates}
-\end{table}
 
 The calculation of the $F_2$ term requires the evaluation of the Mott cross section:
 %
@@ -366,8 +398,8 @@ Point ($\epsilon$) & $\langle \theta_e \rangle$ &  $\langle k^{\prime} \rangle$ 
 \end{table}
 %
 
-\iffalse
-The counting rates for the low $\epsilon$ kinematics should be directly comparable to the rates reported in the original $G_M^n$ proposal \cite{gmp}.
+%\iffalse
+The counting rates for the low $\epsilon$ kinematics should be directly comparable to the rates reported in the original $G_M^n$ proposal \cite{gmn}.
 In this proposal, the requested running time was 12 hours, with a beam intensity of 10 $\mu$A on a 10 cm long liquid deuterium target with density 0.169~g.cm$^{-3}$.
 This luminosity is 4.5 times lower than the currently proposed luminosity.
 %
@@ -388,19 +420,20 @@ Discrepancy factor & 2.73 & 3.38 \\
 \label{tab:RateComp}
 \end{table}
 \end{center}
+%\fi
 \fi
 
 \subsection{Projected results}
 
-The projection for our expected Rosenbluth slope measurement is presented on Fig.~17.%\ref{fig:proj_results}.
+The projection for our expected Rosenbluth slope measurement is presented on Fig.~13. %\ref{fig:proj_results}.
 %
 \begin{figure}[!h]
   \centering
-    \includegraphics[width=12cm]{Plots/Proj_result_multicolors.pdf}
-    \caption{Projected contribution to the neutron Rosenbluth slope $S^n$ from \gen/\gmn (dashed blue curve) with systematic uncertainty (blue dotted area);
-      Total expected neutron Rosenbluth slope $S^n$ including the expected two-photon exchange (solid magenta).
-      The constraint that our measurement will bring to the slope is represented in solid black with the solid red area.
-      The magenta dotted area shows the total projected uncertainty for nTPE contribution.}
+    \includegraphics[width=15cm]{Plots/NTPEplus_Proj.pdf}%Proj_result_multicolors.pdf}
+    \caption{Projected contribution to the neutron Rosenbluth slope $S^n$ from \gen/\gmn (dashed blue curve) with systematic uncertainty (blue dotted area), for \qsq~=4.5 \gevcsq~(left) and \qsq~=3.0 \gevcsq~(right);
+      Total expected neutron Rosenbluth slope $S^n$ including the expected two-photon exchange for electrons (solid magenta) and positrons (solid green).
+      The constraint that our measurement will bring to the slope is represented in solid black with the solid red area for electrons and cyan area for positron.
+      The magenta and green dotted areas show the total projected uncertainty for nTPE contribution for electrons and positrons.}
     \label{fig:proj_results}
 \end{figure}
 %

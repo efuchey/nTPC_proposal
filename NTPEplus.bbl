@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{28}%
+\begin{thebibliography}{29}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -113,15 +113,15 @@
   {pages} {245} (\bibinfo {year} {2017})},\ \Eprint
   {http://arxiv.org/abs/1703.03874} {arXiv:1703.03874 [nucl-ex]} \BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Wojtsekhowski}(2002)}]{Wojtsekhowski:2017kti}%
+\bibitem [{\citenamefont {Fuchey}(2020)}]{ntpe}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
-  {Wojtsekhowski}},\ }in\ \href {\doibase 10.1142/9789812776211_0036} {\emph
-  {\bibinfo {booktitle} {{Exclusive processes at high momentum transfer.
-  Proceedings, Newport News, USA, May 15-18, 2002}}}}\ (\bibinfo {year}
-  {2002})\ \Eprint {http://arxiv.org/abs/1706.02747} {arXiv:1706.02747
-  [physics.ins-det]} \BibitemShut {NoStop}%
-%%CITATION = ARXIV:1706.02747;%%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~S. W.~B.}\
+  \bibnamefont {Fuchey}, \bibfnamefont {E.}},\ }\href@noop {} {\enquote
+  {\bibinfo {title} {\large measurement of the two-photon exchange contribution
+  to the electron-neutron elastic scattering cross section},}\ }\bibinfo
+  {howpublished} {See
+  \url{https://www.jlab.org/exp_prog/proposals/20/PR12-20-010_Proposal.pdf}}
+  (\bibinfo {year} {2020})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cates}\ \emph {et~al.}(2011)\citenamefont {Cates},
   \citenamefont {de~Jager}, \citenamefont {Riordan},\ and\ \citenamefont
   {Wojtsekhowski}}]{Cates:2011pz}%
@@ -239,6 +239,14 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Kivel}},\ }\href@noop {} {} (\bibinfo {year} {2020}),\ \bibinfo {note}
   {private communications}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {MO}\ and\ \citenamefont
+  {TSAI}(1969)}]{RevModPhys.41.205}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~W.}\ \bibnamefont
+  {MO}}\ and\ \bibinfo {author} {\bibfnamefont {Y.~S.}\ \bibnamefont {TSAI}},\
+  }\href {\doibase 10.1103/RevModPhys.41.205} {\bibfield  {journal} {\bibinfo
+  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume} {41}},\ \bibinfo
+  {pages} {205} (\bibinfo {year} {1969})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Annand}\ \emph {et~al.}(2008)\citenamefont {Annand},
   \citenamefont {Gilman}, \citenamefont {Quinn}, \citenamefont {Wojtsekhowski}
   \emph {et~al.}}]{E12-09-019}%
